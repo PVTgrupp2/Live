@@ -1,6 +1,6 @@
 import NativePackagerKeys._
 
-herokuAppName	in	Compile	:=	"protected-savannah-6320”
+herokuAppName	in	Compile	:=	"pvt-grupp2”
 
 libraryDependencies	+=	"mysql"	%	"mysql-connector-java"	%	"5.1.27"	
 
