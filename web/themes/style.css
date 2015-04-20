@@ -1,0 +1,34 @@
+header
+{
+	background-color:green;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+footer
+{
+	background-color:red;
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	bottom: 0px;
+}
+
+article
+{
+
+}
+
+.button
+{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+
+.buttonimg
+{
+	width: 100%;
+	height: 100%;
+}
