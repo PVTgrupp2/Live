@@ -15,7 +15,7 @@ public class Application extends Controller {
 
 		Connection conn = null;
 		Statement stmt = null;
-		String result = "";
+		String result = "\n";
         try {
             conn = DriverManager.getConnection("jdbc:mysql://mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
             stmt = conn.createStatement();
