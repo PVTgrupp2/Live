@@ -25,7 +25,7 @@ public class Application extends Controller {
             return ok(index.render(e));
         }
         while(rs.next()){
-            result = result + rs;
+            result = result + rs.getString(0) + rs.getString(1) + rs.getString(2);
         }
 
         return ok(index.render("Your new application is ready." + result));
