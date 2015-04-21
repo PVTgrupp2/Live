@@ -17,18 +17,18 @@ public class Application extends Controller {
 		Statement stmt = null;
 		String result = "";
         try {
-            conn = DriverManager.getConnection("mysql://mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
+            conn = DB.getConnection();
             stmt = conn.createStatement();
             String sql = "SELECT * FROM Fred_Test";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(sql);			
+			while(rs.next()){
+				result = result + rs.getString(0) + rs.getString(1) + rs.getString(2);
+			}
         }catch(Exception e){
             return ok(index.render(e.toString()));
         }
-        while(rs.next()){
-            result = result + rs.getString(0) + rs.getString(1) + rs.getString(2);
-        }
-
-        return ok(index.render("Your new application is ready." + result));
+        
+        return ok(index.render("Your new application is ready.\n" + result));
     }
 
 }
