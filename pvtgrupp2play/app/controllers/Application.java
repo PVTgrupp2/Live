@@ -22,7 +22,7 @@ public class Application extends Controller {
             String sql = "SELECT * FROM Fred_Test";
             ResultSet rs = stmt.executeQuery(sql);
         }catch(Exception e){
-            return ok(index.render(e));
+            return ok(index.render(e.toString()));
         }
         while(rs.next()){
             result = result + rs.getString(0) + rs.getString(1) + rs.getString(2);
