@@ -31,4 +31,8 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready.<br>" + result));
     }
 
+    public static Result helloWeb(){
+        return ok(index.render("Hello World!"));
+    }
+
 }
