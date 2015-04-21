@@ -16,7 +16,7 @@ import play.mvc.Result;
 import play.mvc.BodyParser;
 import play.libs.Json;
 import play.libs.Json.*;
-
+import org.codehaus.jackson.node.ObjectNode;
 
 
 public class Application extends Controller {
@@ -42,6 +42,7 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
+
         ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
