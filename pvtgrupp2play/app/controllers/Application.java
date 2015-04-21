@@ -17,7 +17,7 @@ public class Application extends Controller {
 		Statement stmt = null;
 		String result = "";
         try {
-            conn = theDB.getConnection();
+            conn = getConnection();
             stmt = conn.createStatement();
             String sql = "SELECT * FROM Fred_Test";
             ResultSet rs = stmt.executeQuery(sql);			
@@ -29,6 +29,10 @@ public class Application extends Controller {
         }
         
         return ok(index.render("Your new application is ready.\n" + result));
+    }
+
+    private Connection getConnection() throws URISyntaxException, SQLException {
+        return DriverManager.getConnection("mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
     }
 
 }
