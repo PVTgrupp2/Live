@@ -17,7 +17,7 @@ public class Application extends Controller {
 		Statement stmt = null;
 		String result = "";
         try {
-            conn = DriverManager.getConnection("mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
+            conn = DriverManager.getConnection("jdbc:mysql://mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
             stmt = conn.createStatement();
             String sql = "SELECT * FROM Fred_Test";
             ResultSet rs = stmt.executeQuery(sql);			
