@@ -1,5 +1,6 @@
 package controllers;
 
+import jdk.nashorn.internal.ir.ObjectNode;
 import play.*;
 import play.mvc.*;
 
@@ -32,7 +33,9 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        return ok(index.render("Hello World!"));
+        ObjectNode result = Json.newObject();
+        result.put("content","Hello Web");
+        return ok(result);
     }
 
 }
