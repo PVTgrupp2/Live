@@ -17,7 +17,7 @@ public class Application extends Controller {
 		Statement stmt = null;
 		String result = "";
         try {
-            conn = DB.getConnection();
+            conn = db.getConnection();
             stmt = conn.createStatement();
             String sql = "SELECT * FROM Fred_Test";
             ResultSet rs = stmt.executeQuery(sql);			
