@@ -1,7 +1,0 @@
-New log file opened at Wed Apr 22 13:50:41 CEST 2015 by 4100@Laptopz
-Taking next connection to: 56063
-New client attempting to connect on port: 56064-56063
-  Address = /193.11.92.191:56063
-This client on port 56064 has uuid 94c12c64-f92b-4aec-87fa-b169ab287276 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-94c12c64-f92b-4aec-87fa-b169ab287276
-Taking next connection to: 56063

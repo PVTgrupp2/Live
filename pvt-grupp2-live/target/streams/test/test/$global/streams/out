@@ -1,0 +1,24 @@
+[debug] Forking tests - parallelism = false
+[debug] Create a single-thread test executor
+[debug] Runner for com.novocode.junit.JUnitFramework produced 2 initial tasks for 2 tests.
+[debug]   Running TaskDef(ApplicationTest, sbt.ForkMain$AnnotatedFingerscan@1847c66d, false, [SuiteSelector])
+[debug] Test run started
+[debug] Test ApplicationTest.simpleCheck started
+[debug] Test ApplicationTest.simpleCheck finished, took 0.016 sec
+[debug] Test ApplicationTest.renderTemplate started
+[debug] Test ApplicationTest.renderTemplate finished, took 2.412 sec
+[debug] Test run finished: 0 failed, 0 ignored, 2 total, 2.453s
+[debug]     Produced 0 nested tasks and 2 events.
+[debug]   Running TaskDef(IntegrationTest, sbt.ForkMain$AnnotatedFingerscan@311ba06f, false, [SuiteSelector])
+[debug] Test run started
+[debug] Test IntegrationTest.test started
+[debug] Test IntegrationTest.test finished, took 7.595 sec
+[debug] Test run finished: 0 failed, 0 ignored, 1 total, 7.596s
+[debug]     Produced 0 nested tasks and 1 events.
+[debug] Runner for org.specs2.runner.Specs2Framework produced 0 initial tasks for 0 tests.
+[debug] Summary for JUnit not available.
+[debug] Summary for specs2 not available.
+[info] Passed: Total 3, Failed 0, Errors 0, Passed 3
+[debug] Passed tests:
+[debug] 	ApplicationTest
+[debug] 	IntegrationTest
