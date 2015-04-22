@@ -18,6 +18,7 @@ import play.libs.Json;
 import play.libs.Json.*;
 import org.codehaus.jackson.node.ObjectNode;
 import org.codehaus.jackson.*;
+import com.fasterxml.jackson.databind.node.*;
 
 
 public class Application extends Controller {
@@ -43,9 +44,11 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        com.fasterxml.jackson.databind.node.ObjectNode result = Json.newObject();
+        ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
     }
+
+
 
 }
