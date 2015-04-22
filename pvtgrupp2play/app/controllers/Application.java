@@ -49,7 +49,7 @@ public class Application extends Controller {
         return ok(result);
     }
 
-    public Result hello(){
+    public static Result hello(){
         JsonNode json = request().body().asJson();
         if(json == null){
             return badRequest("Expecting Json data");
