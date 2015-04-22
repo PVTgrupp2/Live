@@ -21,6 +21,6 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.0.0")
 
 resolvers += Resolver.url("heroku-sbt-plugin-releases", url("http://dl.bintray.com/heroku/sbt-plugins/")) (Resolver.ivyStylePatterns)
 
-addSbtPlugin("com.heroku" % "sbt-heroku" % "0.3.0")
+addSbtPlugin("com.heroku" % "sbt-heroku" % "0.3.6")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.0.0-RC1")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "0.7.6")
