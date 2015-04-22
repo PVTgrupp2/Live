@@ -44,13 +44,23 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        ObjectNode result = Json.newObject();
+        org.codehaus.jackson.node.ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
     }
 
     public Result echo(){
-        org.codehaus.jackson.node.ObjectNode result = Json.newObject();
+        JsonNode json = request().body().asJson();
+        if(json == null){
+            return badRequest("Expecting Json data");
+        }else{
+            String name = json.findPath("name").textValue();
+            if(name == null){
+                return badRequest("Missing parameter [name]");
+            }else{
+                return ok("Hej " + name);
+            }
+        }
     }
 
 
