@@ -17,3 +17,4 @@ pvt-grupp2-live/.sbtserver/master.log
 *.log
 pvt-grupp2-live/project/.sbtserver
 *.log
+*.log
