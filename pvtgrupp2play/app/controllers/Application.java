@@ -16,7 +16,7 @@ import play.mvc.Result;
 import play.mvc.BodyParser;
 import play.libs.Json;
 import play.libs.Json.*;
-import org.codehaus.jackson.node.ObjectNode;
+//import org.codehaus.jackson.node.ObjectNode;
 import org.codehaus.jackson.*;
 //import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -50,7 +50,7 @@ public class Application extends Controller {
     }
 
     public Result echo(){
-        ObjectNode result = Json.newObject();
+        org.codehaus.jackson.node.ObjectNode result = Json.newObject();
     }
 
 
