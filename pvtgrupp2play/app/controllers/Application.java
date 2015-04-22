@@ -43,8 +43,7 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-
-        ObjectNode result = Json.newObject();
+        com.fasterxml.jackson.databind.node.ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
     }
