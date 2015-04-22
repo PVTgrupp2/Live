@@ -1,3 +1,7 @@
+import NativePackagerKeys._
+
+herokuAppName in Compile := "pvt-grupp2-live"
+
 name := """pvt-grupp2-live"""
 
 version := "1.0-SNAPSHOT"
@@ -13,5 +17,6 @@ libraryDependencies ++= Seq(
   javaWs
 )
 
+libraryDependencies += "mysql" % "mysql-connector-java" % "5.1.27"
 
 fork in run := true

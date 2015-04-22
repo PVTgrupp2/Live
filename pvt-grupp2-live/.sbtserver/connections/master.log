@@ -1,19 +1,7 @@
-New log file opened at Wed Apr 22 13:29:46 CEST 2015 by 2416@Laptopz
-Taking next connection to: 55455
-New client attempting to connect on port: 55456-55455
-  Address = /193.11.92.191:55455
-This client on port 55456 has uuid 5ade8944-ae85-444d-977e-fb2f00549630 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-5ade8944-ae85-444d-977e-fb2f00549630
-Taking next connection to: 55455
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55455
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55455
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55455
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55455
+New log file opened at Wed Apr 22 13:46:30 CEST 2015 by 11256@Laptopz
+Taking next connection to: 56012
+New client attempting to connect on port: 56013-56012
+  Address = /193.11.92.191:56012
+This client on port 56013 has uuid c2a34334-7dd4-42e8-bab6-9fffe2a0e36d configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-c2a34334-7dd4-42e8-bab6-9fffe2a0e36d
+Taking next connection to: 56012
