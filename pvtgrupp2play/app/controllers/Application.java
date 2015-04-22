@@ -18,7 +18,7 @@ import play.libs.Json;
 import play.libs.Json.*;
 import org.codehaus.jackson.node.ObjectNode;
 import org.codehaus.jackson.*;
-import com.fasterxml.jackson.databind.node.*;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
 public class Application extends Controller {
@@ -47,6 +47,10 @@ public class Application extends Controller {
         ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
+    }
+
+    public Result echo(){
+        ObjectNode result = Json.newObject();
     }
 
 
