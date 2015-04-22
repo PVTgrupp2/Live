@@ -1,6 +1,6 @@
 import NativePackagerKeys._
 
-herokuAppName in Compile := "pvt-grupp2-live"
+herokuAppName in Compile := "evening-lowlands-7089"
 
 name := """pvt-grupp2-live"""
 
