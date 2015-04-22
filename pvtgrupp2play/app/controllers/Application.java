@@ -50,7 +50,7 @@ public class Application extends Controller {
     }
 
     public static Result hello(){
-        org.codehaus.jackson.JsonNode json = request().body().asJson();
+        com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
             return badRequest("Expecting Json data");
         }else{
