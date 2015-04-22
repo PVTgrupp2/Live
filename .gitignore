@@ -14,3 +14,5 @@ pvt-grupp2-live/.sbtserver/connections/master.log
 *.log
 pvt-grupp2-live/.sbtserver/master.log
 *.01
+*.log
+pvt-grupp2-live/project/.sbtserver
