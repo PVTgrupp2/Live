@@ -44,6 +44,18 @@ article
 	height: 80%;
 }
 
+#homeimage
+{
+	position: relative;
+	margin: auto;
+	background-image: url("https://www.st-stefanus.com/sites/g/files/ogq301/files/wp-content/uploads/2013/05/Vase-Beer-Glass.png");
+	background-size: 200px 340px;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 340px;
+
+}
+
 #headerimage
 {
 	position: relative;
@@ -65,4 +77,8 @@ article
 	width: 100%;
 }
 
-
+.listitem
+{
+	padding: -10px;
+	margin: -10px;
+}
