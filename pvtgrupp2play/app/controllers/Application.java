@@ -64,7 +64,7 @@ public class Application extends Controller {
     }
     
     public static Result fbauth(){
-        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Access-Control-Allow-Origin", "http://wwn.se, https://pvt.dsv.su.se");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
@@ -80,7 +80,7 @@ public class Application extends Controller {
     
     //Allow cross orgin
     public static Result preflight(String all) {
-        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Access-Control-Allow-Origin", "http://wwn.se, https://pvt.dsv.su.se");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
