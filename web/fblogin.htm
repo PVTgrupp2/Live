@@ -80,6 +80,19 @@
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
+	  
+	  $.ajax({
+      url: 'https://pvt-grupp2.herokuapp.com/fbauth',
+      type: 'POST',
+      data: JSON.stringify(authResponse),
+      contentType: 'application/json; charset=utf-8',
+      dataType: 'json',
+      async: false,
+      success: function(msg) {
+        alert(msg);
+      }
+      });
+	  
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
     });
