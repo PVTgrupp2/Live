@@ -71,7 +71,7 @@ public class Application extends Controller {
         
         com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
-            return badRequest("Expecting Json data");
+            return ok("Expecting Json data");
         }else{
             return ok(json);
         }
