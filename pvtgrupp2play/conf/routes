@@ -15,3 +15,6 @@ POST    /hello controllers.Application.hello()
 
 GET	/fbauth controllers.Application.fbauth()
 POST    /fbauth controllers.Application.fbauth()
+
+# Allow cross orgin
+OPTIONS /*all controllers.Application.preflight(all)

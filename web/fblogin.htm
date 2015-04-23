@@ -78,25 +78,24 @@
   // Here we run a very simple test of the Graph API after login is
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
+  var fbresponse;
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-	  
-	  $.ajax({
-      url: 'https://pvt-grupp2.herokuapp.com/fbauth',
-      type: 'POST',
-      data: JSON.stringify(authResponse),
-      contentType: 'application/json; charset=utf-8',
-      dataType: 'json',
-      async: false,
-      success: function(msg) {
-        alert(msg);
-      }
-      });
-	  
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+		fbresponse = response;
     });
+	
+	$.ajax({
+    url: 'https://pvt-grupp2.herokuapp.com/fbauth',
+    type: 'POST',
+    data: JSON.stringify(fbresponse),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    success: function(data) { alert('data: ' + data); }   
+	});
+	
   }
 </script>
 
