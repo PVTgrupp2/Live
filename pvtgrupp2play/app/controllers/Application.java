@@ -68,6 +68,7 @@ public class Application extends Controller {
         if(json == null){
             return badRequest("Expecting Json data");
         }else{
+            response().setHeader("Access-Control-Allow-Origin", "*");
             return ok(json);
         }
     }
