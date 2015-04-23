@@ -9,5 +9,9 @@ GET     /                           controllers.Application.index()
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 GET	/helloWeb controllers.Application.helloWeb()
+
 GET	/hello controllers.Application.hello()
 POST    /hello controllers.Application.hello()
+
+GET	/fbauth controllers.Application.fbauth()
+POST    /fbauth controllers.Application.fbauth()

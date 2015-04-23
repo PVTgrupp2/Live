@@ -62,6 +62,16 @@ public class Application extends Controller {
             }
         }
     }
+    
+    public static Result fbauth(){
+        com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
+        if(json == null){
+            return badRequest("Expecting Json data");
+        }else{
+            return ok(json);
+        }
+    }
+
 
 
 
