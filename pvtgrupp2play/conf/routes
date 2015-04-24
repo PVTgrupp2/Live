@@ -18,7 +18,7 @@ POST    /fbauth controllers.Application.fbauth()
 
 GET    /beer/all            controllers.Application.beer(reqType ?= "All", id: Long = 0)
 GET    /beer/top            controllers.Application.beer(reqType ?= "Top", id: Long = 0)
-GET    /beer/$id<[0-9]+>    controllers.Application.beer(reqType ?= "Id", id: Long)
+GET    /beer/:id   controllers.Application.beer(reqType ?= "Id", id: Long)
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)
