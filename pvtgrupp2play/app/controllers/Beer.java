@@ -82,7 +82,7 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM beer WHERE idBeer=" + id.toString();
+            String sql = "SELECT * FROM beer WHERE idBeer=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
             
             if(rs.next()){    
@@ -103,6 +103,8 @@
         //TODO more controlls?
         if(resultJson == null){
             return internalServerError("Oops: the beer is on the table");
+        }else if(resultJson.size() < 1){
+            return notFound();
         }else{
             return ok(resultJson);
         }
