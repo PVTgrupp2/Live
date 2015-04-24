@@ -98,7 +98,7 @@
         if(resultJson == null){
             return internalServerError("Oops: the beer is on the table");
         }else if(resultJson.size() < 1){
-            return notFound(resultJson);
+            return notFound("Out looking for nonexistant beer I see");
         }else{
             return ok(resultJson);
         }
