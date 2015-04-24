@@ -16,8 +16,10 @@ import play.mvc.Result;
 import play.mvc.BodyParser;
 import play.libs.Json;
 import play.libs.Json.*;
+
+import com.fasterxml.jackson.databind.node.*;
 //import org.codehaus.jackson.node.ObjectNode;
-import org.codehaus.jackson.*;
+//import org.codehaus.jackson.*;
 //import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
@@ -44,7 +46,7 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        com.fasterxml.jackson.databind.node.ObjectNode result = Json.newObject();
+        ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
     }
@@ -82,8 +84,8 @@ public class Application extends Controller {
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
-        
-        return ok(Beer.getAllTest());
+        ObjectNode result = Beer.getAllTest();
+        return ok(result);
         
     }
     
