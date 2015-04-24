@@ -9,6 +9,21 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
+	<script>
+	$.getJSON('https://pvt-grupp2.herokuapp.com/beer', function(data) {
+  var items = [];
+
+  $.each(data, function(key, val) {
+    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + key + '">' + "<h6>" + val + "</h6>" + "</li>");
+  });
+
+  $('<ul/>', {
+    'data-role': 'listview',
+	'class': 'ui-listview',
+    html: items.join('')
+  }).appendTo('div[data-role="content"]');
+});
+	</script>
 </head>
 <body>
 	<div data-role="page" data-theme="a">
@@ -18,7 +33,7 @@
 		
 			<div data-role="content" data-theme="a">
 				<p>De poppuläraste dryckena på mässan</p>
-			<ol data-role="listview">
+			<!--<ol data-role="listview">
 				<li><a href="öl1"><h6>Wisby Pils</h6></a></li>
 				<li><a href="öl2"><h6>Falcon Bayersk</h6></a></li>
  		 		<li><a href="öl2"><h6>Tanquray 10</h6></a></li>
@@ -28,7 +43,7 @@
 				<li><a href="öl2"><h6>Bud</h6></a></li>
 				<li><a href="öl1"><h6>Makers Mark</h6></a></li>
 				<li><a href="öl2"><h6>Havana Club 3 anejos</h6></a></li>
-			</ol>
+			</ol>-->
 
 		</div>
 
