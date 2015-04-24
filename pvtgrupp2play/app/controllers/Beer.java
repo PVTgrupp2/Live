@@ -33,4 +33,18 @@
         
     }
     
+    public static ObjectNode getAllTest() {
+		ObjectNode resultJson = Json.newObject();
+		resultJson.put("1","Carlsberg");
+		resultJson.put("2","Falcon");
+		resultJson.put("3","Sofiero");
+		resultJson.put("4","Pripps blå");
+		
+		
+		return resultJson;
+        
+        
+        
+    }
+    
  }
