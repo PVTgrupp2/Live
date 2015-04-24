@@ -1,0 +1,61 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/theme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="includes.js"></script>
+</head>
+<body>
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<h1>Sök</h1>
+		</div>
+				<div data-role="navbar">
+		<ul>
+			<li><a href= class="ui-btn-active ui-state-persist" data-transition="none">Sök Dryck</a></li>
+			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Sök Utställare</a></li>
+			
+		</ul>
+
+		</div>
+		<div data-role="content" data-theme="a">
+
+			<form class="ui-filterable">
+    <input id="inset-autocomplete-input" data-type="search" placeholder="Sök Dryck">
+</form>
+<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-input="#inset-autocomplete-input">
+    <li><a href="#">Carlsberg hof</a></li>
+    <li><a href="#">Carlsberg export</a></li>
+    <li><a href="#">Campari</a></li>
+    <li><a href="#">Claushauler</a></li>
+    <li><a href="#">Dolphinator</a></li>
+    <li><a href="#">Dagmar</a></li>
+    <li><a href="#">Festis</a></li>
+    <li><a href="#">Fireball</a></li>
+    <li><a href="#">Glenn Fiddler</a></li>
+    <li><a href="#">Havana Clug 3 Anejos</a></li>
+    <li><a href="#">Havana Club</a></li>
+    <li><a href="#">Innis and Gunn</a></li>
+    <li><a href="#">Jura</a></li>
+    <li><a href="#">Kir</a></li>
+    <li><a href="#">Lappinkulta</a></li>
+    <li><a href="#">Mintu</a></li>
+    <li><a href="#">Nils Oscar</a></li>
+    <li><a href="#">Peroni</a></li>
+    <li><a href="#">Sambucca</a></li>
+    <li><a href="#">Tuborg</a></li>
+    <li><a href="#">Wisby Bulldog</a></li>
+    <li><a href="#">Wisby Pils</a></li>
+</ul>
+		</div>
+
+		<footer>
+		</footer>
+	</div>
+</body>
+</html>
