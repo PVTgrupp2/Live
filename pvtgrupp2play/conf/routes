@@ -8,15 +8,17 @@ GET     /                           controllers.Application.index()
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
-GET	/helloWeb controllers.Application.helloWeb()
+GET	    /helloWeb controllers.Application.helloWeb()
 
-GET	/hello controllers.Application.hello()
+GET	    /hello controllers.Application.hello()
 POST    /hello controllers.Application.hello()
 
-GET	/fbauth controllers.Application.fbauth()
+GET	    /fbauth controllers.Application.fbauth()
 POST    /fbauth controllers.Application.fbauth()
 
-GET    /beer controllers.Application.beer()
+GET    /beer/all            controllers.Application.beer(reqType ?= "All", id: Long = 0)
+GET    /beer/top            controllers.Application.beer(reqType ?= "Top", id: Long = 0)
+GET    /beer/$id<[0-9]+>    controllers.Application.beer(reqType ?= "Id", id: Long)
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)

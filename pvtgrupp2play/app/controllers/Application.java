@@ -1,21 +1,26 @@
 package controllers;
 
 
-import play.*;
-import play.mvc.*;
+
 
 import java.lang.Exception;
+
 import java.sql.*;
 import java.sql.DriverManager;
 
 import views.html.*;
-import play.libs.Json;
+//import play.libs.Json;
 
+import play.*;
+
+import play.mvc.*;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Results;
 import play.mvc.BodyParser;
+
 import play.libs.Json;
-import play.libs.Json.*;
+//import play.libs.Json.*;
 
 import com.fasterxml.jackson.databind.node.*;
 //import org.codehaus.jackson.node.ObjectNode;
@@ -79,19 +84,22 @@ public class Application extends Controller {
         }
     }
     
-    public static Result beer(){
+    public static Result beer(String reqType, Long id){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
-        ObjectNode result = Beer.getAll();
         
-        if(result == null){
-            return internalServerError("Oops");
+        if(reqType.equals("Top")){
+            return Beer.getToplist();
+            
+        }else if(reqType.equals("All")){
+            return Beer.getAll();
+        }else if(reqType.equals("Id")){
+            return Beer.beer(id);
         }else{
-            return ok(result);
+            return notFound();
         }
-        
     }
     
     
