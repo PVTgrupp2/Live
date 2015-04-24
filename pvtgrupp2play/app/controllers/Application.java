@@ -24,7 +24,7 @@ import org.codehaus.jackson.*;
 public class Application extends Controller {
 
     public static Result index() {
-
+        /**
 		Connection conn = null;
 		Statement stmt = null;
 		String result = "";
@@ -38,9 +38,9 @@ public class Application extends Controller {
 			}
         }catch(Exception e){
             return ok(index.render(e.toString()));
-        }
+        }**/
         
-        return ok(index.render("Your new application is ready.<br>" + result));
+        return ok(index.render("Your new application is ready."));
     }
 
     public static Result helloWeb(){
@@ -83,7 +83,7 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
-        return ok(Beer.getAll());
+        return ok(Beer.getAllTest());
         
     }
     
