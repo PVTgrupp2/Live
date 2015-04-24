@@ -16,15 +16,17 @@ import play.mvc.Result;
 import play.mvc.BodyParser;
 import play.libs.Json;
 import play.libs.Json.*;
+
+import com.fasterxml.jackson.databind.node.*;
 //import org.codehaus.jackson.node.ObjectNode;
-import org.codehaus.jackson.*;
+//import org.codehaus.jackson.*;
 //import com.fasterxml.jackson.databind.node.ObjectNode;
 
 
 public class Application extends Controller {
 
     public static Result index() {
-
+        /**
 		Connection conn = null;
 		Statement stmt = null;
 		String result = "";
@@ -38,13 +40,13 @@ public class Application extends Controller {
 			}
         }catch(Exception e){
             return ok(index.render(e.toString()));
-        }
+        }**/
         
-        return ok(index.render("Your new application is ready.<br>" + result));
+        return ok(index.render("Your new application is ready."));
     }
 
     public static Result helloWeb(){
-        com.fasterxml.jackson.databind.node.ObjectNode result = Json.newObject();
+        ObjectNode result = Json.newObject();
         result.put("content","Hello Web");
         return ok(result);
     }
@@ -82,8 +84,13 @@ public class Application extends Controller {
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+        ObjectNode result = Beer.getAll();
         
-        return ok(Beer.getAll());
+        if(result == null){
+            return internalServerError("Oops");
+        }else{
+            return ok(result);
+        }
         
     }
     
