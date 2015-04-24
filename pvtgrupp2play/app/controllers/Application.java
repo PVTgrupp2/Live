@@ -92,7 +92,6 @@ public class Application extends Controller {
         
         if(reqType.equals("Top")){
             return Beer.getToplist();
-            
         }else if(reqType.equals("All")){
             return Beer.getAll();
         }else if(reqType.equals("Id")){

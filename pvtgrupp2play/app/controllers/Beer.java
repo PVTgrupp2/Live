@@ -82,19 +82,13 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM beer WHERE idBeer=" + 1;
+            String sql = "SELECT * FROM beer WHERE idBeer=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
-            
-            if(rs.next()){    
+
         		while(rs.next()){
         		    resultJson.put(rs.getString(1),rs.getString(2));
         		}
-            }else{
-                //No results
-                resultJson.put("Error: ","the id does not exist");
-            }
-    		
-    		
+           
     		
         }catch(Exception e){
 		    resultJson = null;
@@ -104,7 +98,7 @@
         if(resultJson == null){
             return internalServerError("Oops: the beer is on the table");
         }else if(resultJson.size() < 1){
-            return notFound();
+            return notFound(resultJson);
         }else{
             return ok(resultJson);
         }
