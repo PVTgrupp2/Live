@@ -53,9 +53,9 @@
   }
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : '799390323443595',
+    appId      : '799390323443595',       // 392795464233014
     cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
+                        // the session 
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.2' // use version 2.2
   });
@@ -117,14 +117,30 @@
 </div>
 
 <div data-role="page" id="mypage">
-<p> Häääär är min siiiiida! </p>
+<p> Mina Sidor i inloggad form <br>
+<br>
+    To-laste lista <br>
+    -dsq <br>
+    -dsqdw <br>
+    -ÖL <br>
+    <br>
+    Mina bedömningar <br>
+    - Jag är bäst <br>
+    - Andra är inte fullt lika bra<br>
+
+</p>
 <p><a href="#" id="fblogout">Logga ut</a></p>
+</div>
+
+<div data-role="page" id="mypageoffline">
+<p> Mina Sidor i utloggad form <br>
+    Vet inte riktigt vad som ska stå här ärligt talat.....
+</p>
 </div>
 
 
 <div data-role="page" id="login">
 
-  <p><a href="#" onclick="checkLogin()">Testa inlogg</a></p>
   <p>Användarens egen sida. "Min sida" eller whatever </p>
   <a href="#" id="fblogin"><img src="fblogin.png"></a>
   <p><a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop">Fortsätt utan att logga in</a></p>
@@ -137,7 +153,7 @@
           <h3 class="ui-title">Fortsätta utan att logga in?</h3>
       <p>Du kommer att gå miste om fett coola grejer om du inte loggar in assååå!!!</p>
           <a href="#login" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Avbryt</a>
-          <a href="#mypage" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Fortsätt</a>
+          <a href="#mypageoffline" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="flow">Fortsätt</a>
       </div>
   </div>
 
