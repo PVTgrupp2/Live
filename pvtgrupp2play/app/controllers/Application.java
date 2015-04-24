@@ -84,8 +84,13 @@ public class Application extends Controller {
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
-        ObjectNode result = Beer.getAllTest();
-        return ok(result);
+        ObjectNode result = Beer.getAll();
+        
+        if(result == null){
+            return internalServerError("Oops");
+        }else{
+            return ok(result);
+        }
         
     }
     
