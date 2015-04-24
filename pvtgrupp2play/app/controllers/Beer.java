@@ -82,7 +82,7 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM beer WHERE idBeer=" + id;
+            String sql = "SELECT * FROM beer WHERE idBeer=" + 1;
             ResultSet rs = stmt.executeQuery(sql);	
             
             if(rs.next()){    
