@@ -13,8 +13,8 @@
 	$.getJSON('https://pvt-grupp2.herokuapp.com/beer/top', function(data) {
   var items = [];
 
-  $.each(data, function(name, id, score) {
-    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + id + '">' + "<h6>" + score + " " + name + "</h6>" + "</li>");
+  $.each(data, function(id, name) {
+    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + id + '">' + "<h6>" + name + "</h6>" + "</li>");
   });
 
   $('<ul/>', {
