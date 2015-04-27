@@ -57,7 +57,13 @@
                 
     		while(rs.next()){
     		    //beer name , id, totalscore
-    		    resultJson.put(rs.getString(1),rs.getString(2),rs.getString(3));
+    		    String name = rs.getString(1);
+    		    String id = rs.getString(2);
+    		    String totalscore = rs.getString(3);
+    		    
+    		    // id, beer name
+    		    resultJson.put(id,name);
+    		    resultJson.put(id,totalscore);
     		}
     		
         }catch(Exception e){
