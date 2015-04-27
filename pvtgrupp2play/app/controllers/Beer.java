@@ -61,10 +61,12 @@
     		    String id = rs.getString("Id");
     		    String totalscore = rs.getString("TotalScore");
     		    
-    		    // id, beer name
-    		    resultJson.put("id",id);
-    		    resultJson.put("name",name);
-    		    resultJson.put("totalscore",totalscore);
+    		    while(rs.next()){
+        		    // id, beer name
+        		    resultJson.put("id",id);
+        		    resultJson.put("name",name);
+        		    resultJson.put("totalscore",totalscore);
+    		    }
     		}
     		
         }catch(Exception e){
