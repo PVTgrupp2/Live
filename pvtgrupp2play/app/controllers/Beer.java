@@ -56,7 +56,8 @@
             ResultSet rs = stmt.executeQuery(sql);	
                 
     		while(rs.next()){
-    		    resultJson.put(rs.getString(1),rs.getString(2));
+    		    //beer name , id, totalscore
+    		    resultJson.put(rs.getString(1),rs.getString(2),rs.getString(3));
     		}
     		
         }catch(Exception e){
@@ -105,18 +106,6 @@
         
     }
     
-    public static ObjectNode getAllTest() {
-		ObjectNode resultJson = Json.newObject();
-		resultJson.put("1","Carlsberg");
-		resultJson.put("2","Falcon");
-		resultJson.put("3","Sofiero");
-		resultJson.put("4","Pripps blå");
-		
-		
-		return resultJson;
-        
-        
-        
-    }
+    
     
  }

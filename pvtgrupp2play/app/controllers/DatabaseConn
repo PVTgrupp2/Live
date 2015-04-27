@@ -1,9 +1,0 @@
-package controllers;
-
-class DatabaseConn{
-    public Connection getDatabaseConn(){
-        DriverManager.getConnection("jdbc:mysql://mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
-        
-    
-    }
-}
