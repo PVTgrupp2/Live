@@ -55,11 +55,12 @@
             String sql = "SELECT * FROM Toplist";
             ResultSet rs = stmt.executeQuery(sql);	
             //beer name , id, totalscore
-    		    while(rs.next()){
-        		    //resultJson.put("id",rs.getString("Id"));
-        		    resultJson.put("name",rs.getString("beerName"));
-        		   // resultJson.put("totalscore",rs.getString("TotalScore"));
-    		   }
+    		while(rs.next()){
+        		  resultJson.put("id",rs.getString("Id"));
+        		  resultJson.put("name",rs.getString("beerName"));
+        		  resultJson.put("totalscore",rs.getString("TotalScore"));
+        		  rs.next();
+    		  }
     		
     		
         }catch(Exception e){
