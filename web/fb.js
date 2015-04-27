@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#fblogin').click(function(){
-		var anv = $.fblogin({fbId: '392795464233014'});
+		var anv = $.fblogin({fbId: '799390323443595'});
 		
 		anv.done(function(data){
 			console.log(data);
