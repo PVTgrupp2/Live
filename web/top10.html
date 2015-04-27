@@ -10,11 +10,11 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
 	<script>
-	$.getJSON('https://pvt-grupp2.herokuapp.com/beer', function(data) {
+	$.getJSON('https://pvt-grupp2.herokuapp.com/beer/top', function(data) {
   var items = [];
 
   $.each(data, function(key, val) {
-    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/top' + key + '">' + "<h6>" + val + "</h6>" + "</li>");
+    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + key + '">' + "<h6>" + val + "</h6>" + "</li>");
   });
 
   $('<ul/>', {
