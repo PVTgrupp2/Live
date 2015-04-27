@@ -56,10 +56,7 @@
             ResultSet rs = stmt.executeQuery(sql);	
             //beer name , id, totalscore
     		while(rs.next()){
-        		  resultJson.put("id",rs.getString("Id"));
-        		  resultJson.put("name",rs.getString("beerName"));
-        		  resultJson.put("totalscore",rs.getString("TotalScore"));
-        		  rs.next();
+    		    resultJson.put(rs.getString("id"), rs.getString("beername"));
     		  }
     		
     		
