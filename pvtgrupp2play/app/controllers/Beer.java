@@ -62,8 +62,9 @@
     		    String totalscore = rs.getString("TotalScore");
     		    
     		    // id, beer name
-    		    resultJson.put(id,name);
-    		    resultJson.put(id,totalscore);
+    		    resultJson.put("id",id);
+    		    resultJson.put("name",name);
+    		    resultJson.put("totalscore",totalscore);
     		}
     		
         }catch(Exception e){
