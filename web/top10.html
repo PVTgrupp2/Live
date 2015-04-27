@@ -14,7 +14,7 @@
   var items = [];
 
   $.each(data, function(key, val) {
-    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + key + '">' + "<h6>" + key + "</h6>" + "</li>");
+    items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + key + '">' + "<h6>" + val + " " + key + "</h6>" + "</li>");
   });
 
   $('<ul/>', {
