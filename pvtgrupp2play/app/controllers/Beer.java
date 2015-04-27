@@ -54,20 +54,13 @@
             stmt = conn.createStatement();
             String sql = "SELECT * FROM Toplist";
             ResultSet rs = stmt.executeQuery(sql);	
-                
-    		while(rs.next()){
-    		    //beer name , id, totalscore
-    		    String name = rs.getString("beerName");
-    		    String id = rs.getString("Id");
-    		    String totalscore = rs.getString("TotalScore");
-    		    
+            //beer name , id, totalscore
     		    while(rs.next()){
-        		    // id, beer name
-        		    resultJson.put("id",id);
-        		    resultJson.put("name",name);
-        		    resultJson.put("totalscore",totalscore);
-    		    }
-    		}
+        		    resultJson.put("id",rs.getString("Id"));
+        		    resultJson.put("name",rs.getString("beerName"));
+        		    resultJson.put("totalscore",rs.getString("TotalScore"));
+    		   }
+    		
     		
         }catch(Exception e){
 		    resultJson.put("Error","Dbconn");
