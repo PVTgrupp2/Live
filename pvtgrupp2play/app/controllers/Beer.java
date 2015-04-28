@@ -1,6 +1,9 @@
  package controllers;
  
  import java.sql.*;
+ import java.util.ArrayList;
+ 
+ import views.html.*;
  
  import play.*;
  import play.mvc.*;
@@ -10,12 +13,14 @@
  import play.libs.Json;
  
  import com.fasterxml.jackson.databind.node.*;
- 
+
  
  class Beer extends Controller{
  
     public static Result getAll() {
         ObjectNode resultJson = Json.newObject();
+        
+        ArrayList<BeerItem> thelist = new ArrayList<>();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -27,21 +32,23 @@
             ResultSet rs = stmt.executeQuery(sql);	
                 
     		while(rs.next()){
-    		    resultJson.put(rs.getString(1),rs.getString(2));
+    		    //resultJson.put(rs.getString(1),rs.getString(2));
+    		    BeerItem i = new BeerItem();
+    		    i.id = rs.getString(1);
+    		    i.name = rs.getString(2);
+    		    thelist.add(i);
     		}
     		
-    		
-    		
         }catch(Exception e){
-		    resultJson.put("Error","Dbconn");
+		    //resultJson.put("Error","Dbconn");
         }
         
         //TODO more controlls?
-        if(resultJson == null){
+        if(thelist.isEmpty()){
            return internalServerError("Oops: the beers is on the table");
         
         }else{
-            return ok(resultJson);
+            return ok(list.render(thelist));
         }
     }
     

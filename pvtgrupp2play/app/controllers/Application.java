@@ -53,10 +53,8 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        ArrayList<String> thelist = new ArrayList<>();
-        thelist.add("item1");
-        thelist.add("item2");
-        return ok(list.render(thelist));
+        
+        return ok("list.render(thelist)");
     }
 
     public static Result hello(){
