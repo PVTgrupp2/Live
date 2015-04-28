@@ -10,7 +10,15 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
+	
 	<script>
+	$( document ).ready(function() {
+		$( "#beerbutton" ).click(function() {
+			$("#thelist").load("https://pvt-grupp2.herokuapp.com/helloWeb");
+		});
+	});
+	</script>
+	<!--<script>
 	$( document ).ready(function() {
 	$.getJSON('https://pvt-grupp2.herokuapp.com/beer/top', function(data) {
   	var beerToplist = [];
@@ -26,7 +34,7 @@
   	}).appendTo('div[data-role="content"]');
 	});
 });
-	</script>
+	</script>-->
 </head>
 <body>
 	<div data-role="page" data-theme="a">
@@ -35,14 +43,16 @@
 		</div>
 			<div data-role="navbar">
 		<ul>
-			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Öl</a></li>
+			<li><a href="?" id="beerbutton""class="ui-btn-active ui-state-persist" data-transition="none">Öl</a></li>
 			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Whisky</a></li>
 			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Allt</a></li>
 		</ul>
 		</div>
 		
 		<div data-role="content" data-theme="a">
-
+		<ol id="thelist" class="ui-listview" data-role="listview">
+		
+		</ol>
 		</div>
 
  <div data-role="footer" data-position="fixed" class="nav-iconmanager">
