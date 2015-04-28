@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="themes/style.css" />
   
   <!-- dessa två rader är de som refererar till temat -->
+  <link rel="stylesheet" href="themes/icon.css" />
   <link rel="stylesheet" href="themes/theme.min.css" />
   <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
   
@@ -160,13 +161,13 @@
       </div>
   </div>
 
- <div data-role="footer" data-position="fixed">
-    <div data-role="navbar">
+ <div data-role="footer" data-position="fixed" class="nav-iconmanager">
+    <div data-role="navbar" class="nav-iconmanager">
         <ul>
-        <li><a class='ui-btn' href='top10.html' data-transition='none'>Toplista</a></li>
-        <li><a class='ui-btn' href='map.html' data-transition='none'>Karta</a></li>
-        <li><a class='ui-btn' href='list.html' data-transition='none'>Sök</a></li>
-        <li><a class='ui-btn-active' href='mypage.html' data-transition='none'>Min Sida</a></li>
+        <li><a id="top10" href='top10.html' data-transition='none' data-icon="custom">Toplista</a></li>
+        <li><a id="map" href='map.html' data-transition='none' data-icon="custom">Karta</a></li>
+        <li><a id="search" href='list.html' data-transition='none' data-icon="custom">Sök</a></li>
+        <li><a id="mypage" href='mypage.html' data-transition='none' data-icon="custom">Min Sida</a></li>
         </ul>
       </div>
     </div>

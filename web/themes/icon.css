@@ -1,0 +1,7 @@
+.nav-iconmanager .ui-btn { padding-top: 35px !important; }
+.nav-iconmanager .ui-btn:after { width: 35px!important; height: 35px!important; margin-left: -20px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+#top10:after { background:  url("img/podium.png") 50% 50% no-repeat; background-size: 30px 30px; }
+#map:after { background:  url("img/map.png") 50% 50% no-repeat; background-size: 30px 30px;  }
+#search:after { background:  url("img/search.png") 50% 50% no-repeat;  background-size: 30px 30px; }
+#mypage:after { background:  url("img/profile.png") 50% 50% no-repeat;  background-size: 30px 30px; }
