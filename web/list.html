@@ -10,6 +10,11 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
+	<script>
+	$( document ).ready(function() {		
+		$("#thelist").load("https://pvt-grupp2.herokuapp.com/beer/all");
+	});
+	</script>
 </head>
 <body>
 	<div data-role="page" data-theme="a">
@@ -29,7 +34,8 @@
 			<form class="ui-filterable">
     <input id="inset-autocomplete-input" data-type="search" placeholder="Sök Dryck">
 		</form>
-		<ul data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-input="#inset-autocomplete-input">
+		<ul id="thelist" data-role="listview" data-inset="true" data-filter="true" data-filter-reveal="true" data-input="#inset-autocomplete-input">
+			<!-- nicklas test ajax
 		    <li><a href="#">Carlsberg hof</a></li>
 		    <li><a href="#">Carlsberg export</a></li>
 		    <li><a href="#">Campari</a></li>
@@ -51,7 +57,7 @@
 		    <li><a href="#">Sambucca</a></li>
 		    <li><a href="#">Tuborg</a></li>
 		    <li><a href="#">Wisby Bulldog</a></li>
-		    <li><a href="#">Wisby Pils</a></li>
+		    <li><a href="#">Wisby Pils</a></li>-->
 		</ul>
 		</div>
 
