@@ -23,6 +23,8 @@ import play.libs.Json;
 //import play.libs.Json.*;
 
 import com.fasterxml.jackson.databind.node.*;
+
+import java.util.ArrayList;
 //import org.codehaus.jackson.node.ObjectNode;
 //import org.codehaus.jackson.*;
 //import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -51,9 +53,10 @@ public class Application extends Controller {
     }
 
     public static Result helloWeb(){
-        ObjectNode result = Json.newObject();
-        result.put("content","Hello Web");
-        return ok(result);
+        ArrayList<String> thelist = new ArrayList<>();
+        thelist.add("item1");
+        thelist.add("item2");
+        return ok(list.render(thelist));
     }
 
     public static Result hello(){
