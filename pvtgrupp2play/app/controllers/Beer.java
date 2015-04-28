@@ -18,7 +18,7 @@
  class Beer extends Controller{
  
     public static Result getAll() {
-        ObjectNode resultJson = Json.newObject();
+        //ObjectNode resultJson = Json.newObject();
         
         ArrayList<BeerItem> thelist = new ArrayList<>();
         
@@ -34,8 +34,8 @@
     		while(rs.next()){
     		    //resultJson.put(rs.getString(1),rs.getString(2));
     		    BeerItem i = new BeerItem();
-    		    i.id = rs.getString(1);
-    		    i.name = rs.getString(2);
+    		    i.id = rs.getString("idBeer");
+    		    i.name = rs.getString("beerName");
     		    thelist.add(i);
     		}
     		
@@ -53,7 +53,8 @@
     }
     
     public static Result getToplist() {
-        ObjectNode resultJson = Json.newObject();
+        //ObjectNode resultJson = Json.newObject();
+        ArrayList<BeerItem> thelist = new ArrayList<>();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -63,21 +64,27 @@
             ResultSet rs = stmt.executeQuery(sql);	
             //beer name , id, totalscore
     		while(rs.next()){
-    		    resultJson.put(rs.getString("id"), rs.getString("beername"));
+    		    BeerItem i = new BeerItem();
+    		    i.id = rs.getString("id");
+    		    i.name = rs.getString("beername");
+    		    if(rs.getString("TotalScore").length() > 0){
+    		        i.score = rs.getString("TotalScore");
+    		        thelist.add(i);
+    		    }
     		  }
     		
     		
         }catch(Exception e){
-		    resultJson.put("Error","Dbconn");
+		   // resultJson.put("Error","Dbconn");
         }
         
         
         //TODO more controlls?
-        if(resultJson == null){
+        if(thelist.isEmpty()){
             return internalServerError("Oops: the best beers is on the table");
             //return status(500, "Oops: the best beers is on the table");
         }else{
-            return ok(resultJson);
+            return ok(list.render(thelist));
         }
     }
     
