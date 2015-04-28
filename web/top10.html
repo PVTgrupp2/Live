@@ -10,18 +10,20 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
 	<script>
+	$( document ).ready(function() {
 	$.getJSON('https://pvt-grupp2.herokuapp.com/beer/top', function(data) {
-  var items = [];
+  	var items = [];
 
-  $.each(data, function(id, name) {
+  	$.each(data, function(id, name) {
     items.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + id + '">' + "<h6>" + name + "</h6>" + "</li>");
-  });
+  	});
 
-  $('<ul/>', {
-    'data-role': 'listview',
-	'class': 'ui-listview',
-    html: items.join('')
-  }).appendTo('div[data-role="content"]');
+ 	$('<ul/>', {
+    	'data-role': 'listview',
+		'class': 'ui-listview',
+    	html: items.join('')
+  		}).appendTo('div[data-role="content"]');
+	});
 });
 	</script>
 </head>
