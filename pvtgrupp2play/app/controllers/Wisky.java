@@ -32,7 +32,9 @@
             ResultSet rs = stmt.executeQuery(sql);	
             
             BeerItem j = new BeerItem();
+    		j.id = "0";
     		j.name = "Egentligen Wisky listan";
+    	    thelist.add(j);
                 
     		while(rs.next()){
     		    //resultJson.put(rs.getString(1),rs.getString(2));
