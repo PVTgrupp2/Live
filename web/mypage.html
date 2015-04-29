@@ -19,7 +19,7 @@
   <script type="text/javascript" src="includes.js"></script>
   <script type="text/javascript" src="fb.js"></script>
 </head>
-<body onload="checkLogin();">
+<body>
 <script>
   // Load Facebook SDK
      // This is called with the results from from FB.getLoginStatus().
@@ -106,6 +106,10 @@
   });
   
   }
+
+  $('div:jqmData(role="page")').live('pagebeforeshow',function(){
+    checkLogin();
+  });
 </script>
 
 <!--
