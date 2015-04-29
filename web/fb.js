@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('#fblogin').click(function(){
+		location.reload();
 		var anv = $.fblogin({fbId: '799390323443595'});
 		
 		anv.done(function(data){
@@ -9,6 +10,7 @@ $(document).ready(function(){
 	});
 	
 	$('#fblogout').click(function(){
+		location.reload();
 		FB.logout(function(response){
 			window.location.href = "index.html";
 		});
