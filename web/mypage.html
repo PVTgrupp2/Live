@@ -16,8 +16,8 @@
   <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
   <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script type="text/javascript" src="jquery.fblogin.js"></script>
-  <script src="includes.js"></script>
-  <script src="fb.js"></script>
+  <script type="text/javascript" src="includes.js"></script>
+  <script type="text/javascript" src="fb.js"></script>
 </head>
 <body onload="checkLogin();">
 <script>
@@ -194,11 +194,24 @@
 
 <div data-role="page" id="mypageoffline">
   <div data-role="header" data-position="inline">
-  <h1>Min Sida</h1>
-</div>
-<p> Mina Sidor i utloggad form <br>
-    Vet inte riktigt vad som ska stå här ärligt talat.....
-</p>
+    <h1>Min Sida</h1>
+  </div>
+
+  <p> Mina Sidor i utloggad form <br>
+  Vet inte riktigt vad som ska stå här ärligt talat.....
+  </p> 
+
+    <div data-role="footer" data-position="fixed" class="nav-iconmanager">
+      <div data-role="navbar" class="nav-iconmanager">
+        <ul>
+        <li><a id="top10" href='top10.html' data-transition='none' data-icon="custom">Toplista</a></li>
+        <li><a id="map" href='map.html' data-transition='none' data-icon="custom">Karta</a></li>
+        <li><a id="search" href='list.html' data-transition='none' data-icon="custom">Sök</a></li>
+        <li><a id="mypage" href='mypage.html' data-transition='none' data-icon="custom">Min Sida</a></li>
+        </ul>
+      </div>
+    </div>
+
 </div>
 
 
