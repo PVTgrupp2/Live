@@ -102,6 +102,25 @@ public class Application extends Controller {
         }
     }
     
+    public static Result wisky(String reqType, Long id){
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+        
+        if(reqType.equals("Top")){
+            //return Wisky.getToplist();
+            return notFound();
+        }else if(reqType.equals("All")){
+            return Wisky.getAll();
+        }else if(reqType.equals("Id")){
+           // return Wisky.beer(id);
+           return notFound();
+        }else{
+            return notFound();
+        }
+    }
+    
     
     //Allow cross orgin
     public static Result preflight(String all) {
