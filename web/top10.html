@@ -1,41 +1,24 @@
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Topplista</title>
 	<link rel="stylesheet" href="themes/icon.css" />
 	<link rel="stylesheet" href="themes/theme.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.1.3.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="includes.js"></script>
-	
 	<script>
-	$( document ).ready(function() {
-		$( "#beerbutton" ).click(function() {
-			$("#thelist").load("https://pvt-grupp2.herokuapp.com/beer/top");
-			$("#thelist").enhanceWithin();
-		});
-	});
+	$(document).ready(function() { 
+		$('#thelist').load('https://pvt-grupp2.herokuapp.com/beer/top', function(){			
+			$('#thelist').listview().listview('refresh');
+		});		
+	});	
 	</script>
-	<!--<script>
-	$( document ).ready(function() {
-	$.getJSON('https://pvt-grupp2.herokuapp.com/beer/top', function(data) {
-  	var beerToplist = [];
 
-  	$.each(data, function(id, name) {
-    beerToplist.push("<li>" + '<a class="ui-btn ui-btn-icon-right ui-icon-carat-r" href="https://pvt-grupp2.herokuapp.com/beer/' + id + '">' + "<h6>" + name + "</h6>" + "</li>");
-  	});
-
- 	$('<ol/>', {
-    	'data-role': 'listview',
-		'class': 'ui-listview',
-    	html: beerToplist.join('')
-  	}).appendTo('div[data-role="content"]');
-	});
-});
-	</script>-->
 </head>
 <body>
 	<div data-role="page" data-theme="a">
@@ -44,16 +27,16 @@
 		</div>
 			<div data-role="navbar">
 		<ul>
-			<li><a href="?" id="beerbutton""class="ui-btn-active ui-state-persist" data-transition="none">Öl</a></li>
+			<li><a href="?" id="beerbutton" class="ui-btn-active ui-state-persist" data-transition="none">Öl</a></li>
 			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Whisky</a></li>
 			<li><a href="?" class="ui-btn-active ui-state-persist" data-transition="none">Allt</a></li>
 		</ul>
 		</div>
 		
 		<div data-role="content" data-theme="a">
-		<ol id="thelist" class="ui-listview" data-role="listview">
+		<ul id="thelist" class="ul-listview" data-role="listview">
 		
-		</ol>
+		</ul>
 		</div>
 
  <div data-role="footer" data-position="fixed" class="nav-iconmanager">
