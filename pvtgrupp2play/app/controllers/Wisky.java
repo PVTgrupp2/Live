@@ -56,6 +56,14 @@
             return ok(list.render(thelist));
         }
     }
+    
+    public static Result beer(Long id){
+        return internalServerError("Oops: not implemented" + id);
+    }
+    
+    public static Result getToplist() {
+         return getAll();
+    }
      
      
  }
