@@ -109,13 +109,11 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
         if(reqType.equals("Top")){
-            //return Wisky.getToplist();
-            return notFound();
+            return Wisky.getToplist();
         }else if(reqType.equals("All")){
             return Wisky.getAll();
         }else if(reqType.equals("Id")){
-           // return Wisky.beer(id);
-           return notFound();
+           return Wisky.beer(id);
         }else{
             return notFound();
         }
