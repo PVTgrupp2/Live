@@ -24,6 +24,7 @@ GET    /wisky/all            controllers.Application.wisky(reqType ?= "All", id:
 GET    /wisky/top            controllers.Application.wisky(reqType ?= "Top", id: Long = 0)
 GET    /wisky/:id            controllers.Application.wisky(reqType ?= "Id", id: Long)
 
+GET    /all            controllers.Application.all(reqType ?= "All", id: Long = 0)
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)

@@ -85,6 +85,20 @@ public class Application extends Controller {
         }
     }
     
+    public static Result all(String reqType, Long id){
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+        
+        if(reqType.equals("All")){
+            return All.getAll();
+        }else{
+            return notFound();
+        }
+        
+    }
+    
     public static Result beer(String reqType, Long id){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
