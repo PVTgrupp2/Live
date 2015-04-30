@@ -15,9 +15,15 @@
 	<script src="includes.js"></script>
 	<script>
 	$(document).ready(function() { 
-		$('#thelist').load('https://pvt-grupp2.herokuapp.com/beer/top', function(){			
+		$('#beerlist').load('https://pvt-grupp2.herokuapp.com/beer/top', function(){			
+			$('#beerlist').listview().listview('refresh');
+		});
+		$('#wiskylist').load('https://pvt-grupp2.herokuapp.com/wisky/top', function(){			
+			$('#wiskylist').listview().listview('refresh');
+		});
+		$('#thelist').load('https://pvt-grupp2.herokuapp.com/all', function(){			
 			$('#thelist').listview().listview('refresh');
-		});		
+		});
 	});	
 	</script>
 
@@ -75,7 +81,7 @@
 		</div>
 		
 		<div data-role="content" data-theme="a">
-		<ul id="thelist" class="ul-listview" data-role="listview">
+		<ul id="beerlist" class="ul-listview" data-role="listview">
 		
 		</ul>
 		</div>
@@ -113,7 +119,7 @@
 		</div>
 		
 		<div data-role="content" data-theme="a">
-		<ul id="thelist" class="ul-listview" data-role="listview">
+		<ul id="wiskylist" class="ul-listview" data-role="listview">
 		
 		</ul>
 		</div>
