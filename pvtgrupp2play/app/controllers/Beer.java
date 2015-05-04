@@ -75,7 +75,7 @@
     		
     		
         }catch(Exception e){
-		   // resultJson.put("Error","Dbconn");
+		   i.name = e.toString();
         }
         
         
@@ -99,15 +99,12 @@
             stmt = conn.createStatement();
             String sql = "SELECT * FROM beer WHERE idBeer=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
-            if(rs.next() != false){
+            while(rs.next()){
             	i.id = rs.getString("idBeer");
             	i.name = rs.getString("beerName");
-            }else{
-                i.id = "idBeer";
-            	i.name = "beerName";
             }
         }catch(Exception e){
-		    i = null;
+		    i.name = e.toString();
         }
         
         //TODO more controlls?
