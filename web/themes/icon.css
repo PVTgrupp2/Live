@@ -5,3 +5,12 @@
 #map:after { background:  url("img/map.png") 50% 50% no-repeat; background-size: 30px 30px;  }
 #search:after { background:  url("img/search.png") 50% 50% no-repeat;  background-size: 30px 30px; }
 #mypage:after { background:  url("img/profile.png") 50% 50% no-repeat;  background-size: 30px 30px; }
+
+
+/*
+De nedan är de aktiva därför t.ex. map"A" osv.
+*/
+#top10a:after { background:  url("img/podiumw.png") 50% 50% no-repeat; background-size: 30px 30px; }
+#mapa:after { background:  url("img/mapw.png") 50% 50% no-repeat; background-size: 30px 30px;  }
+#searcha:after { background:  url("img/searchw.png") 50% 50% no-repeat;  background-size: 30px 30px; }
+#mypagea:after { background:  url("img/profilew.png") 50% 50% no-repeat;  background-size: 30px 30px; }
