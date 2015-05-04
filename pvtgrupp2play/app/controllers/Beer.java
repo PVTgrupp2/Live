@@ -75,7 +75,7 @@
     		
     		
         }catch(Exception e){
-		   i.name = e.toString();
+		   //i.name = e.toString();
         }
         
         
