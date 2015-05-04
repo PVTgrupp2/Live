@@ -30,7 +30,7 @@
             stmt = conn.createStatement();
             String sql = "SELECT * FROM beer";
             ResultSet rs = stmt.executeQuery(sql);	
-                
+            
     		while(rs.next()){
     		    //resultJson.put(rs.getString(1),rs.getString(2));
     		    BeerItem i = new BeerItem();
@@ -89,7 +89,7 @@
     }
     
     public static Result beer(Long id){
-        ObjectNode resultJson = Json.newObject();
+        BeerItem i = new BeerItem();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -99,23 +99,21 @@
             stmt = conn.createStatement();
             String sql = "SELECT * FROM beer WHERE idBeer=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
-
-        		while(rs.next()){
-        		    resultJson.put(rs.getString(1),rs.getString(2));
-        		}
-           
+            
+        	i.id = rs.getString("idBeer");
+        	i.name = rs.getString("beerName");
     		
         }catch(Exception e){
-		    resultJson = null;
+		    i = null;
         }
         
         //TODO more controlls?
-        if(resultJson == null){
+        if(i == null){
             return internalServerError("Oops: the beer is on the table");
-        }else if(resultJson.size() < 1){
+        }else if(false){ //FIX later
             return notFound("Out looking for nonexistant beer I see");
         }else{
-            return ok(resultJson);
+            return ok(drink.render(i));
         }
         
     }
