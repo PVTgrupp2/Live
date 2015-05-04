@@ -99,10 +99,13 @@
             stmt = conn.createStatement();
             String sql = "SELECT * FROM beer WHERE idBeer=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
-            
-        	i.id = rs.getString("idBeer");
-        	i.name = rs.getString("beerName");
-    		
+            if(rs.next() != false){
+            	i.id = rs.getString("idBeer");
+            	i.name = rs.getString("beerName");
+            }else{
+                i.id = "idBeer";
+            	i.name = "beerName";
+            }
         }catch(Exception e){
 		    i = null;
         }
