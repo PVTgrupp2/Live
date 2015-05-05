@@ -1,5 +1,9 @@
 @(thelist: List[BeerItem])
 
 @for(item <- thelist) {
-  <li><a id="beeritem" href="#@item.id">@item.name</a></li>
+  <li data-role="collapsible" data-iconpos="right" data-inset="false">
+    <h2>@item.name</h2>
+    Score: (insert score)
+      
+  </li>
 }
