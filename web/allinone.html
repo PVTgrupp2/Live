@@ -17,6 +17,14 @@
 
 	<script type="text/javascript">
 	$(document).ready(function(){
+		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+			$('#searchlistdrink').listview().listview('refresh');
+		});
+		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/all', function(){			
+			$('#searchlistuts').listview().listview('refresh');
+			$('#searchlistuts').hide();
+		});
+
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');			
@@ -58,6 +66,15 @@
 			$('#thetoplistwisky').show();
 			$('#thetoplistall').hide();
 			$('#thetoplistbeer').hide();
+		});
+
+		$('#searchdrink').click(function(){
+			$('#searchlistuts').hide();
+			$('#searchlistdrink').show();
+		});
+		$('#searchuts').click(function(){
+			$('#searchlistuts').show();
+			$('#searchlistdrink').hide();
 		});
 
 
@@ -167,8 +184,22 @@
 		<h1>Sök</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Sök</p>
+	<div data-role="content" data-theme="b">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" id="searchdrink" class="ui-btn" data-transition="none">Dryck</a></li>
+				<li><a href="#" id="searchuts" class="ui-btn" data-transition="none">Utställare</a></li>				
+			</ul>
+		</div>
+		<div data-role="content">
+			<form class="ui-filterable">
+	    		<input id="inset-autocomplete-input" data-type="search" placeholder="Sök Dryck" />
+			</form>
+			<ul id="searchlistuts" class="ul-listview" data-role="listview" data-input="#inset-autocomplete-input" data-inset="true" data-filter="true" data-filter-reveal="true">			
+			</ul>
+			<ul id="searchlistdrink" class="ul-listview" data-role="listview" data-input="#inset-autocomplete-input" data-inset="true" data-filter="true" data-filter-reveal="true">			
+			</ul>
+		</div>
 	</div><!-- /content -->
 
 
