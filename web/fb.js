@@ -11,7 +11,9 @@ $(document).ready(function(){
 	
 	$('#fblogout').click(function(){
 		FB.logout(function(response){
-			window.location.href = "index.html";
+			// window.location.href = "index.html";
+            $('#login').show();
+            $('#minsida').hide();
 		});
 	});
 
