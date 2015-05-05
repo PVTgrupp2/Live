@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Start</title>
+	<link rel="stylesheet" href="themes/icon.css" />
+	<link rel="stylesheet" href="themes/test2.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+					$('#hallall').click(function(){											
+						$("#mapimg").removeAttr("src").attr("src", "themes/img/hall0.png");
+					});
+					$('#halla').click(function(){												
+  						$("#mapimg").removeAttr("src").attr("src", "themes/img/hall1.png");
+					});
+					$('#hallb').click(function(){												
+  						$("#mapimg").removeAttr("src").attr("src", "themes/img/hall2.png");
+					});
+					$('#hallc').click(function(){												
+  						$("#mapimg").removeAttr("src").attr("src", "themes/img/hall3.jpg");
+					});
+	});
+	</script>
+</head>
+
+<body>
+<!-- PAGE 1 -->
+	<div data-role="page" id="toplist">
+		<div data-role="header">
+			<h1>Toplistan</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">	
+			<p>Toplistan</p>
+		</div><!-- /content -->
+
+
+ 		<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
+    		<div data-role="navbar" class="nav-iconmanager">
+		        <ul>
+		        <li><a id="top10" class="ui-btn-active" href='#toplist' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mapa" href='#map' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="search" href='#search' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mypage" href='#mypage' data-transition='none' data-icon="custom"></a></li>
+		        </ul>
+      		</div>
+    	</div><!-- /footer -->
+	</div>
+<!-- PAGE 1 END-->
+
+
+<!-- PAGE 2 -->
+<div data-role="page" id="map">
+	<div data-role="header">
+		<h1>Karta</h1>
+	</div><!-- /header -->
+
+	<div data-role="content"data-theme="b">		
+			<div>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#" id="hallall" class="ui-btn-active" data-transition="none">Karta</a></li>
+						<li><a href="#" id="halla" class="ui-btn" data-transition="none">Hall A</a></li>
+						<li><a href="#" id="hallb" class="ui-btn" data-transition="none">Hall B</a></li>
+						<li><a href="#" id="hallc" class="ui-btn" data-transition="none">Hall C</a></li>
+					</ul>
+				</div>				
+				<img id="mapimg" src="themes/img/hall0.png" style= "width:90%">
+			</div>
+	</div><!-- /content -->
+
+ 	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
+    	<div data-role="navbar" class="nav-iconmanager">
+		    <ul>
+			    <li><a id="top10" href='#toplist' data-transition='none' data-icon="custom"></a></li>
+			    <li><a id="mapa" class="ui-btn-active" href='#map' data-transition='none' data-icon="custom"></a></li>
+			    <li><a id="search" href='#search' data-transition='none' data-icon="custom"></a></li>
+			    <li><a id="mypage" href='#mypage' data-transition='none' data-icon="custom"></a></li>
+		    </ul>
+      	</div>
+    </div><!-- /footer -->
+</div>
+
+<!-- PAGE 2 END-->
+
+<!-- PAGE 3 -->
+<div data-role="page" id="search">
+		<div data-role="header">
+			<h1>Sök</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">	
+			<p>Sök</p>
+		</div><!-- /content -->
+
+
+ 		<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
+    		<div data-role="navbar" class="nav-iconmanager">
+		        <ul>
+		        <li><a id="top10" href='#toplist' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mapa" href='#map' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="search" href='#search' class="ui-btn-active" data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mypage" href='#mypage' data-transition='none' data-icon="custom"></a></li>
+		        </ul>
+      		</div>
+    	</div><!-- /footer -->
+	</div>
+<!-- PAGE 3 END-->
+
+
+<!-- PAGE 4 -->
+<div data-role="page" id="mypage">
+		<div data-role="header">
+			<h1>Min sida</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">	
+			<p>Min sida</p>
+		</div><!-- /content -->
+
+
+ 		<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
+    		<div data-role="navbar" class="nav-iconmanager">
+		        <ul>
+		        <li><a id="top10" href='#toplist' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mapa" href='#map' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="search" href='#search' data-transition='none' data-icon="custom"></a></li>
+		        <li><a id="mypage" href='#mypage' class="ui-btn-active" data-transition='none' data-icon="custom"></a></li>
+		        </ul>
+      		</div>
+    	</div><!-- /footer -->
+	</div>
+<!-- PAGE 4 END-->
+
+</body>
+</html>
