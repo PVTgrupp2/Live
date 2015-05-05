@@ -17,7 +17,21 @@
 
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$('#hallall').click(function(){											
+
+		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+			$('#thetoplistbeer').listview().listview('refresh');			
+		});
+		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/top', function(){			
+			$('#thetoplistwisky').listview().listview('refresh');
+			$('#thetoplistwisky').hide();
+		});
+		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){			
+			$('#thetoplistall').listview().listview('refresh');
+			$('#thetoplistall').hide();
+		});
+
+
+		$('#hallall').click(function(){			
 			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall0.png");
 		});
 		$('#halla').click(function(){												
@@ -29,6 +43,24 @@
 		$('#hallc').click(function(){												
   			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall3.jpg");
 		});
+
+		$('#topAlla').click(function(){
+			$('#thetoplistwisky').hide();
+			$('#thetoplistall').show();
+			$('#thetoplistbeer').hide();
+		});
+		$('#topÖl').click(function(){
+			$('#thetoplistwisky').hide();
+			$('#thetoplistall').hide();
+			$('#thetoplistbeer').show();
+		});
+		$('#topWhisky').click(function(){
+			$('#thetoplistwisky').show();
+			$('#thetoplistall').hide();
+			$('#thetoplistbeer').hide();
+		});
+
+
 	});
 
 
@@ -60,8 +92,24 @@
 		<h1>Toplistan</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-		<p>Toplistan</p>
+	<div data-role="content" data-theme="b">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" id="topAlla" class="ui-btn" data-transition="none">Alla</a></li>
+				<li><a href="#" id="topÖl" class="ui-btn" data-transition="none">Öl</a></li>
+				<li><a href="#" id="topWhisky" class="ui-btn" data-transition="none">Whisky</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+		<ul id="thetoplistall" class="ul-listview" data-role="listview">			
+		</ul>
+
+		<ul id="thetoplistbeer" class="ul-listview" data-role="listview">		
+		</ul>
+
+		<ul id="thetoplistwisky" class="ul-listview" data-role="listview">		
+		</ul>
+		</div>
 	</div><!-- /content -->
 
 
