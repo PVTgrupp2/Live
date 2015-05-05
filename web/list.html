@@ -11,10 +11,11 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	
 	<script>
-	$(document).ready(function() {		
+	$(document).ready(function() {
 		$('#thelist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thelist').listview().listview('refresh');
 		});
+		$('body').trigger('pagecreate');
 	});
 	</script>
 

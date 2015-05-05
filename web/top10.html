@@ -22,6 +22,8 @@
 		$('#thelist').load('https://pvt-grupp2.herokuapp.com/all', function(){			
 			$('#thelist').listview().listview('refresh');
 		});
+
+		$('body').trigger('pagecreate');
 	});	
 	</script>
 
