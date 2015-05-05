@@ -13,6 +13,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+	<script type="text/javascript" src="fb.js"></script>
 
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -29,6 +30,26 @@
   			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall3.jpg");
 		});
 	});
+
+
+	//Ladda Facebook API
+
+	window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '799390323443595',		// 392795464233014
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+
 	</script>
 </head>
 
@@ -125,6 +146,7 @@
 
 	<div data-role="content">	
 		<p>Min sida</p>
+		<a href="#" id="fblogin"><img src="themes/img/fblogin.png"></a>
 	</div><!-- /content -->
 
 
