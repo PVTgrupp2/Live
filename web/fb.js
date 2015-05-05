@@ -4,7 +4,7 @@ $(document).ready(function(){
 		
 		anv.done(function(data){
 			console.log(data);
-			window.location.href = "#mypage";
+			window.location.href = "#mypagea";
 		});
 	});
 	
