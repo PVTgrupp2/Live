@@ -1,9 +1,9 @@
 @(thelist: List[BeerItem])
 
 @for(item <- thelist) {
-  <li data-role="collapsible" data-iconpos="right" data-inset="false">
+  <li data-role="collapsible">
     <h2>@item.name</h2>
-    Score: (insert score)
+    <p>Score: (insert score)</p>
       
   </li>
 }
