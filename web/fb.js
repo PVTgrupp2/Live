@@ -14,6 +14,11 @@ $(document).ready(function(){
 		});
 	});
 
+    
+
+});
+
+
     function checkLogin(){
         console.log("checkLogin");
         FB.getLoginStatus(function(response) {
@@ -41,12 +46,7 @@ $(document).ready(function(){
             $('#minsida').hide();
           }
         });
-}
-    
-});
-
-
-
+    }
 
 
 //------------------------------//
