@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 
 function checkLogin(){
+    console.log("checkLogin");
 	FB.getLoginStatus(function(response) {
 	  if (response.status === 'connected') {
 	    // the user is logged in and has authenticated your
