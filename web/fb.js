@@ -26,14 +26,14 @@ function checkLogin(){
 	    // and signed request each expire
 	    var uid = response.authResponse.userID;
 	    var accessToken = response.authResponse.accessToken;
-	    window.location.href="#mypage";
+	    console.log("Inloggad");
 	  } else if (response.status === 'not_authorized') {
 	    // the user is logged in to Facebook, 
 	    // but has not authenticated your app
-	    window.location.href="#login";
+	    console.log("Offline");
 	  } else {
 	    // the user isn't logged in to Facebook.
-	    window.location.href="#login";
+	    console.log("Offline");
 	  }
 	});
 }
