@@ -1,5 +1,5 @@
 @(thelist: List[Produkt])
 
 @for(item <- thelist) {
-  <li><a href="#" id="@item.id" class="produkt" data-score="@item.betyg"><h2>@item.namn</h2><p>@item.land</p></a></li>
+  <li class="produkt"><a href="#" id="@item.id" class="produktlink" data-score="@item.betyg"><h2>@item.namn</h2><p>@item.land</p></a></li>
 }
