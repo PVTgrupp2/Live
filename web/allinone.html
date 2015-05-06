@@ -35,8 +35,8 @@
   			score: function() {
     			return $(this).attr('data-score');
 			  }
+			number: 5
 			});
-			$('.produkt').raty({ number: 5 });
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
 			$('#thetoplistwisky').listview().listview('refresh');
