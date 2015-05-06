@@ -33,7 +33,13 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
+    		    String bet = rs.getString("Medelbetyg");
+    		    if(bet.length == 0){
+    		       p.betyg = "0";
+    		    }else{
+    		      p.betyg = bet;  
+    		    }
+    		    
     		    thelist.add(p);
     		}
     		
