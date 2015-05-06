@@ -34,7 +34,7 @@
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		    String bet = rs.getString("Medelbetyg");
-    		    if(bet.length == 0){
+    		    if(bet.length() == 0){
     		       p.betyg = "0";
     		    }else{
     		      p.betyg = bet;  
