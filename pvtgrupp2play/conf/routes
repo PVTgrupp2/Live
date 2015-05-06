@@ -16,6 +16,8 @@ POST    /hello controllers.Application.hello()
 GET	    /fbauth controllers.Application.fbauth()
 POST    /fbauth controllers.Application.fbauth()
 
+POST    /rate controllers.RateController.rate()
+
 GET    /beer/all            controllers.Application.beer(reqType ?= "All", id: Long = 0)
 GET    /beer/top            controllers.Application.beer(reqType ?= "Top", id: Long = 0)
 GET    /beer/:id            controllers.Application.beer(reqType ?= "Id", id: Long)

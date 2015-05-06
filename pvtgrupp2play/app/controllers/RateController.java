@@ -17,8 +17,8 @@
  import com.fasterxml.jackson.databind.node.*;
 
  
- class RateController extends Controller{
-     public static Result hello(){
+ public class RateController extends Controller{
+     public static Result rate(){
         com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
             return badRequest("Expecting Json data");
