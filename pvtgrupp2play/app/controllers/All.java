@@ -16,6 +16,7 @@
 
  
  class All extends Controller{
+     /**
      public static Result getAll() {
         
         
@@ -55,5 +56,5 @@
             return ok(list.render(thelist));
         }
     }
-     
+     **/
  }

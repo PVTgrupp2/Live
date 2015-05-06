@@ -16,11 +16,11 @@
 
  
  class Beer extends Controller{
- 
+ /**
     public static Result getAll() {
         //ObjectNode resultJson = Json.newObject();
         
-        ArrayList<BeerItem> thelist = new ArrayList<>();
+        ArrayList<Produkt> thelist = new ArrayList<>();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -33,9 +33,9 @@
             
     		while(rs.next()){
     		    //resultJson.put(rs.getString(1),rs.getString(2));
-    		    BeerItem i = new BeerItem();
+    		    Produkt i = new BeerItem();
     		    i.id = rs.getString("idBeer");
-    		    i.name = rs.getString("beerName");
+    		    i.namn = rs.getString("beerName");
     		    thelist.add(i);
     		}
     		
@@ -54,7 +54,7 @@
     
     public static Result getToplist() {
         //ObjectNode resultJson = Json.newObject();
-        ArrayList<BeerItem> thelist = new ArrayList<>();
+        ArrayList<Produkt> thelist = new ArrayList<>();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -64,7 +64,7 @@
             ResultSet rs = stmt.executeQuery(sql);	
             //beer name , id, totalscore
     		while(rs.next()){
-    		    BeerItem i = new BeerItem();
+    		    Produkt i = new BeerItem();
     		    i.id = rs.getString("id");
     		    i.name = rs.getString("beername");
     		    if(rs.getString("TotalScore").length() > 0){
@@ -89,7 +89,7 @@
     }
     
     public static Result beer(Long id){
-        BeerItem i = new BeerItem();
+        Produkt i = new BeerItem();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -119,5 +119,5 @@
     }
     
     
-    
+    **/
  }

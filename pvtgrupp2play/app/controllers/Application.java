@@ -92,7 +92,7 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
         if(reqType.equals("All")){
-            return All.getAll();
+            return ProduktController.getAll();
         }else{
             return notFound();
         }
@@ -106,11 +106,12 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
         if(reqType.equals("Top")){
-            return Beer.getToplist();
+            //return Beer.getToplist();
+            return notFound();
         }else if(reqType.equals("All")){
-            return Beer.getAll();
+            return ProduktController.getAllBeer();
         }else if(reqType.equals("Id")){
-            return Beer.beer(id);
+            return ProduktController.get(id);
         }else{
             return notFound();
         }
@@ -123,11 +124,12 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
         if(reqType.equals("Top")){
-            return Wisky.getToplist();
+            //return Wisky.getToplist();
+            return notFound();
         }else if(reqType.equals("All")){
-            return Wisky.getAll();
+            return ProduktController.getAllWisky();
         }else if(reqType.equals("Id")){
-           return Wisky.beer(id);
+           return ProduktController.get(id);
         }else{
             return notFound();
         }

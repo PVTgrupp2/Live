@@ -16,11 +16,11 @@
 
  
  class Wisky extends Controller{
-     
+     /**
       public static Result getAll() {
         //ObjectNode resultJson = Json.newObject();
         
-        ArrayList<BeerItem> thelist = new ArrayList<>();
+        ArrayList<Produkt> thelist = new ArrayList<>();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -31,14 +31,14 @@
             String sql = "SELECT * FROM beer";
             ResultSet rs = stmt.executeQuery(sql);	
             
-            BeerItem j = new BeerItem();
+            Produkt j = new BeerItem();
     		j.id = "0";
     		j.name = "Egentligen Wisky listan";
     	    thelist.add(j);
                 
     		while(rs.next()){
     		    //resultJson.put(rs.getString(1),rs.getString(2));
-    		    BeerItem i = new BeerItem();
+    		    Produkt i = new BeerItem();
     		    i.id = rs.getString("idBeer");
     		    i.name = rs.getString("beerName");
     		    thelist.add(i);
@@ -65,5 +65,5 @@
          return getAll();
     }
      
-     
+     **/
  }
