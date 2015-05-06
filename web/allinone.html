@@ -89,6 +89,33 @@
 			checkLogin();
 		});
 
+		$('#send').click(function(){
+			 var data = {'id':'9999','data':'dog'};
+			 $.ajax({
+			   url: url,
+			   type: 'POST',
+			   contentType:'application/json',
+			   data: JSON.stringify(data),
+			   dataType:'json',
+			   success: function(data){
+			     //On ajax success do this
+			     alert(data);
+			      },
+			   error: function(xhr, ajaxOptions, thrownError) {
+			      //On error do this
+			        $.mobile.loading('hide')
+			        if (xhr.status == 200) {
+
+			            alert(ajaxOptions);
+			        }
+			        else {
+			            alert(xhr.status);
+			            alert(thrownError);
+			        }
+			    }
+			 });
+		});
+
 		
 
 	});
@@ -246,6 +273,8 @@
 	<div data-role="content" id="minsida">	
 		<p>Inloggad på Min sida</p>
 		<p><a href="#" id="fblogout">Logga ut</a></p>
+
+		<button id="test">Test</button>
 	</div><!-- /content -->
 
 
