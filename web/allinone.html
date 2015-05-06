@@ -29,7 +29,14 @@
 		*/
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#thetoplistbeer').listview().listview('refresh');			
+			$('#thetoplistbeer').listview().listview('refresh');	
+			
+			$('.produkt').raty({
+  			score: function() {
+    			return $(this).attr('data-score');
+			  }
+			});
+			
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
 			$('#thetoplistwisky').listview().listview('refresh');
@@ -84,7 +91,7 @@
 			checkLogin();
 		});
 
-		$('.produkt').raty();
+		
 
 	});
 
