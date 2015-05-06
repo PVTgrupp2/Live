@@ -32,7 +32,7 @@
                     Connection conn = DatabaseConn.getConn();
     		        Statement stmt = null;
                     stmt = conn.createStatement();
-                    String sql = "INSERT INTO `nian8516`.`test` (`idtest`, `testcol`) VALUES"+ "('"+ id +"', '" + data + "')";
+                    String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES"+ "("+ id +", " + data + ")";
                     ResultSet rs = stmt.executeQuery(sql);	
                 }catch(Exception e){
                     return internalServerError("Oops: the drinks is on the table" + e.toString());

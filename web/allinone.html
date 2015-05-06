@@ -89,11 +89,11 @@
 			checkLogin();
 		});
 
-		$('#send').click(function(){
+		$('#test').click(function(){
 			console.log('test post');
 			 var data = {'id':'9999','data':'dog'};
 			 $.ajax({
-			   url: url,
+			   url: 'https://pvt-grupp2.herokuapp.com/rate',
 			   type: 'POST',
 			   contentType:'application/json',
 			   data: JSON.stringify(data),
@@ -273,10 +273,9 @@
 
 	<div data-role="content" id="minsida">	
 		<p>Inloggad på Min sida</p>
-		<p><a href="#" id="fblogout">Logga ut</a></p>
-
-		<button id="test">Test</button>
+		<p><a href="#" id="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
+	<button id="test">Test</button>
 
 
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
