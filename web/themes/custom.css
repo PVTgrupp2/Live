@@ -12,7 +12,9 @@
     width: 70%;
 }
 
-.ui-btn.my-tooltip-btn,
+/* NEDAN ÄR KODEN FÖR INFORUTORNA PÅ RATINGSIDAN */
+
+.ui-btn.my-tooltip-btn,        
 .ui-btn.my-tooltip-btn:hover,
 .ui-btn.my-tooltip-btn:active {
     background: none;
