@@ -32,7 +32,7 @@
                     Connection conn = DatabaseConn.getConn();
     		        Statement stmt = null;
                     stmt = conn.createStatement();
-                    String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES" + "("+ id.toString() +",'" + data + "')";
+                    String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES" + "("+ id +",'" + data + "')";
                     //ResultSet rs = 
                     stmt.executeUpdate(sql);	
                 }catch(Exception e){
