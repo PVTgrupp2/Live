@@ -1,6 +1,4 @@
-//INSERT INTO `nian8516`.`test` (`idtest`, `testcol`) VALUES ('1', 'test');
-
- package controllers;
+package controllers;
  
  import java.sql.*;
  import java.util.ArrayList;

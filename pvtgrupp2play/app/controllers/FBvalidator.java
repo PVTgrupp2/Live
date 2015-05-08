@@ -1,161 +1,76 @@
- package controllers;
- 
- import java.sql.*;
- import java.util.ArrayList;
- 
- import views.html.*;
- 
- import play.*;
- import play.mvc.*;
- import play.mvc.Controller;
- import play.mvc.Result;
- import play.mvc.Results;
- import play.libs.Json;
- 
- import com.fasterxml.jackson.databind.node.*;
+package controllers;
 
- 
- class ProduktController extends Controller{
-     public static Result getAll() {
-        ArrayList<Produkt> thelist = new ArrayList<>();
+import java.io.*;
+import java.util.List;
+import java.net.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+//import com.restfb.DefaultFacebookClient;
+
+public class FBvalidator {
+    static String fburl = "graph.facebook.com/debug_token?";
+    
+    static String appid = System.getenv("FBAppID");
+    static String appsecret = System.getenv("FBAppSecret");
+    static String ver = "v2.3";
+    
+    
+    
+    public static boolean validateFb(String token){
+        String ourToken = appid + "|" + appsecret;
+        String theUrl = fburl + "input_token={" + token + "}" + " &access_token={" + ourToken + "}";
+        String response = getHTML(theUrl);
         
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode obj = null;
         try{
-		    Connection conn = DatabaseConn.getConn();
-    		Statement stmt = null;
-            stmt = conn.createStatement();
-            
-            String sql = "SELECT * FROM nian8516.1Produkt";
-            
-            ResultSet rs = stmt.executeQuery(sql);	
-            
-    		while(rs.next()){
-    		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
-    		    p.namn = rs.getString("Namn");
-    		    p.land = rs.getString("Land");
-    		    String bet = rs.getString("Medelbetyg");
-    		    if(bet.length() == 0){
-    		       p.betyg = "0";
-    		    }else{
-    		      p.betyg = bet;  
-    		    }
-    		    
-    		    thelist.add(p);
-    		}
-    		
-        }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
+            obj = mapper.readTree(response);
+        }catch(IOException ioe){
+            //
         }
         
-        //TODO more controlls?
-        if(thelist.isEmpty()){
-           return internalServerError("Oops: the drinks is on the table");
-        
+        List<String> auth = obj.findValuesAsText("is_valid");
+        String auths = auth.get(1);
+        if(auth.equals("true")){
+            return true;
         }else{
-            return ok(list.render(thelist));
+            return false;
         }
     }
     
-    public static Result getAllBeer() {
-        ArrayList<Produkt> thelist = new ArrayList<>();
-        
-        try{
-		    Connection conn = DatabaseConn.getConn();
-    		Statement stmt = null;
-            stmt = conn.createStatement();
-            
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE Kategori_KategoriID=1";
-            
-            ResultSet rs = stmt.executeQuery(sql);	
-            
-    		while(rs.next()){
-    		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
-    		    p.namn = rs.getString("Namn");
-    		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
-    		    thelist.add(p);
-    		}
-    		
-        }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
-        }
-        
-        //TODO more controlls?
-        if(thelist.isEmpty()){
-           return internalServerError("Oops: the beers is on the table");
-        
-        }else{
-            return ok(list.render(thelist));
-        }
-    }
     
-    public static Result getAllWisky() {
-        ArrayList<Produkt> thelist = new ArrayList<>();
-        
-        try{
-		    Connection conn = DatabaseConn.getConn();
-    		Statement stmt = null;
-            stmt = conn.createStatement();
-            
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE Kategori_KategoriID=2";
-            
-            ResultSet rs = stmt.executeQuery(sql);	
-            
-    		while(rs.next()){
-    		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
-    		    p.namn = rs.getString("Namn");
-    		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
-    		    thelist.add(p);
-    		}
-    		
-        }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
-        }
-        
-        //TODO more controlls?
-        if(thelist.isEmpty()){
-           return internalServerError("Oops: the wisky is on the table");
-        
-        }else{
-            return ok(list.render(thelist));
-        }
-    }
-    
-    public static Result get(Long id){
-        Produkt p = new Produkt();
-        
-        try{
-		    Connection conn = DatabaseConn.getConn();
-        
-    		Statement stmt = null;
-    		
-            stmt = conn.createStatement();
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE idProdukt=" + id;
-            ResultSet rs = stmt.executeQuery(sql);	
-            while(rs.next()){
-                //Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
-    		    p.namn = rs.getString("Namn");
-    		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
-            }
-        }catch(Exception e){
-		    p.namn = e.toString();
-        }
-        
-        //TODO more controlls?
-        if(p == null){
-            return internalServerError("Oops: the drink is on the table");
-        }else if(false){ //FIX later
-            return notFound("Out looking for a nonexistant drink I see");
-        }else{
-            return ok(drink.render(p));
-        }
-        
-    }
-     
- }
- 
+   public static String getHTML(String urlToRead) {
+      URL url;
+      HttpURLConnection conn;
+      BufferedReader rd;
+      String line;
+      String result = "";
+      try {
+         url = new URL(urlToRead);
+         conn = (HttpURLConnection) url.openConnection();
+         conn.setRequestMethod("GET");
+         rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+         while ((line = rd.readLine()) != null) {
+            result += line;
+         }
+         rd.close();
+      } catch (IOException e) {
+         e.printStackTrace();
+      } catch (Exception e) {
+         e.printStackTrace();
+      }
+      return result;
+   }
+
+  /** public static void main(String args[])
+   {
+     c c = new c();
+     System.out.println(c.getHTML(args[0]));
+   } **/
+   
+   
+   class FBresponse{
+       
+   }
+}
