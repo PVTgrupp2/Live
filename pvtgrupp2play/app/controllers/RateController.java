@@ -25,20 +25,27 @@
         }else{
             String id = json.findPath("id").textValue();
             String data = json.findPath("data").textValue();
-            if(id == null && data == null){
+            String token = json.findPath("token").textValue();
+            if(id == null && data == null && token == null){
                 return badRequest("Missing parameter [name]");
             }else{
-                try{
-                    Connection conn = DatabaseConn.getConn();
-    		        Statement stmt = null;
-                    stmt = conn.createStatement();
-                    String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES" + "("+ id +",'" + data + "')";
-                    //ResultSet rs = 
-                    stmt.executeUpdate(sql);	
-                }catch(Exception e){
-                    return internalServerError("Oops: the drinks is on the table" + e.toString());
+                if(FBvalidator.validateFb(token)){
+                    try{
+                        Connection conn = DatabaseConn.getConn();
+        		        Statement stmt = null;
+                        stmt = conn.createStatement();
+                        String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES" + "("+ id +",'" + data + "')";
+                        //ResultSet rs = 
+                        stmt.executeUpdate(sql);	
+                    }catch(Exception e){
+                        return internalServerError("Oops: the drinks is on the table" + e.toString());
+                    }
+                    
+                    return ok();
+                }else{
+                   return internalServerError("Login fail");
                 }
-                return ok();
+                
             }
         }
     }
