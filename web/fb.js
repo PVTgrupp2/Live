@@ -20,7 +20,8 @@ $(document).ready(function(){
     
 
 });
-
+var uid = 666;
+var accessToken;
 
     function checkLogin(){
         console.log("checkLogin");
@@ -31,8 +32,8 @@ $(document).ready(function(){
             // the user's ID, a valid access token, a signed
             // request, and the time the access token 
             // and signed request each expire
-            var uid = response.authResponse.userID;
-            var accessToken = response.authResponse.accessToken;
+            uid = response.authResponse.userID;
+            accessToken = response.authResponse.accessToken;
             console.log("Inloggad");
             $('#login').hide();
             $('#minsida').show();
