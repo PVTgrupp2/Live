@@ -15,8 +15,4 @@ pvt-grupp2-live/.sbtserver/master.log
 *.log
 pvtgrupp2play/project/.sbtserver
 *.lock
-pvtgrupp2play/.sbtserver/connections/activator-e7090bbe-9514-491d-bc9c-e6a1ec954ee7.log.02
-pvtgrupp2play/project/sbt-ui.sbt
-pvtgrupp2play/project/play-fork-run.sbt
-pvtgrupp2play/build.sbt
-pvtgrupp2play/build.sbt
+*.02
