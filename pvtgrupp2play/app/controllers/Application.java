@@ -117,7 +117,7 @@ public class Application extends Controller {
         }
     }
     
-    public static Result rate(String reqType, Long id){
+    public static Result rate(){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");

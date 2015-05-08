@@ -16,6 +16,7 @@ package controllers;
 
  
  public class RateController extends Controller{
+     
      public static Result rate(){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
