@@ -117,6 +117,15 @@ public class Application extends Controller {
         }
     }
     
+    public static Result rate(String reqType, Long id){
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+        
+        return rate();
+    }
+    
     public static Result wisky(String reqType, Long id){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
