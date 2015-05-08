@@ -90,6 +90,21 @@
 			$('#searchlistdrink').hide();
 		});
 
+		/* Kod för rating sidan */
+			$('#textarea-2').hide();
+		$('#minAnteckningRate').click(function(){
+			$('#textarea-1').show();
+			$('#textarea-2').hide();
+		});
+
+		$('#produktInfoRate').click(function(){
+			$('#textarea-1').hide();
+			$('#textarea-2').show();
+		});
+
+
+
+
 		$('#mypage').click(function(){
 			console.log('test');
 			checkLogin();
@@ -336,13 +351,24 @@
 
 	<div class="produkt" id="slidestar">
 	</div>
+
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#" id="minAnteckningRate" class="ui-btn-active" data-transition="none">Min anteckning</a></li>
+			<li><a href="#" id="produktInfoRate" class="ui-btn" data-transition="none">Produktinformation</a></li>
+		</ul>
+	</div>
+
 		<form>
-		    <label for="textarea-1">Textarea:</label>
 		    <textarea name="textarea-1" id="textarea-1"></textarea>
 		</form>
 
+	    <textarea name="textarea-1" disabled="disabled" id="textarea-2">Den här ölen smakar si och den smakar så, capish?</textarea>
+		
+
+
 	<div >
-		<button class="ui-btn ui-btn-inline">Avbryt</button>
+		<button class="ui-btn ui-btn-inline">Avbrytw</button>
 		<button class="ui-btn ui-btn-inline">Spara/Dela</button>
 		<button class="ui-btn ui-btn-inline">Spara</button>
 	</div>
