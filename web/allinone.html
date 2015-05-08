@@ -97,7 +97,7 @@
 
 		$('#test').click(function(){
 			console.log('test post');
-			 var uids = JSON.stringify(uid);
+			 var uids = uid + "";
 			 var data = {'id':uids,'data':'dog'}; 
 			 $.ajax({
 			   url: 'https://pvt-grupp2.herokuapp.com/rate',
