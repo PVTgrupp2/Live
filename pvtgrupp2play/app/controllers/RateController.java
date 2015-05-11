@@ -30,15 +30,15 @@ package controllers;
             String pid = json.findPath("pid").textValue();
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
-            if(uid == null && pid == null && token == null && score == null ||false){
-                return badRequest("Missing parameter [name]");
+            if(uid == null && pid == null && token == null && score == null){
+                return badRequest("Missing parameter");
             }else{
                 if(FBvalidator.validateFb(token)){
                     try{
                         Connection conn = DatabaseConn.getConn();
         		        Statement stmt = null;
                         stmt = conn.createStatement();
-                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES("+ uid +"," + pid +"," + score + ")";
+                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES('"+ uid +"','" + pid +"','" + score + "')";
                         //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
