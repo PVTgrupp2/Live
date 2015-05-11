@@ -17,3 +17,4 @@ pvtgrupp2play/project/.sbtserver
 *.lock
 *.02
 pvtgrupp2play/project/sbt-ui.sbt
+pvtgrupp2play/project/play-fork-run.sbt
