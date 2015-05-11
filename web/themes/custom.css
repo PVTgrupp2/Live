@@ -3,7 +3,10 @@
 }
 Är till för att flytta stjärnor*/
 .sliderubrik {
-	text-align:center;
+	/*text-align:center;*/
+	margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
 
 #slidestar {
