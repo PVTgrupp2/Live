@@ -47,7 +47,7 @@ package controllers;
                     
                     return ok();
                 }else{
-                   return internalServerError("Login fail");
+                   return ok("Login fail");
                 }
                 
             }
