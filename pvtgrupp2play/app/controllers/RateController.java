@@ -21,10 +21,11 @@ package controllers;
         if(json == null){
             return badRequest("Expecting Json data");
         }else{
-            String id = json.findPath("id").textValue();
-            String data = json.findPath("data").textValue();
+            String uid = json.findPath("uid").textValue();
+            String pid = json.findPath("pid").textValue();
+            String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
-            if(id == null && data == null && token == null){
+            if(uid == null && pid == null && token == null && score == null){
                 return badRequest("Missing parameter [name]");
             }else{
                 if(FBvalidator.validateFb(token)){
@@ -32,7 +33,7 @@ package controllers;
                         Connection conn = DatabaseConn.getConn();
         		        Statement stmt = null;
                         stmt = conn.createStatement();
-                        String sql = "INSERT INTO nian8516.test (idtest, testcol) VALUES" + "("+ id +",'" + data + "')";
+                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES" + "("+ uid +",'" + pid +",'" + score + "')";
                         //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){

@@ -20,7 +20,7 @@ $(document).ready(function(){
     
 
 });
-var uid = 666;
+var uid;
 var accessToken;
 
     function checkLogin(){
