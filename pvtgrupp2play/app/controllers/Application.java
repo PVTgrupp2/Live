@@ -123,7 +123,7 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
-        return rate();
+        return RateController.rate();
     }
     
     public static Result wisky(String reqType, Long id){

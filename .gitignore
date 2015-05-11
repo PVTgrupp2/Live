@@ -16,3 +16,4 @@ pvt-grupp2-live/.sbtserver/master.log
 pvtgrupp2play/project/.sbtserver
 *.lock
 *.02
+pvtgrupp2play/project/sbt-ui.sbt
