@@ -38,7 +38,7 @@ package controllers;
                         Connection conn = DatabaseConn.getConn();
         		        Statement stmt = null;
                         stmt = conn.createStatement();
-                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES" + "("+ uid +",'" + pid +",'" + score + "')";
+                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES("+ uid +"," + pid +"," + score + ")";
                         //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
