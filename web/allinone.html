@@ -116,7 +116,7 @@
 			 var uids = uid + "";
 			 var pids = pid + "";
 			 var scores = score + "";
-			 var data = {'uid':uids,'pid':pids,'score':scores}; 
+			 var data = {'uid':uids,'pid':pids,'score':scores,'token':accessToken}; 
 			 $.ajax({
 			   url: 'https://pvt-grupp2.herokuapp.com/rate',
 			   type: 'POST',
