@@ -30,7 +30,7 @@ package controllers;
             String pid = json.findPath("pid").textValue();
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
-            if(uid == null && pid == null && token == null && score == null){
+            if(uid == null && pid == null && token == null && score == null ||true){
                 return badRequest("Missing parameter [name]");
             }else{
                 if(FBvalidator.validateFb(token)){
@@ -42,7 +42,7 @@ package controllers;
                         //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
-                        return internalServerError("Oops: the drinks is on the table" + e.toString());
+                        return ok("Oops: the drinks is on the table" + e.toString());
                     }
                     
                     return ok();
