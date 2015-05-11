@@ -16,7 +16,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 	<script type="text/javascript" src="fb.js"></script>
 	<script src="themes/jquery.raty.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">	
+
+	
 
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -30,11 +32,14 @@
 		});
 		*/
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#thetoplistbeer').listview().listview('refresh');			
+			$('#thetoplistbeer').listview().listview('refresh');
 			$('.produkt').raty({
-  			score: function() {
-    			return $(this).attr('data-score');
-				}			
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+	    			console.log('ID: ' +  $(this).parent().attr('id') + "\nscore: " + score + "\nevent: " + evt);
+	  			}	
 			});
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
@@ -103,9 +108,12 @@
 			console.log('test');
 			checkLogin();
 		});
+
 		$('#test').click(function(){
 			console.log('test post');
 			 var uids = uid + "";
+			 var product = x + "";
+			 var score = y + "";
 			 var data = {'id':uids,'data':'dog'}; 
 			 $.ajax({
 			   url: 'https://pvt-grupp2.herokuapp.com/rate',
@@ -115,7 +123,8 @@
 			   dataType:'json',
 			   success: function(data){
 			     //On ajax success do this
-			     alert(data);
+			     //alert(data);
+			     console.log(data);
 			      },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
