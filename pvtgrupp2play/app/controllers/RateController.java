@@ -17,6 +17,7 @@ package controllers;
  
  public class RateController extends Controller{
      public static Result rate(){
+        ObjectNode result = Json.newObject();
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
@@ -24,14 +25,16 @@ package controllers;
          
         com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
-            return badRequest("Expecting Json data");
+            //return badRequest("Expecting Json data");
+            result.put("status", "Expecting Json data");
         }else{
             String uid = json.findPath("uid").textValue();
             String pid = json.findPath("pid").textValue();
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
             if(uid == null && pid == null && token == null && score == null){
-                return badRequest("Missing parameter");
+                //return badRequest("Missing parameter");
+                result.put("status", "Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
                     try{
@@ -42,15 +45,20 @@ package controllers;
                         //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
-                        return ok("Oops: the drinks is on the table" + e.toString());
+                        result.put("status", e.toString());
+                        //return ok("Oops: the drinks is on the table" + e.toString());
+                        
                     }
                     
-                    return ok();
+                    return ok(result);
                 }else{
-                   return ok("Login fail");
+                   //return ok("Login fail");
+                   result.put("status", "Login fail");
+                   //return ok(result);
                 }
             }
         }
+        return ok(result);
     }
      
  }
