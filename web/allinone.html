@@ -38,7 +38,9 @@
     				return $(this).attr('data-score');
 				},
 				click: function(score, evt) {
-	    			console.log('ID: ' +  $(this).parent().attr('id') + "\nscore: " + score + "\nevent: " + evt);
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
 	  			}	
 			});
 		});
@@ -109,12 +111,12 @@
 			checkLogin();
 		});
 
-		$('#test').click(function(){
+		function storeRate(pid, score){
 			console.log('test post');
 			 var uids = uid + "";
-			 var product = x + "";
-			 var score = y + "";
-			 var data = {'id':uids,'data':'dog'}; 
+			 var pids = pid + "";
+			 var scores = score + "";
+			 var data = {'uid':uids,'pid':pids,'score':scores}; 
 			 $.ajax({
 			   url: 'https://pvt-grupp2.herokuapp.com/rate',
 			   type: 'POST',
@@ -130,7 +132,6 @@
 			      //On error do this
 			        $.mobile.loading('hide')
 			        if (xhr.status == 200) {
-
 			            alert(ajaxOptions);
 			        }
 			        else {
@@ -142,7 +143,8 @@
 			        }
 			    }
 			 });
-		});
+		}
+
 	});
 
 	//Ladda Facebook API
