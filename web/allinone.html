@@ -53,6 +53,14 @@
 			$('#thetoplistall').hide();
 		});
 
+		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+			$('#mytoplist').listview().listview('refresh');
+		
+		});
+
+
+
+
 		$('#hallall').click(function(){			
 			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall0.png");
 		});
@@ -108,7 +116,10 @@
 
 		/* MINA SIDOR TESTLIST */
 
-
+		$('#myTop').click(function(){
+		$('#mytoplist').show();
+			
+		});
 
 
 		$('#minaBedömningar').click(function(){
@@ -315,7 +326,19 @@
 
 	<div data-role="content" id="login" data-theme="b">
 
-	
+			<div data-role="navbar">
+			<ul>
+				<li><a href="#" id="myTop" class="ui-btn-active" data-transition="none">Prövade</a></li>
+				<li><a href="#" id="myTaste" class="ui-btn" data-transition="none">ToTaste</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<ul id="mytoplist" class="ul-listview" data-role="listview">			
+			</ul>
+
+			<ul id="mytastelist" class="ul-listview" data-role="listview">		
+			</ul>
+		</div>
 
 		<p>Min sida</p>
 		<a href="#" id="fblogin"><img src="themes/img/fblogin.png"></a>
@@ -326,33 +349,6 @@
 		<p><a href="#" id="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
 	<button id="test">Test</button>
-
-
-
-
-
-
-
-
-
-	<div data-role="navbar">
-			<ul>
-				<li><a href="#" id="topAlla" class="ui-btn-active" data-transition="none">Alla</a></li>
-				<li><a href="#" id="topÖl" class="ui-btn" data-transition="none">Öl</a></li>
-				<li><a href="#" id="topWhisky" class="ui-btn" data-transition="none">Whisky</a></li>
-			</ul>
-		</div>
-		<div data-role="content">
-			<ul id="thetoplistall" class="ul-listview" data-role="listview">			
-			</ul>
-
-			<ul id="thetoplistbeer" class="ul-listview" data-role="listview">		
-			</ul>
-
-			<ul id="thetoplistwisky" class="ul-listview" data-role="listview">		
-			</ul>
-		</div>
-
 
 
 
