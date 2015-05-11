@@ -106,6 +106,26 @@
 			$('#textarea-2').show();
 		});
 
+		/* MINA SIDOR TESTLIST */
+
+
+
+
+		$('#minaBedömningar').click(function(){
+			$('#thetoplistwisky').show();
+			/*$('#thetoplistwisky').hide();*/
+		});
+		$('#To-Taste-Lista').click(function(){
+			$('#thetoplistwisky').hide();
+			$('#thetoplistwisky').show();
+		});
+
+
+
+
+
+		
+
 		$('#mypage').click(function(){
 			console.log('test');
 			checkLogin();
@@ -293,7 +313,10 @@
 
 	<div id="fb-root"></div>
 
-	<div data-role="content" id="login">	
+	<div data-role="content" id="login" data-theme="b">
+
+	
+
 		<p>Min sida</p>
 		<a href="#" id="fblogin"><img src="themes/img/fblogin.png"></a>
 	</div><!-- /content -->
@@ -303,6 +326,40 @@
 		<p><a href="#" id="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
 	<button id="test">Test</button>
+
+
+
+
+
+
+
+
+
+	<div data-role="navbar">
+			<ul>
+				<li><a href="#" id="topAlla" class="ui-btn-active" data-transition="none">Alla</a></li>
+				<li><a href="#" id="topÖl" class="ui-btn" data-transition="none">Öl</a></li>
+				<li><a href="#" id="topWhisky" class="ui-btn" data-transition="none">Whisky</a></li>
+			</ul>
+		</div>
+		<div data-role="content">
+			<ul id="thetoplistall" class="ul-listview" data-role="listview">			
+			</ul>
+
+			<ul id="thetoplistbeer" class="ul-listview" data-role="listview">		
+			</ul>
+
+			<ul id="thetoplistwisky" class="ul-listview" data-role="listview">		
+			</ul>
+		</div>
+
+
+
+
+
+
+
+
 
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
     	<div data-role="navbar" class="nav-iconmanager">
