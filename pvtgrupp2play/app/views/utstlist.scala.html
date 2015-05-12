@@ -1,0 +1,5 @@
+@(thelist: List[Utstallare])
+
+@for(item <- thelist) {
+  <li><a href="#" id="@item.id" class="utställarlink"><h2>@item.namn</h2><div class="uställare" ></div><p>@item.land</p></a></li>
+}
