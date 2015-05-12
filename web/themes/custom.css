@@ -29,11 +29,16 @@
 }
 
 #textarea-2 {
-	border: 0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #E0E0E0;
+    margin-top: -2%;
 }
 
 #inloggadtext {
     font-family: "Verdana", Times, sans-serif;
     font-size: 16px;
 }
+
+
 
