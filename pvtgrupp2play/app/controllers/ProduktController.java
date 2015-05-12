@@ -79,7 +79,7 @@
     		
         }catch(Exception e){
 		    //resultJson.put("Error","Dbconn");
-		    return internalServerError("Oops: the beers is on the table DB");
+		    return internalServerError("Oops: the beers is on the table DB " + e.toString());
         }
         
         //TODO more controlls?
