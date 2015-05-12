@@ -40,5 +40,45 @@
     font-size: 16px;
 }
 
+/*
+röd=b03120
+grön=2f451e
+gul=fde68b
+*/
+.banner {
+  width: 100%;
 
+    height: 70px; 
+    background: #b03120; 
+      position:relative;
+    
+}
+   
+.banner:after{
+    position:absolute;
+    top: 75%;
+    height: 25%;
+    width: 100%;
+    background: #fff;
+    border-top-left-radius: 150em 5em;
+  border-top-right-radius: 150em 5em;
+    content:'';
+  border: 2px;
+    border-top: solid #fde68b;
+}
+
+
+.banner:before{
+    position:absolute;
+top: 50%;
+    height: 45%;
+    width: 100%;
+    background: #2f451e;
+    border-top-left-radius: 150em 5em;
+  border-top-right-radius: 150em 5em;
+    content:'';
+    
+    border: 2px;
+    border-top: solid #fde68b;
+}
 
