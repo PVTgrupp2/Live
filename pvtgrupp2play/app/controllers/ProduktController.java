@@ -73,7 +73,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
+    	
     		    thelist.add(p);
     		}
     		
