@@ -34,11 +34,7 @@
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		   
-    		    if(bet.length() == 0){
-    		       p.betyg = "0";
-    		    }else{
-    		      p.betyg = bet;  
-    		    }
+    		  //kanske betyg?
     		    
     		    thelist.add(p);
     		}
