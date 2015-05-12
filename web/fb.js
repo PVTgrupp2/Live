@@ -4,16 +4,16 @@ $(document).ready(function(){
 		
 		anv.done(function(data){
 			console.log(data);
-			$('#login').hide();
-            $('#minsida').show();
+			$('#utloggad').hide();
+            $('#inloggad').show();
 		});
 	});
 	
 	$('#fblogout').click(function(){
 		FB.logout(function(response){
 			// window.location.href = "index.html";
-            $('#login').show();
-            $('#minsida').hide();
+            $('#utloggad').show();
+            $('#inloggad').hide();
 		});
 	});
 
@@ -35,19 +35,19 @@ var accessToken;
             uid = response.authResponse.userID;
             accessToken = response.authResponse.accessToken;
             console.log("Inloggad");
-            $('#login').hide();
-            $('#minsida').show();
+            $('#utloggad').hide();
+            $('#inloggad').show();
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
             console.log("Offline");
-            $('#login').show();
-            $('#minsida').hide();
+            $('#utloggad').show();
+            $('#inloggad').hide();
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
-            $('#login').show();
-            $('#minsida').hide();
+            $('#utloggad').show();
+            $('#inloggad').hide();
           }
         });
     }
