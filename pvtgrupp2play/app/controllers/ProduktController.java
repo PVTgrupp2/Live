@@ -33,7 +33,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    String bet = rs.getString("Medelbetyg");
+    		   
     		    if(bet.length() == 0){
     		       p.betyg = "0";
     		    }else{
@@ -79,7 +79,6 @@
     		
         }catch(Exception e){
 		    //resultJson.put("Error","Dbconn");
-		    return internalServerError("Oops: the beers is on the table DB " + e.toString());
         }
         
         //TODO more controlls?
@@ -108,7 +107,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
+    		    
     		    thelist.add(p);
     		}
     		
@@ -141,7 +140,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.betyg = rs.getString("Medelbetyg");
+    		  
             }
         }catch(Exception e){
 		    p.namn = e.toString();
