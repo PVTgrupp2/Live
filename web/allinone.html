@@ -25,12 +25,12 @@
 			$('#searchlistdrink').listview().listview('refresh');
 			$('#searchbaruts').hide(); /*  SKA IGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
 		});
-		/*
-		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/all', function(){			
+	
+		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
 			$('#searchlistuts').listview().listview('refresh');
 			$('#searchlistuts').hide();
 		});
-		*/
+
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
 			$('.produkt').raty({
