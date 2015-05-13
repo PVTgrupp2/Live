@@ -43,7 +43,7 @@ public  class UtstallareController extends Controller{
     		}
     		
         }catch(Exception e){
-		    return internalServerError("Database error" + e.torString());
+		    return internalServerError("Database error" + e.toString());
         }
         
         //TODO more controlls?
