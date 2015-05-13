@@ -45,40 +45,44 @@ röd=b03120
 grön=2f451e
 gul=fde68b
 */
-.banner {
-  width: 100%;
-
+#banner {
+    position:fixed;
+    margin-top: 0px auto;
+    top: 0px;
+    width: 100%;
     height: 70px; 
     background: #b03120; 
-      position:relative;
+    z-index: 2000;
     
 }
    
-.banner:after{
-    position:absolute;
-    top: 75%;
-    height: 25%;
+#banner:after{
+    position:fixed;
+    top: 60px;
+    height: 30px;
     width: 100%;
     background: #fff;
     border-top-left-radius: 150em 5em;
-  border-top-right-radius: 150em 5em;
+    border-top-right-radius: 150em 5em;
     content:'';
-  border: 2px;
+    border: 2px;
     border-top: solid #fde68b;
+    margin-top: 0px auto;
+    z-index: 2000;
 }
 
 
-.banner:before{
-    position:absolute;
-top: 50%;
-    height: 45%;
+#banner:before{
+    position:fixed;
+    top: 45px;
+    height: 45px;
     width: 100%;
     background: #2f451e;
     border-top-left-radius: 150em 5em;
-  border-top-right-radius: 150em 5em;
+    border-top-right-radius: 150em 5em;
     content:'';
-    
+    margin-top: 0px auto;
     border: 2px;
     border-top: solid #fde68b;
+    z-index: 2000;
 }
-
