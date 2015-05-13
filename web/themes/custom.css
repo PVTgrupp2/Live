@@ -82,3 +82,12 @@ top: 50%;
     border-top: solid #fde68b;
 }
 
+
+
+#hoger{
+    background-color: white;
+    float:right;
+}
+#vanster{
+    float:left;
+}
