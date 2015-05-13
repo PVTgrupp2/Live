@@ -345,7 +345,7 @@
 
 	<a href="#popupBasic" data-rel="popup">Open Popup</a>
 
-		<div data-role="popup" id="popupBasic">
+		<div data-role="popup" id="popupBasic" data-theme="b">
 			<div class="ui-grid-a">
 		  		<div class="ui-block-a" ><img src="http://placehold.it/162x360"></div>
 			        <div class="ui-block-b">
@@ -364,15 +364,22 @@
 			</div>
 
 			<div class="ui-grid-solo">
-				<div class="ui-block-a">NAVBAR</div>
+				<div class="ui-block-a" data-role="navbar">
+					<ul>
+						<li><a href="#" id="produktInfoRate" class="ui-btn" data-transition="none">Produktinformation</a></li>
+					</ul>
+				</div>
+				<p> </p>
+
+	    		<div name="textarea-1">Den här ölen smakar si och den smakar så, capish?</div>
 			</div>
 
 			<div class="ui-grid-solo">
-				<div class="ui-block-a">TEXT</div>
-			</div>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">KNAPPAR</div>
+				<div class="ui-block-a">
+					<button class="ui-btn ui-btn-inline">Avbryt</button>
+					<button class="ui-btn ui-btn-inline">ToTaste</button>
+					<button class="ui-btn ui-btn-inline">Bedöm</button>
+				</div>
 			</div>
 		</div>
 
