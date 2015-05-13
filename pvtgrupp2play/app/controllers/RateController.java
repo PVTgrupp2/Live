@@ -31,25 +31,27 @@ package controllers;
             String pid = json.findPath("pid").textValue();
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
-            if(uid == null && pid == null && token == null && score == null){
-                result.put("status", "Missing parameter");
-            }else{
-                if(FBvalidator.validateFb(token)){ //if(FBvalidator.validateFb(token)){
-                if(uid.length() < 9){
-                    try{
-                        Connection conn = DatabaseConn.getConn();
-        		        Statement stmt = null;
-                        stmt = conn.createStatement();
-                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES('"+ uid +"','" + pid +"','" + score + "')";
-                        stmt.executeUpdate(sql);	
-                    }catch(Exception e){
-                        result.put("status", e.toString());
-                    }
-                    
-                    return ok(result);
-                }
+            if(uid.length() < 9){
+                if(uid == null && pid == null && token == null && score == null){
+                    result.put("status", "Missing parameter");
                 }else{
-                   result.put("status", "Login fail");
+                    if(FBvalidator.validateFb(token)){ //if(FBvalidator.validateFb(token)){
+                    
+                        try{
+                            Connection conn = DatabaseConn.getConn();
+            		        Statement stmt = null;
+                            stmt = conn.createStatement();
+                            String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES('"+ uid +"','" + pid +"','" + score + "')";
+                            stmt.executeUpdate(sql);	
+                        }catch(Exception e){
+                            result.put("status", e.toString());
+                        }
+                        
+                        return ok(result);
+                    
+                    }else{
+                       result.put("status", "Login fail");
+                    }
                 }
             }
         }
