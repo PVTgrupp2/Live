@@ -135,6 +135,7 @@
 		});
 
 		function storeRate(pid, score){
+			if(uid.length > 1){
 			console.log('test post');
 			 var uids = uid + "";
 			 var pids = pid + "";
@@ -166,6 +167,9 @@
 			        }
 			    }
 			 });
+			}else{
+				console.log('notloggedin');
+			}
 		}
 
 	});
