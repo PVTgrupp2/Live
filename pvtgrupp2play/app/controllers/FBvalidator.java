@@ -19,7 +19,7 @@ public class FBvalidator {
     
     public static boolean validateFb(String token){
         String ourToken = appid + "|" + appsecret;
-        String theUrl = fburl + "input_token={" + token + "}" + " &access_token={" + ourToken + "}";
+        String theUrl = fburl + "input_token={" + token + "}" + "&access_token={" + ourToken + "}";
         String response = getHTML(theUrl);
         
         ObjectMapper mapper = new ObjectMapper();
