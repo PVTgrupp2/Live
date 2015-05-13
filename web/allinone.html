@@ -89,15 +89,11 @@
 		});
 
 		$('#searchdrink').click(function(){
-			$('#searchbaruts').hide();
 			$('#searchlistuts').hide();
-			$('#searchbardrink').show();
 			$('#searchlistdrink').show();
 		});
 		$('#searchuts').click(function(){
-			$('#searchbaruts').show();
 			$('#searchlistuts').show();
-			$('#searchbardrink').hide();
 			$('#searchlistdrink').hide();
 		});
 
@@ -286,14 +282,14 @@
 		</div>
 		<div data-role="content">
 			<form id="searchbardrink" class="ui-filterable">
-	    		<input id="inset-autocomplete-input" data-type="search" placeholder="Sök Dryck" />
+	    		<input id="inset-autocomplete-input" data-type="search" placeholder="Sök" />
 			</form>
 				<ul id="searchlistdrink" class="ul-listview" data-role="listview" data-input="#inset-autocomplete-input" data-inset="true" data-filter="true" data-filter-reveal="true">			
 				</ul>
-
-			<form id="searchbaruts" class="ui-filterable">
+			
+			<!--<form id="searchbaruts" class="ui-filterable">
 	    		<input id="inset-autocomplete-input" data-type="search" placeholder="Sök Utställare" />
-			</form>
+			</form> -->
 				<ul id="searchlistuts" class="ul-listview" data-role="listview" data-input="#inset-autocomplete-input" data-inset="true" data-filter="true" data-filter-reveal="true">			
 				</ul>
 		</div>
