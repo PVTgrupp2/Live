@@ -30,6 +30,7 @@ GET    /wisky/all            controllers.ProduktController.getAllWisky()
 GET    /all            controllers.ProduktController.getAll()
 
 GET    /utst            controllers.UtstallareController.getAll()
+GET     /totaste/:id        controllers.ToTaste.getToTaste(id: Long)
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)
