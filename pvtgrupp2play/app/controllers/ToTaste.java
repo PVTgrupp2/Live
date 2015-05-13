@@ -30,7 +30,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.1Produkt AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = id" + id;
+            String sql = "SELECT * FROM nian8516.1Produkt AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = " + id;
             
             ResultSet rs = stmt.executeQuery(sql);	
             
