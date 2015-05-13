@@ -20,14 +20,14 @@ public class FBvalidator {
     public static boolean validateFb(String token){
         String ourToken = appid + "|" + appsecret;
         String theUrl = fburl + "input_token={" + token + "}" + "&access_token={" + ourToken + "}";
-        String response = getHTML(theUrl);
+        String response = getHTML(URLEncoder.encode(theUrl));
         
         ObjectMapper mapper = new ObjectMapper();
         JsonNode obj = null;
         try{
             obj = mapper.readTree(response);
         }catch(IOException ioe){
-            //
+            ioe.printStackTrace();
         }
         
         List<String> auth = obj.findValuesAsText("is_valid");
