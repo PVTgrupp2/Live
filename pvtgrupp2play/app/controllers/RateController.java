@@ -35,7 +35,7 @@ package controllers;
             if(uid.length() == 18 && pid.length() == 5 && token == null && score == null){
                 result.put("status", "Missing parameter");
             }else{
-                if(FBvalidator.validateFb(token)){ //if(FBvalidator.validateFb(token)){
+                if(true){ //if(FBvalidator.validateFb(token)){
                     
                     try{
                         Connection conn = DatabaseConn.getConn();
