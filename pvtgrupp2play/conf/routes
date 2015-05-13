@@ -19,15 +19,15 @@ POST    /fbauth controllers.Application.fbauth()
 GET     /rate controllers.RateController.rate()
 POST    /rate controllers.RateController.rate()
 
-GET    /beer/all            controllers.Application.beer(reqType ?= "All", id: Long = 0)
+GET    /beer/all            controllers.ProduktController.getAllBeer()
 GET    /beer/top            controllers.Application.beer(reqType ?= "Top", id: Long = 0)
 GET    /beer/:id            controllers.Application.beer(reqType ?= "Id", id: Long)
 
-GET    /wisky/all            controllers.Application.wisky(reqType ?= "All", id: Long = 0)
+GET    /wisky/all            controllers.ProduktController.getAllWisky()
 GET    /wisky/top            controllers.Application.wisky(reqType ?= "Top", id: Long = 0)
 GET    /wisky/:id            controllers.Application.wisky(reqType ?= "Id", id: Long)
 
-GET    /all            controllers.Application.all(reqType ?= "All", id: Long = 0)
+GET    /all            controllers.ProduktController.getAll()
 
 GET    /utst/            controllers.UtstallareController.getAll()
 

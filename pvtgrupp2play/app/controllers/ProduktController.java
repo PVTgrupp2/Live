@@ -15,7 +15,7 @@
  import com.fasterxml.jackson.databind.node.*;
 
  
- class ProduktController extends Controller{
+ public class ProduktController extends Controller{
      public static Result getAll() {
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
@@ -45,7 +45,7 @@
     		}
     		
         }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
+		    return internalServerError("Oops: Database Error" + e.toString());
         }
         
         //TODO more controlls?
@@ -58,6 +58,10 @@
     }
     
     public static Result getAllBeer() {
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         ArrayList<Produkt> thelist = new ArrayList<>();
         
         try{
@@ -92,6 +96,11 @@
     }
     
     public static Result getAllWisky() {
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
+        
         ArrayList<Produkt> thelist = new ArrayList<>();
         
         try{
@@ -113,7 +122,7 @@
     		}
     		
         }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
+		    return internalServerError("Oops: Database Error" + e.toString());
         }
         
         //TODO more controlls?
@@ -126,6 +135,10 @@
     }
     
     public static Result get(Long id){
+        response().setHeader("Access-Control-Allow-Origin", "*");
+        response().setHeader("Allow", "*");
+        response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
+        response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         Produkt p = new Produkt();
         
         try{
@@ -144,7 +157,7 @@
     		  
             }
         }catch(Exception e){
-		    p.namn = e.toString();
+		    return internalServerError("Oops: Database Error" + e.toString());
         }
         
         //TODO more controlls?
