@@ -25,7 +25,6 @@ package controllers;
          
         com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
-            //return badRequest("Expecting Json data");
             result.put("status", "Expecting Json data");
         }else{
             String uid = json.findPath("uid").textValue();
@@ -33,7 +32,6 @@ package controllers;
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
             if(uid == null && pid == null && token == null && score == null){
-                //return badRequest("Missing parameter");
                 result.put("status", "Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
@@ -42,19 +40,14 @@ package controllers;
         		        Statement stmt = null;
                         stmt = conn.createStatement();
                         String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES('"+ uid +"','" + pid +"','" + score + "')";
-                        //ResultSet rs = 
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
                         result.put("status", e.toString());
-                        //return ok("Oops: the drinks is on the table" + e.toString());
-                        
                     }
                     
                     return ok(result);
                 }else{
-                   //return ok("Login fail");
                    result.put("status", "Login fail");
-                   //return ok(result);
                 }
             }
         }

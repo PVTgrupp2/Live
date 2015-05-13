@@ -33,30 +33,15 @@ import java.util.ArrayList;
 public class Application extends Controller {
 
     public static Result index() {
-        /**
-		Connection conn = null;
-		Statement stmt = null;
-		String result = "";
-        try {
-            conn = DriverManager.getConnection("jdbc:mysql://mysql.dsv.su.se/nian8516", "nian8516", "ozaezithaibe");
-            stmt = conn.createStatement();
-            String sql = "SELECT * FROM Fred_Test";
-            ResultSet rs = stmt.executeQuery(sql);			
-			while(rs.next()){
-				result = result + rs.getString(1) + rs.getString(2) + rs.getString(3) + "<br>";
-			}
-        }catch(Exception e){
-            return ok(index.render(e.toString()));
-        }**/
-        
-        return ok(index.render("Your new application is ready."));
+        return ok(index.render("the root"));
     }
-
+    /**
     public static Result helloWeb(){
         
         return ok("list.render(thelist)");
-    }
+    }**/
 
+    /**
     public static Result hello(){
         com.fasterxml.jackson.databind.JsonNode json = request().body().asJson();
         if(json == null){
@@ -69,8 +54,9 @@ public class Application extends Controller {
                 return ok("Hej " + name);
             }
         }
-    }
+    }**/
     
+    /**
     public static Result fbauth(){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
@@ -97,8 +83,8 @@ public class Application extends Controller {
             return notFound();
         }
         
-    }
-    
+    } **/
+    /**
     public static Result beer(String reqType, Long id){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
@@ -115,8 +101,9 @@ public class Application extends Controller {
         }else{
             return notFound();
         }
-    }
+    } **/
     
+    /**
     public static Result rate(){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
@@ -124,8 +111,9 @@ public class Application extends Controller {
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
         
         return RateController.rate();
-    }
+    }**/
     
+    /**
     public static Result wisky(String reqType, Long id){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
@@ -142,7 +130,7 @@ public class Application extends Controller {
         }else{
             return notFound();
         }
-    }
+    }**/
     
     
     //Allow cross orgin
