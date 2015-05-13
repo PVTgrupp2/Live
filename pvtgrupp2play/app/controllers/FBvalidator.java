@@ -31,7 +31,7 @@ public class FBvalidator {
         }
         
         List<String> auth = obj.findValuesAsText("is_valid");
-        String auths = auth.get(0);
+        String auths = auth.get(1);
         if(auth.equals("true")){
             return true;
         }else{
