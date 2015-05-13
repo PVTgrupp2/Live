@@ -41,7 +41,7 @@ package controllers;
                         Connection conn = DatabaseConn.getConn();
             		    Statement stmt = null;
                         stmt = conn.createStatement();
-                        String sql = "INSERT INTO nian8516.test (uid, pid, score) VALUES('"+ uid +"','" + pid +"','" + score + "')";
+                        String sql = "INSERT INTO nian8516.1Produkt_has_Användare (Produkt_IdProdukt, Användare_idanv, betyg) VALUES('"+ uid +"','" + pid +"','" + score + "')";
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
                         result.put("status", e.toString());
