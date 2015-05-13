@@ -29,7 +29,7 @@ GET    /wisky/:id            controllers.Application.wisky(reqType ?= "Id", id: 
 
 GET    /all            controllers.ProduktController.getAll()
 
-GET    /utst/            controllers.UtstallareController.getAll()
+GET    /utst            controllers.UtstallareController.getAll()
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)
