@@ -43,7 +43,7 @@ public  class UtstallareController extends Controller{
     		}
     		
         }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
+		    return internalServerError("Database error" + e.torString());
         }
         
         //TODO more controlls?
