@@ -70,7 +70,5 @@ public class FBvalidator {
    } **/
    
    
-   class FBresponse{
-       
-   }
+
 }

@@ -47,7 +47,7 @@ package controllers;
                         result.put("status", e.toString());
                     }
                         
-                    return ok(result);
+                    //return ok(result);
                     
                 }else{
                     result.put("status", "Login fail");
