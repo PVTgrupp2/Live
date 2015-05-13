@@ -27,7 +27,7 @@ public class FBvalidator {
         try{
             obj = mapper.readTree(response);
         }catch(IOException ioe){
-            ioe.printStackTrace();
+           // ioe.printStackTrace();
         }
         
         List<String> auth = obj.findValuesAsText("is_valid");
