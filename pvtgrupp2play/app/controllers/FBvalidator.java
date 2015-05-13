@@ -9,7 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 //import com.restfb.DefaultFacebookClient;
 
 public class FBvalidator {
-    static String fburl = "graph.facebook.com/debug_token?";
+    static String fburl = "https://graph.facebook.com/debug_token?";
     
     static String appid = System.getenv("FBAppID");
     static String appsecret = System.getenv("FBAppSecret");
