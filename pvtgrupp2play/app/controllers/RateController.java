@@ -34,7 +34,8 @@ package controllers;
             if(uid == null && pid == null && token == null && score == null){
                 result.put("status", "Missing parameter");
             }else{
-                if(true){ //if(FBvalidator.validateFb(token)){
+                if(FBvalidator.validateFb(token)){ //if(FBvalidator.validateFb(token)){
+                if(uid.length() < 9){
                     try{
                         Connection conn = DatabaseConn.getConn();
         		        Statement stmt = null;
@@ -46,6 +47,7 @@ package controllers;
                     }
                     
                     return ok(result);
+                }
                 }else{
                    result.put("status", "Login fail");
                 }
