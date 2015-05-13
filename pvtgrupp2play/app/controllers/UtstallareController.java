@@ -36,8 +36,8 @@ public  class UtstallareController extends Controller{
     		while(rs.next()){
     		    Utstallare u = new Utstallare();
     		    u.id = rs.getString("idUtställare");
-    		    u.namn = rs.getString("Namn");
-    		    u.land = rs.getString("Land");
+    		    u.namn = rs.getString("utsnamn");
+    		    u.land = rs.getString("land");
     		    
     		    thelist.add(u);
     		}
