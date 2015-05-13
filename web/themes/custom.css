@@ -86,3 +86,16 @@ gul=fde68b
     border-top: solid #fde68b;
     z-index: 2000;
 }
+<<<<<<< HEAD
+=======
+
+
+
+#hoger{
+    background-color: white;
+    float:right;
+}
+#vanster{
+    float:left;
+}
+>>>>>>> origin/master
