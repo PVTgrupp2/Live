@@ -38,10 +38,8 @@
     		    p.id = rs.getString("IdProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-				String temp = rs.getString("AVG(PA.Betyg)"); 
-				if(temp == null){
-					temp = "0";
-				}
+				String temp = rs.getString("Betyg"); 
+				//Kontroller?
 				p.betyg = temp;
     		    
     		    thelist.add(p);
