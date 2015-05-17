@@ -40,7 +40,7 @@
     		    p.land = rs.getString("Land");
 				String temp = rs.getString("AVG(PA.Betyg)"); 
 				if(temp == null){
-					temp = 0;
+					temp = "0";
 				}
 				p.betyg = temp;
     		    
