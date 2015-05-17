@@ -29,17 +29,20 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.1Produkt";
+            String sql = "SELECT * FROM nian8516.Produkt_Betyg";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getString("IdProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		   
-    		  //kanske betyg?
+				String temp = rs.getString("AVG(PA.Betyg)"); 
+				if(temp == null){
+					temp = 0;
+				}
+				p.betyg = temp;
     		    
     		    thelist.add(p);
     		}
