@@ -45,7 +45,8 @@
 		});
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/top', function(){					
 			$('#thetoplistall').listview().listview('refresh');
-			RatyEnable();				
+			RatyEnable();
+			ListPopup();
 		});
 
 		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){	
@@ -128,6 +129,13 @@
 			console.log('test');
 			checkLogin();
 		});
+
+		function ListPopup(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				var linkid = $(this).attr('id');
+				console.log(linkid);			
+			});
+		}
 
 		function RatyEnable(){
 			$('.produkt').raty({
