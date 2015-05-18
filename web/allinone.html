@@ -33,7 +33,7 @@
 			$('#searchbaruts').hide(); /*  SKA IGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
 		});
 
-		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){	
 			$('#thetoplistbeer').listview().listview('refresh');
 			$('.produkt').raty({
   				score: function() {
