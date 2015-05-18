@@ -36,10 +36,12 @@
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
+			//RatyEnable();
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
 			$('#thetoplistwisky').listview().listview('refresh');
 			$('#thetoplistwisky').hide();
+			//RatyEnable();
 		});
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){			
 			$('#thetoplistall').listview().listview('refresh');
