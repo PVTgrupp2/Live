@@ -55,7 +55,7 @@ gul=fde68b
     width: 100%;
     height: 70px; 
     background: #b03120; 
-    z-index: 1;
+    z-index: 1000;
     
 }
    
@@ -70,7 +70,7 @@ gul=fde68b
     content:'';
     border: 2px;
     border-top: solid #fde68b;
-    z-index: 1;
+    z-index: 1000;
 }
 
 
@@ -85,7 +85,7 @@ gul=fde68b
     content:'';
     border: 2px;
     border-top: solid #fde68b;
-    z-index: 1;
+    z-index: 1000;
 }
 /*<<<<<<< HEAD
 =======
@@ -101,7 +101,7 @@ gul=fde68b
 }
 
 #p10000{
-    z-index:3;
+    z-index:3000;
     /*position:fixed;
     width:95%;
     height:95%;
