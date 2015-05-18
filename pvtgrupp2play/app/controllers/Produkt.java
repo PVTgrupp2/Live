@@ -8,7 +8,11 @@ public class Produkt{
     public String alkhalt;
     
     
-    Produkt(){
+    public Produkt(){
         
+    }
+    
+    public String getBetyg(){
+        return betyg;
     }
 }
