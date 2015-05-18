@@ -38,25 +38,15 @@
 			$('#thetoplistbeer').listview().listview('refresh');
 			RatyEnable();			
 			$('#thetoplistbeer').hide();
-
-			//$('.produkt').trigger('refresh');
-			//$('.produkt').trigger('create');
-			
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){
 			$('#thetoplistwisky').listview().listview('refresh');
 			RatyEnable();
-			$('#thetoplistwisky').hide();
-			//$('.produkt').trigger('refresh');
-			
+			$('#thetoplistwisky').hide();			
 		});
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){					
 			$('#thetoplistall').listview().listview('refresh');
-			RatyEnable();	
-			//$('#thetoplistall').hide();
-			
-			//$('.produkt').trigger('refresh');
-			
+			RatyEnable();				
 		});
 
 		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -81,16 +71,19 @@
 			$('#thetoplistwisky').hide();
 			$('#thetoplistall').show();
 			$('#thetoplistbeer').hide();
+			$('.produkt').trigger('refresh');
 		});
 		$('#topÖl').click(function(){
 			$('#thetoplistwisky').hide();
 			$('#thetoplistall').hide();
-			$('#thetoplistbeer').show();			
+			$('#thetoplistbeer').show();
+			$('.produkt').trigger('refresh');		
 		});
 		$('#topWhisky').click(function(){
 			$('#thetoplistwisky').show();
 			$('#thetoplistall').hide();
 			$('#thetoplistbeer').hide();
+			$('.produkt').trigger('refresh');
 		});
 
 		$('#searchdrink').click(function(){
