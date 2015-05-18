@@ -79,7 +79,9 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    	
+    			String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.betyg = temp;
     		    thelist.add(p);
     		}
     		conn.close();
@@ -117,7 +119,9 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    
+    		    String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.betyg = temp;
     		    thelist.add(p);
     		}
     		conn.close();
