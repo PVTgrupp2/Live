@@ -15,6 +15,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
 	<script type="text/javascript" src="fb.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 	<script src="themes/jquery.raty.js"></script>
 	<script type="text/javascript">	
 
@@ -29,7 +30,7 @@
 		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
 			$('#searchlistuts').listview().listview('refresh');
 			$('#searchlistuts').hide();
-			$('#searchbaruts').hide(); /*  SKA IGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
+			$('#searchbaruts').hide(); /*  SKA EGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
 		});
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -342,7 +343,7 @@
 		<p><a href="#" id="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
 
-	<a href="#popupBasic" data-rel="popup">Open Popup</a>
+	<a href="#p10000" data-rel="popup">Open Popup</a>
 
 		<div data-role="popup" id="p10000" data-theme="b">	
 
@@ -376,7 +377,7 @@
 
 			<div class="ui-grid-solo">
 				<div class="ui-block-a">
-					<button class="ui-btn ui-btn-inline">Avbryt</button>
+					<button class="ui-btn ui-btn-inline" data-rel="back" id="popAvbryt">Avbryt</button>
 					<button class="ui-btn ui-btn-inline">ToTaste</button>
 					<button class="ui-btn ui-btn-inline">Bedöm</button>
 				</div>
