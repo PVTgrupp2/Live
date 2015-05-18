@@ -44,7 +44,7 @@
     		    
     		    thelist.add(p);
     		}
-    		
+    		conn.close();
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
         }
@@ -82,15 +82,14 @@
     	
     		    thelist.add(p);
     		}
-    		
+    		conn.close();
         }catch(Exception e){
-		    //resultJson.put("Error","Dbconn");
+		    return internalServerError("Oops: Database Error" + e.toString());
         }
         
         //TODO more controlls?
         if(thelist.isEmpty()){
-           return internalServerError("Oops: the beers is on the table");
-        
+            return internalServerError("Oops: the beers is on the table");
         }else{
             return ok(list.render(thelist));
         }
@@ -121,14 +120,14 @@
     		    
     		    thelist.add(p);
     		}
-    		
+    		conn.close();
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
         }
         
         //TODO more controlls?
         if(thelist.isEmpty()){
-           return internalServerError("Oops: the wisky is on the table");
+            return internalServerError("Oops: the wisky is on the table");
         
         }else{
             return ok(list.render(thelist));
