@@ -34,19 +34,22 @@
 			$('#searchbaruts').hide(); /*  SKA EGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
 		});
 
-		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){
+			RatyEnable();			
 			$('#thetoplistbeer').listview().listview('refresh');
-			RatyEnable();
+			
 		});
-		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
+		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){
+			RatyEnable();		
 			$('#thetoplistwisky').listview().listview('refresh');
 			$('#thetoplistwisky').hide();
-			RatyEnable();
+			
 		});
-		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){			
+		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){
+			RatyEnable();			
 			$('#thetoplistall').listview().listview('refresh');
 			$('#thetoplistall').hide();
-			RatyEnable();
+			
 		});
 
 		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
