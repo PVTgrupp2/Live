@@ -21,11 +21,11 @@ POST    /rate controllers.RateController.rate()
 
 GET    /beer/all            controllers.ProduktController.getAllBeer()
 GET    /beer/top            controllers.ProduktController.getTopBeer()
-# GET    /beer/:id            controllers.Application.beer(reqType ?= "Id", id: Long)
+GET    /beer/:id            controllers.ProduktController.get(id: Long)
 
 GET    /wisky/all            controllers.ProduktController.getAllWisky()
 GET    /wisky/top            controllers.ProduktController.getTopWisky()
-# GET    /wisky/:id            controllers.Application.wisky(reqType ?= "Id", id: Long)
+GET    /wisky/:id          controllers.ProduktController.get(id: Long)
 
 GET    /all            controllers.ProduktController.getAll()
 GET    /top            controllers.ProduktController.getTop()

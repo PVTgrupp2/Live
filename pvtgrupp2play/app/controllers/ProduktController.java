@@ -268,13 +268,14 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE idProdukt=" + id;
+            String sql = "SELECT * FROM SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt=" + id;
             ResultSet rs = stmt.executeQuery(sql);	
             while(rs.next()){
                 //Produkt p = new Produkt();
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
+    		    p.betyg = rs.getString("Betyg");
     		  
             }
         }catch(Exception e){
