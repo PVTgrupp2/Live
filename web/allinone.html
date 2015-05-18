@@ -24,8 +24,7 @@
 
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#searchlistdrink').listview().listview('refresh');
-			
+			$('#searchlistdrink').listview().listview('refresh');			
 		});
 	
 		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
@@ -34,23 +33,24 @@
 			$('#searchbaruts').hide(); 
 		});
 
-		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
+		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/top', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
 			RatyEnable();			
 			$('#thetoplistbeer').hide();
 		});
-		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){
+		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/top', function(){
 			$('#thetoplistwisky').listview().listview('refresh');
 			RatyEnable();
 			$('#thetoplistwisky').hide();			
 		});
-		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){					
+		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/top', function(){					
 			$('#thetoplistall').listview().listview('refresh');
 			RatyEnable();				
 		});
 
-		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#mytoplist').listview().listview('refresh');
+		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){	
+			/* FIXA RIKTIGA LISTAN*/		
+			$('#mytoplist').listview().listview('refresh'); 
 		});
 
 
