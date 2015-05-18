@@ -36,24 +36,17 @@
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
-			$('.produkt').raty({
-  				score: function() {
-    				return $(this).attr('data-score');
-				},
-				click: function(score, evt) {
-					var theid = $(this).parent().attr('id');
-	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
-	    			storeRate(theid, score);
-	  			}	
-			});
+			RatyEnable();
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
 			$('#thetoplistwisky').listview().listview('refresh');
 			$('#thetoplistwisky').hide();
+			RatyEnable();
 		});
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){			
 			$('#thetoplistall').listview().listview('refresh');
 			$('#thetoplistall').hide();
+			RatyEnable();
 		});
 
 		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -133,6 +126,19 @@
 			checkLogin();
 		});
 
+		function RatyEnable(){
+			$('.produkt').raty({
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
+	  			}	
+			});
+		}
+
 		function storeRate(pid, score){
 			if(uid.length > 1){
 			console.log('test post');
@@ -200,14 +206,14 @@
 	<div id="banner" data-role="header">
 		<h1>Topplista</h1>
 		<div id="dropmenu">
-		<ul>
-			<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
-				<ul>
-					<li><a href="#">Dela</a></li>
-					<li><a href="#">Logga ut</a></li>
-				</ul>
-			</li>	
-		</ul>
+			<ul>
+				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
+					<ul>
+						<li><a href="#">Dela</a></li>
+						<li><a href="#">Logga ut</a></li>
+					</ul>
+				</li>	
+			</ul>
 				
 		</div>
 
@@ -250,6 +256,17 @@
 <div data-role="page" id="map">
 	<div id="banner" data-role="header">
 		<h1>Karta</h1>
+		<div id="dropmenu">
+		<ul>
+			<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
+				<ul>
+					<li><a href="#">Dela</a></li>
+					<li><a href="#">Logga ut</a></li>
+				</ul>
+			</li>	
+		</ul>
+				
+		</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">		
@@ -285,6 +302,17 @@
 <div data-role="page" id="search">
 	<div id="banner" data-role="header">
 		<h1>Sök</h1>
+		<div id="dropmenu">
+		<ul>
+			<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
+				<ul>
+					<li><a href="#">Dela</a></li>
+					<li><a href="#">Logga ut</a></li>
+				</ul>
+			</li>	
+		</ul>
+				
+		</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -328,6 +356,17 @@
 <div data-role="page" id="mypage">
 	<div id="banner" data-role="header">
 		<h1>Min sida</h1>
+		<div id="dropmenu">
+		<ul>
+			<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
+				<ul>
+					<li><a href="#">Dela</a></li>
+					<li><a href="#">Logga ut</a></li>
+				</ul>
+			</li>	
+		</ul>
+				
+		</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div id="fb-root"></div>

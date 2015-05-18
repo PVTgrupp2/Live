@@ -102,6 +102,12 @@ gul=fde68b
 
 #p10000{
     z-index:3;
+    /*position:fixed;
+    width:95%;
+    height:95%;
+    left:2%;
+    top:2%;
+    */
 }
 
 /*
