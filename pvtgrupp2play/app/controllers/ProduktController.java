@@ -268,7 +268,7 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
+            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
             ResultSet rs = stmt.executeQuery(sql);	
             while(rs.next()){
                 //Produkt p = new Produkt();
