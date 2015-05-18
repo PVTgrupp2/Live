@@ -42,7 +42,7 @@ package controllers;
             		    Statement stmt = null;
                         stmt = conn.createStatement();
                         String sql = "INSERT INTO nian8516.1Produkt_has_Användare (Produkt_IdProdukt, Användare_idanv, betyg) VALUES('"+ pid +"','" + uid +"','" + score + "')" +
-                         "ON DUPLICATE KEY UPDATE Användare_idanv='" + uid + "', Produkt_IdProdukt='" + pid + "'";
+                         "ON DUPLICATE KEY UPDATE Användare_idanv='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
                         result.put("status", e.toString());
