@@ -36,16 +36,6 @@
 
 		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
-			$('.produkt').raty({
-  				score: function() {
-    				return $(this).attr('data-score');
-				},
-				click: function(score, evt) {
-					var theid = $(this).parent().attr('id');
-	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
-	    			storeRate(theid, score);
-	  			}	
-			});
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){			
 			$('#thetoplistwisky').listview().listview('refresh');
@@ -54,6 +44,7 @@
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){			
 			$('#thetoplistall').listview().listview('refresh');
 			$('#thetoplistall').hide();
+			RatyEnable();
 		});
 
 		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -132,6 +123,19 @@
 			console.log('test');
 			checkLogin();
 		});
+
+		function RatyEnable(){
+			$('.produkt').raty({
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
+	  			}	
+			});
+		}
 
 		function storeRate(pid, score){
 			if(uid.length > 1){

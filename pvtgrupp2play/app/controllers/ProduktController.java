@@ -70,7 +70,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE Kategori_KategoriID=1";
+            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=1";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -109,7 +109,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.1Produkt WHERE Kategori_KategoriID=2";
+            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=2";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
