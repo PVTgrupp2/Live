@@ -31,24 +31,31 @@
 		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
 			$('#searchlistuts').listview().listview('refresh');
 			$('#searchlistuts').hide();
-			$('#searchbaruts').hide(); /*  SKA EGENTLIGEN VARA I SEARCHLISTUTS MEN ÄR HÄR TILLS VIDARE! */
+			$('#searchbaruts').hide(); 
 		});
 
-		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){
-			RatyEnable();			
+		$('#thetoplistbeer').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#thetoplistbeer').listview().listview('refresh');
+			//RatyEnable();			
+			$('#thetoplistbeer').hide();
+
+			//$('.produkt').trigger('refresh');
+			//$('.produkt').trigger('create');
 			
 		});
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/all', function(){
-			RatyEnable();		
 			$('#thetoplistwisky').listview().listview('refresh');
+			//RatyEnable();
 			$('#thetoplistwisky').hide();
+			//$('.produkt').trigger('refresh');
 			
 		});
-		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){
-			RatyEnable();			
+		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/all', function(){					
 			$('#thetoplistall').listview().listview('refresh');
-			$('#thetoplistall').hide();
+			RatyEnable();	
+			//$('#thetoplistall').hide();
+			
+			//$('.produkt').trigger('refresh');
 			
 		});
 
@@ -78,7 +85,7 @@
 		$('#topÖl').click(function(){
 			$('#thetoplistwisky').hide();
 			$('#thetoplistall').hide();
-			$('#thetoplistbeer').show();
+			$('#thetoplistbeer').show();			
 		});
 		$('#topWhisky').click(function(){
 			$('#thetoplistwisky').show();
@@ -140,11 +147,12 @@
 	    			storeRate(theid, score);
 	  			}	
 			});
+			//$('#toplist').trigger('create');
 		}
 
 		function storeRate(pid, score){
 			if(uid.length > 1){
-			console.log('test post');
+			 console.log('post score to db');
 			 var uids = uid + "";
 			 var pids = pid + "";
 			 var scores = score + "";
