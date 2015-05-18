@@ -1,0 +1,55 @@
+body {
+	background-color:black;
+	color:red;
+}
+
+#dropmenu {
+	margin:0px;
+	padding:0px;
+	position:relative;
+	float:right;
+	bottom:50%;
+	right:2%;
+	z-index:2001;
+}
+
+#dropmenu ul {
+	margin:0px;
+	padding:0px;
+}
+
+#dropmenu li {
+	list-style:none;
+	float:left;
+	position:relative;
+}
+
+#dropmenu ul li a {
+	color:white;
+	text-align:left;
+	text-decoration:none;
+	display:block;
+}
+
+#dropmenu ul ul {
+	position:absolute;
+	display:none;
+	float:left;
+	border: 1px solid #e7c0bb;
+}
+
+#dropmenu ul li:hover ul{
+	display:block;
+}
+
+#dropmenu ul li ul {
+	background-color:white;
+	position:absolute;
+	right:20%;
+	}
+
+#dropmenu ul li ul li a{
+	color:black;
+	display:block;
+	padding:10px 20px;
+}
