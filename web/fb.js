@@ -10,6 +10,7 @@ $(document).ready(function(){
 	});
 	
 	$('.fblogout').click(function(){
+        console.log("Klick class");
 		FB.logout(function(response){
 			// window.location.href = "index.html";
             $('#utloggad').show();
@@ -37,17 +38,20 @@ var accessToken;
             console.log("Inloggad");
             $('#utloggad').hide();
             $('#inloggad').show();
+            $('.fblogout').text("Logga ut");
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
+            $('.fblogout').text("Logga in");
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
+            $('.fblogout').text("Logga in");
           }
         });
     }
