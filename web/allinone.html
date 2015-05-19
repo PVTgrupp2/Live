@@ -162,18 +162,18 @@ $('#hallc').click(function(){
 
 		function ListPopup(){
 			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
 				var linkid = $(this).attr('id');
 				console.log(linkid); 
 				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
 				var popupid;
 				$('#popupFrame').load(poplink, function(){	
-					$('#popupFrame').trigger('create');					
-				});
-				$('#popupFrame').popup( "open" );				
-					//console.log('TEST');
+					$('#popupFrame').trigger('create');
+				});				
+
+				$('#popupFrame').popup('open');	
 			});
 		}
-
 		function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
@@ -298,7 +298,7 @@ $('#hallc').click(function(){
 	        </ul>
   		</div>
 	</div><!-- /footer -->
-<div class="popupruta" data-role="popup" data-theme="b" id="popupFrame" class="ui-content">
+<div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
 	<!-- Ska vara tom-->
 </div>
 
