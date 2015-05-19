@@ -18,6 +18,12 @@
 	<script type="text/javascript" src="fb.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script src="themes/jquery.raty.js"></script>
+
+	<link href="themes/kartan/interactive_map.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="themes/kartan/jquery.touchpanview.js"></script>
+	<script type="text/javascript" src="themes/kartan/jquery.jgestures.js"></script>
+	<script type="text/javascript" src="themes/kartan/interactive_map.js"></script>
+
 	<script type="text/javascript">	
 
 	
@@ -55,18 +61,42 @@
 		});
 
 
-		$('#hallall').click(function(){			
-			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall0.png");
-		});
-		$('#halla').click(function(){												
-  			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall1.png");
-		});
-		$('#hallb').click(function(){												
-  			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall2.png");
-		});
-		$('#hallc').click(function(){												
-  			$("#mapimg").removeAttr("src").attr("src", "themes/img/hall3.jpg");
-		});
+$('#').ready(function(){
+			$('#b').hide();
+			$('#a').hide();
+			$('#all0').show();
+			$('#c').hide();
+	});
+
+
+$('#hallall').click(function(){
+			$('#b').hide();
+			$('#a').hide();
+			$('#all0').show();
+			$('#c').hide();
+	});
+
+$('#halla').click(function(){
+			$('#b').hide();
+			$('#a').show();
+			$('#all0').hide();
+			$('#c').hide();
+	});
+
+$('#hallb').click(function(){
+			$('#b').show();
+			$('#a').hide();
+			$('#all0').hide();
+			$('#c').hide();
+	});
+
+$('#hallc').click(function(){
+			$('#b').hide();
+			$('#a').hide();
+			$('#all0').hide();
+			$('#c').show();
+				});
+
 
 		$('#topAlla').click(function(){
 			$('#thetoplistwisky').hide();
@@ -285,15 +315,56 @@
 		<div>
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#" id="hallall" class="ui-btn-active" data-transition="none">Karta</a></li>
-						<li><a href="#" id="halla" class="ui-btn" data-transition="none">Hall A</a></li>
-						<li><a href="#" id="hallb" class="ui-btn" data-transition="none">Hall B</a></li>
-						<li><a href="#" id="hallc" class="ui-btn" data-transition="none">Hall C</a></li>
+						<li><a href="#all0" id="hallall" class="ui-btn-active" data-transition="none">Karta</a></li>
+						<li><a href="#a" id="halla" class="ui-btn" data-transition="none">Hall A</a></li>
+						<li><a href="#b" id="hallb" class="ui-btn" data-transition="none">Hall B</a></li>
+						<li><a href="#c" id="hallc" class="ui-btn" data-transition="none">Hall C</a></li>
 					</ul>
 				</div>				
-			<img id="mapimg" src="themes/img/hall0.png" style= "width:90%">
 		</div>
-	</div><!-- /content -->
+	</div>
+<!--interaktiv karta, zoom och dra bilden fram och tillbaka-->
+
+
+	<div id="all0" class="map_c">
+<img id="hall0" src="themes/img/hall0.png" width="1200" height="463" />
+<a class="touchpanview-pin-1"  href="#"></a>
+<a class="touchpanview-pin-2" href="#"></a>
+<a class="touchpanview-pin-3" href="#"></a>
+<a class="touchpanview-pin-4" href="#"></a>
+
+</div>
+
+
+	<div id="a" class="map_c">
+<img id="hall1" src="themes/img/hall1.png" width="1200" height="463" />
+<a class="touchpanview-pin-1"  href="#"></a>
+<a class="touchpanview-pin-2" href="#"></a>
+<a class="touchpanview-pin-3" href="#"></a>
+<a class="touchpanview-pin-4" href="#"></a>
+
+</div>
+
+<div id="b" class="map_c">
+<img id="hall2" src="themes/img/hall2.png" width="1200" height="463"/>
+<a class="touchpanview-pin-1"  href="#"></a>
+<a class="touchpanview-pin-2" href="#"></a>
+<a class="touchpanview-pin-3" href="#"></a>
+<a class="touchpanview-pin-4" href="#"></a>
+
+</div>
+
+	<div id="c" class="map_c">
+<img id="hall3" src="themes/img/hall3.jpg" width="1200" height="463" />
+<a class="touchpanview-pin-1"  href="#"></a>
+<a class="touchpanview-pin-2" href="#"></a>
+<a class="touchpanview-pin-3" href="#"></a>
+<a class="touchpanview-pin-4" href="#"></a>
+
+</div>
+
+
+	<!-- /content -->
 
 		<a href="#rate">RATESIDAN</a> <!-- TILLFÄLLIG GENVÄG TILL RATESIDAN!!! -->
 

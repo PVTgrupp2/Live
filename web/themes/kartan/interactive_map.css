@@ -1,0 +1,62 @@
+.map_c{
+	
+	/*width:230px;*/
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: white;
+}
+
+.all0{
+	display: block;
+}
+.a{
+	display: none;
+}
+
+.b{
+	display: none;
+}
+.c{
+	display: none;
+}
+
+
+
+.touchpanview-wrap {
+	position:relative;
+	
+	overflow:hidden;
+	border:1px solid #e7c0bb;
+}
+
+.touchpanview-pan {
+	position:absolute;
+	top:0;
+	left:0;
+	
+	overflow:hidden;
+}
+
+.touchpanview-pan img {
+	position:absolute;
+	top:0;
+	left:0;
+	
+}
+
+
+.touchpanview-pin {
+	position: absolute;
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: orange;
+	border-radius: 50%;
+	
+}
+
+.touchpanview-pin:active {
+	background-position: -30px 0px; 
+}
+
