@@ -3,17 +3,17 @@
 	<div class="ui-grid-a">
 		 <div class="ui-block-a" ><img src="themes/img/@(theitem.id).png" style= "width:90%"></div>
 			 <div class="ui-block-b">
-				  <h2>Produkt Rubrik</h2>
+				  <h2>@theitem.typ</h2>
 			            <p>Namn: @theitem.namn</p>
-				        <p>artnr: Autogenerat</p>
-				        <p>Typ: Autogenerat</p>
-				        <p>Alkhalt: 99%</p>
+				        <p>artnr: @(theitem.id)</p>
+				        <p>Land: @theitem.land</p>
+				        <p>Alkhalt: @theitem.alkhalt %</p>
             </div>
     </div>
 
 	<div class="ui-grid-solo">
 		<div class="ui-block-a">
-			<div id="slidestar" class="produkt"></div>
+			<div class="produkt" data-score="@theitem.betyg"></div>
 		</div>
 	</div>
 
@@ -25,12 +25,11 @@
 	    </div>
 		<p> </p>
 
-	    <div name="textarea-1">Den här ölen smakar si och den smakar så, capish?</div>
+	    <div name="textarea-1">@theitem.beskr</div>
 		</div>
 
 		<div class="ui-grid-solo">
 			<div class="ui-block-a">
-				<button class="ui-btn ui-btn-inline" data-rel="back" id="popAvbryt">Avbryt</button>
 				<button class="ui-btn ui-btn-inline">ToTaste</button>
 			    <button class="ui-btn ui-btn-inline">Bedöm</button>
 		    </div>
