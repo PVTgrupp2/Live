@@ -40,20 +40,20 @@ var accessToken;
             console.log("Inloggad");
             $('#utloggad').hide();
             $('#inloggad').show();
-            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
+            $('.fbdrop').empty().append('<a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a>');
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fbdrop').empty().append('<a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a>');
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fbdrop').empty().append('<a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a>');
           }
         });
     }
