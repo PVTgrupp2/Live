@@ -38,20 +38,20 @@ var accessToken;
             console.log("Inloggad");
             $('#utloggad').hide();
             $('#inloggad').show();
-            $('.fblogout').text("Logga ut");
+            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').text("Logga in");
+            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').text("Logga in");
+            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
           }
         });
     }
