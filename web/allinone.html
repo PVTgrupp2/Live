@@ -163,7 +163,18 @@ $('#hallc').click(function(){
 		function ListPopup(){
 			$('.produktlink').not('.emptyMessage').click(function(){
 				var linkid = $(this).attr('id');
-				console.log(linkid);
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame').load(poplink, function(){
+					//$('#toplist').listview().listview('refresh'); 
+					console.log(poplink);
+					popupid = '#' + linkid;	
+					//$('#toplist').trigger('create');
+					$('#popupFrame').popup();
+				console.log('#popupFrame');
+				});
+				
 			});
 		}
 
@@ -178,6 +189,7 @@ $('#hallc').click(function(){
 	    			storeRate(theid, score);
 	  			}	
 			});
+
 			//$('#toplist').trigger('create');
 		}
 
@@ -211,7 +223,7 @@ $('#hallc').click(function(){
 			        	console.log(JSON.stringify(data));
 			            console.log(xhr.status);
 			            console.log(thrownError);
-			        }
+					}
 			    }
 			 });
 			}else{
@@ -281,7 +293,7 @@ $('#hallc').click(function(){
 			</ul>
 		</div>
 	</div><!-- /content -->
-
+	<div id="popupcontent"></div>
 	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
 		<div data-role="navbar" class="nav-iconmanager">
 	        <ul>
@@ -292,6 +304,10 @@ $('#hallc').click(function(){
 	        </ul>
   		</div>
 	</div><!-- /footer -->
+<div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
+	<!-- Ska vara tom-->
+</div>
+
 </div>
 <!-- PAGE 1 END-->
 
@@ -479,7 +495,7 @@ $('#hallc').click(function(){
 		<p><a href="#" class="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
 
-	<a href="#p10000" data-rel="popup">Open Popup</a>
+	<!--<a href="#p10000" data-rel="popup">Open Popup</a>
 
 		<div data-role="popup" id="p10000" data-theme="b">	
 
@@ -518,7 +534,7 @@ $('#hallc').click(function(){
 					<a href="#rate"><button class="ui-btn ui-btn-inline">Bedöm</button></a>
 				</div>
 			</div>
-		</div>
+		</div>-->
 
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
     	<div data-role="navbar" class="nav-iconmanager">
