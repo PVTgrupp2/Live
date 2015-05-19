@@ -33,7 +33,7 @@ import java.util.ArrayList;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("the root"));
+        return ok(index.render("Your new application is ready."));
     }
     /**
     public static Result helloWeb(){
