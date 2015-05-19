@@ -38,9 +38,7 @@
     		    p.id = rs.getString("IdProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-				String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+                p.setBetyg(rs.getString("Betyg"));
     		    
     		    thelist.add(p);
     		}
@@ -79,9 +77,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    			String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+                p.setBetyg(rs.getString("Betyg"));
     		    thelist.add(p);
     		}
     		conn.close();
@@ -119,9 +115,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+                p.setBetyg(rs.getString("Betyg"));
     		    thelist.add(p);
     		}
     		conn.close();
@@ -159,9 +153,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    			String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+                p.setBetyg(rs.getString("Betyg"));
     		    thelist.add(p);
     		}
     		conn.close();
@@ -198,9 +190,7 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    			String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+                p.setBetyg(rs.getString("Betyg"));
     		    thelist.add(p);
     		}
     		conn.close();
@@ -237,9 +227,8 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    			String temp = rs.getString("Betyg"); 
-				//Kontroller?
-				p.setBetyg(temp);
+    			p.setBetyg(rs.getString("Betyg"));
+
     		    thelist.add(p);
     		}
     		conn.close();
@@ -275,13 +264,9 @@
     		    p.id = rs.getString("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-<<<<<<< HEAD
     		    p.setBetyg(rs.getString("Betyg"));
-=======
-    		    p.betyg = rs.getString("Betyg");
     		    p.typ = rs.getString("KategoriNamn");
     		    p.alkhalt = rs.getString("Alk");
->>>>>>> origin/master
     		  
             }
         }catch(Exception e){
