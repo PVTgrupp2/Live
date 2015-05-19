@@ -168,13 +168,14 @@ $('#hallc').click(function(){
 				var popupid;
 				$('#popupFrame').load(poplink, function(){
 					//$('#toplist').listview().listview('refresh'); 
-					console.log(poplink);
-					popupid = '#' + linkid;	
-					//$('#toplist').trigger('create');
-					$('#popupFrame').popup();
-					console.log('#popupFrame');
+					//console.log(poplink);
+					//popupid = '#' + linkid;	
+					$('#popupFrame').trigger('create');
+					
 				});
-				
+				$('#popupFrame').popup( "open" )
+				//$('#popupFrame').dialog({modal:true});
+					console.log('#popupFrame-popup');
 			});
 		}
 
