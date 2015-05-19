@@ -166,16 +166,11 @@ $('#hallc').click(function(){
 				console.log(linkid); 
 				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
 				var popupid;
-				$('#popupFrame').load(poplink, function(){
-					//$('#toplist').listview().listview('refresh'); 
-					//console.log(poplink);
-					//popupid = '#' + linkid;	
-					$('#popupFrame').trigger('create');
-					
+				$('#popupFrame').load(poplink, function(){	
+					$('#popupFrame').trigger('create');					
 				});
-				$('#popupFrame').popup( "open" )
-				//$('#popupFrame').dialog({modal:true});
-					console.log('#popupFrame-popup');
+				$('#popupFrame').popup( "open" );				
+					//console.log('TEST');
 			});
 		}
 
