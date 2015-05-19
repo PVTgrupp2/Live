@@ -1,3 +1,8 @@
+body {
+	background-color:black;
+	color:red;
+}
+
 #dropmenu {
 	margin:0px;
 	padding:0px;
@@ -41,33 +46,10 @@
 	background-color:white;
 	position:absolute;
 	right:20%;
-}
+	}
 
 #dropmenu ul li ul li a{
 	color:black;
 	display:block;
 	padding:10px 20px;
-	color:#b03120;
-}
-
-#dropmenu ul ul {
-	background: #5f6975; border-radius: 0px; padding: 0;
-	position: absolute; top: 100%;
-	width:120px;
-}
-#dropmenu ul ul li {
-	float: none; 
-	border-top: 1px solid #e7c0bb;
-	border-bottom: 1px solid #e7c0bb;
-	position: relative;
-
-}
-#dropmenu ul ul li a {
-	padding: 15px 40px;
-	color: #fff;
-	text-align:center;
-}	
-#dropmenu ul ul li a:hover {
-	background: #e7c0bb;
-	color:#ffffff;
 }
