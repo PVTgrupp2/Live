@@ -41,6 +41,44 @@ public class ApplicationTest {
         assertThat(contentType(html)).isEqualTo("text/html");
         assertThat(contentAsString(html)).contains("Your new application is ready.");
     }
+    @Test
+    public void testBetyg() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg("4");
+        assertThat(p.getBetyg()).isEqualTo(4);
+        
+    }
+    @Test
+    public void testBetygTecken() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg("....");
+        assertThat(p.getBetyg()).isEqualTo(0);
+    }
+    @Test
+    public void testBetygNull() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg(null);
+        assertThat(p.getBetyg()).isEqualTo(0);
+    }
+    @Test
+    public void testBetygTom() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg("");
+        assertThat(p.getBetyg()).isEqualTo(0);
+    }
+    @Test
+    public void testBetygLitet() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg("-1");
+        assertThat(p.getBetyg()).isEqualTo(0);
+    }
+    @Test
+    public void testBetygStort() {
+        controllers.Produkt p = new controllers.Produkt();
+        p.setBetyg("10");
+        assertThat(p.getBetyg()).isEqualTo(0);
+    }
+    
     
     /**@Test
     public void fbtest(){
