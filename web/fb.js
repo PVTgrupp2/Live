@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('#fblogin').click(function(){
+	$('.fblogin').click(function(){
 		var anv = $.fblogin({fbId: '799390323443595'});
 		
 		anv.done(function(data){
@@ -45,13 +45,13 @@ var accessToken;
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
           }
         });
     }
