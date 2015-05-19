@@ -169,9 +169,13 @@ $('#hallc').click(function(){
 				var popupid;
 				$('#popupFrame').load(poplink, function(){	
 					$('#popupFrame').trigger('create');
+					RatyEnable();
 				});				
 
+
+
 				$('#popupFrame').popup('open');	
+				
 			});
 		}
 		function RatyEnable(){
