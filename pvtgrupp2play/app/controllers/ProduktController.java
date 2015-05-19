@@ -276,6 +276,8 @@
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		    p.betyg = rs.getString("Betyg");
+    		    p.typ = rs.getString("KategoriNamn");
+    		    p.alkhalt = rs.getString("Alk");
     		  
             }
         }catch(Exception e){

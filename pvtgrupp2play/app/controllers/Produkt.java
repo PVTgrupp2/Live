@@ -6,7 +6,7 @@ public class Produkt{
     public String land;
     public String beskr;
     public String alkhalt;
-    
+    public String typ;
     
     Produkt(){
         
