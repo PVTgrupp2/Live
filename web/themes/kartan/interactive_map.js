@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 $("#hall0").touchPanView({
 	width: '100%',
-	height: 250,
+	height: 350,
 startZoomedOut: true,
 	pins: [{
 						//hall 1
@@ -32,7 +32,7 @@ startZoomedOut: true,
 
 $("#hall1").touchPanView({
 	width: '100%',
-	height: 250,
+	height: 350,
 startZoomedOut: true,
 	pins: [{
 						//1 från vän
@@ -73,7 +73,7 @@ startZoomedOut: true,
 
 $("#hall2").touchPanView({
 	width: '100%',
-	height: 250,
+	height: 350,
 startZoomedOut: true,
 	pins: [{
 						//1 från vän
@@ -113,7 +113,7 @@ startZoomedOut: true,
 
 	$("#hall3").touchPanView({
 	width: '100%',
-	height: 250,
+	height: 350,
 startZoomedOut: true,
 	
 });
