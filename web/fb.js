@@ -4,8 +4,9 @@ $(document).ready(function(){
 		
 		anv.done(function(data){
 			console.log(data);
-			$('#utloggad').hide();
-            $('#inloggad').show();
+		//	$('#utloggad').hide();
+        //  $('#inloggad').show(); 
+            checkLogin();
 		});
 	});
 	
@@ -13,8 +14,9 @@ $(document).ready(function(){
         console.log("Klick class");
 		FB.logout(function(response){
 			// window.location.href = "index.html";
-            $('#utloggad').show();
-            $('#inloggad').hide();
+        //    $('#utloggad').show();
+        //    $('#inloggad').hide();
+            checkLogin();
 		});
 	});
 
