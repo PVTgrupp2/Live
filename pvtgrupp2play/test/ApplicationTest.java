@@ -42,12 +42,12 @@ public class ApplicationTest {
         assertThat(contentAsString(html)).contains("Your new application is ready.");
     }
     
-    @Test
+    /**@Test
     public void fbtest(){
         String token = "CAALXCpBEB4sBAMtdilX14Sgcx7MRoujAHZCLwe9eTGqlFTRrZADDmWhD20na5ZBABSZB19LZBZBitEvs8FYHqXq2KhiqsbhzLdIVOrO7vryceJlsWdnewg94YZBdMjsglrmQIGGSZBGT0hPZAezrNdTUl4oS3HxiWT46GIQMLiY4DZBo0MEKWs21ErZA8521ZAT10ZAZC1wErbxy5ssEgwXIWacwqW";
         boolean test = FBvalidator.validateFb(token);
         assertTrue("ehh?",test);
-    }
+    }**/
 
 
 }
