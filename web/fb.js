@@ -38,6 +38,7 @@ var accessToken;
             uid = response.authResponse.userID;
             accessToken = response.authResponse.accessToken;
             console.log("Inloggad");
+            onLogin();
             $('#utloggad').hide();
             $('#inloggad').show();
             $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
