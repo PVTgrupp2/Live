@@ -26,6 +26,13 @@ $(document).ready(function(){
 var uid = '';
 var accessToken;
 
+        function onLogin(){
+            var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
+            $('#mytoplist').load(totasteurl, function(){                        
+                $('#mytoplist').listview().listview('refresh'); 
+            });
+        }
+
     function checkLogin(){
         console.log("checkLogin");
         FB.getLoginStatus(function(response) {
