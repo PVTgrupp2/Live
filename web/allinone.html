@@ -55,7 +55,8 @@
 			ListPopup();
 		});
 
-		$('#mytoplist').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){	
+		var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
+		$('#mytoplist').load(totasteurl, function(){	
 			/* FIXA RIKTIGA LISTAN*/		
 			$('#mytoplist').listview().listview('refresh'); 
 		});
@@ -557,47 +558,6 @@
 
 		<p><a href="#" class="fblogout">Logga ut</a></p>		
 	</div><!-- /content -->
-
-	<!--<a href="#p10000" data-rel="popup">Open Popup</a>
-
-		<div data-role="popup" id="p10000" data-theme="b">	
-
-			<div class="ui-grid-a">
-		  		<div class="ui-block-a" ><img src="themes/img/10004.png" style= "width:90%"></div>
-			        <div class="ui-block-b">
-				        <h2>Produkt Rubrik</h2>
-				        <p>Namn: Autogenerat</p>
-				        <p>artnr: Autogenerat</p>
-				        <p>Typ: Autogenerat</p>
-				        <p>Alkhalt: 99%</p>
-			        </div>
-	        </div>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-					<div id="slidestar" class="produkt"></div>
-				</div>
-			</div>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a" data-role="navbar">
-					<ul>
-						<li><a href="#" id="produktInfoRate" class="ui-btn-active" data-transition="none">Produktinformation</a></li>
-					</ul>
-				</div>
-				<p> </p>
-
-	    		<div name="textarea-1">Den här ölen smakar si och den smakar så, capish?</div>
-			</div>
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-					<button class="ui-btn ui-btn-inline" data-rel="back" id="popAvbryt">Avbryt</button>
-					<button class="ui-btn ui-btn-inline">ToTaste</button>
-					<a href="#rate"><button class="ui-btn ui-btn-inline">Bedöm</button></a>
-				</div>
-			</div>
-		</div>-->
 
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
     	<div data-role="navbar" class="nav-iconmanager">
