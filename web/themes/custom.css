@@ -25,7 +25,11 @@
 }
 
 .produkt {
-	float:right;
+    margin-left:50%;
+}
+
+.produktlist {
+    float:right;
 }
 
 #textarea-2 {
