@@ -184,7 +184,16 @@
 
 
 				$('#popupFrame').popup({ tolerance: 25 });
-				$('#popupFrame').popup('open');	
+				$('#popupFrame').popup('open');
+
+				function explode(){
+  					//alert("Boom!");
+  					console.log('explode'); 
+  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+				}
+				setTimeout(explode, 1000);
+
+				
 
 				//$('#ToTasteButton').trigger('create');
 			});
@@ -364,6 +373,7 @@
 	        </ul>
   		</div>
 	</div><!-- /footer -->
+
 <div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
 	<!-- Ska vara tom-->
 </div>
