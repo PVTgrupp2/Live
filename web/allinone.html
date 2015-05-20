@@ -160,6 +160,17 @@
 			checkLogin();
 		});
 
+		/*$('#ToTasteButton').click(function() {			
+			var theid = $(this).attr('data-id');
+  			console.log('totaste ID: ' +  theid);
+  			storeToTaste(theid);
+		});*/
+		$(document).on("click", "#ToTasteButton", function(){
+			var theid = $(this).attr('data-id');
+  			console.log('totaste ID: ' +  theid);
+  			storeToTaste(theid);
+		});
+
 		function ListPopup(){
 			$('.produktlink').not('.emptyMessage').click(function(){
 				//$('#popupFrame').hide();
@@ -175,7 +186,7 @@
 
 
 				$('#popupFrame').popup('open');	
-				
+				$('#ToTasteButton').trigger('create');
 			});
 		}
 		function RatyEnable(){
@@ -203,11 +214,7 @@
 			//$('#toplist').trigger('create');
 		}
 
-		$('#ToTasteButton').click(function() {
-			var theid = $(this).attr('data-id');
-  			console.log('ID: ' +  theid);
-  			storeToTaste(theid);
-		});
+
 
 		function storeRate(pid, score){
 			if(uid.length > 1){
