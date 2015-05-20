@@ -56,8 +56,19 @@ public class Produkt{
             throw new Exception("Inget id");
         }
     }
-  
     
+    public String getNamn(){
+        return namn;
+    }
+    
+    public void setNamn(String namn){
+        if (namn!=null){
+            if (!namn.isEmpty()&&namn.length()<=45&&namn.length()>1){
+                this.namn=namn;
+        }
+    }else this.namn=new String("inget namn");
+  
+    }  
     
     
 }
