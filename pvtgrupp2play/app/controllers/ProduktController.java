@@ -35,10 +35,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("IdProdukt");
+    		    p.id = rs.getLong("IdProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-                p.setBetyg(rs.getString("Betyg"));
+				String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    
     		    thelist.add(p);
     		}
@@ -74,10 +76,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-                p.setBetyg(rs.getString("Betyg"));
+    			String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    thelist.add(p);
     		}
     		conn.close();
@@ -112,10 +116,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-                p.setBetyg(rs.getString("Betyg"));
+    		    String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    thelist.add(p);
     		}
     		conn.close();
@@ -150,10 +156,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-                p.setBetyg(rs.getString("Betyg"));
+    			String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    thelist.add(p);
     		}
     		conn.close();
@@ -187,10 +195,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-                p.setBetyg(rs.getString("Betyg"));
+    			String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    thelist.add(p);
     		}
     		conn.close();
@@ -224,11 +234,12 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    			p.setBetyg(rs.getString("Betyg"));
-
+    			String temp = rs.getString("Betyg"); 
+				//Kontroller?
+				p.setBetyg(temp);
     		    thelist.add(p);
     		}
     		conn.close();
@@ -261,12 +272,10 @@
             ResultSet rs = stmt.executeQuery(sql);	
             while(rs.next()){
                 //Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		    p.setBetyg(rs.getString("Betyg"));
-    		    p.typ = rs.getString("KategoriNamn");
-    		    p.alkhalt = rs.getString("Alk");
     		  
             }
         }catch(Exception e){

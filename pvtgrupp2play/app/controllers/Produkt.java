@@ -1,11 +1,11 @@
 package controllers;
 public class Produkt{
-    public String id;
+    public Long id;
     public String namn;
     public int betyg;
     public String land;
     public String beskr;
-    public String alkhalt;
+    public Double alkhalt;
     public String typ;
     
     public Produkt(){
@@ -17,17 +17,15 @@ public class Produkt{
         return betyg;
         
     }
-    
-    
-    public void setBetyg(String betyginput){
+    public void setBetyg(String betygstr){
         
     Integer betygnr;
        
-    if (betyginput!=null){
+    if (betygstr!=null){
        
-    if (!betyginput.isEmpty()){
+    if (!betygstr.isEmpty()){
             try{
-                betygnr=Integer.parseInt(betyginput);
+                betygnr=Integer.parseInt(betygstr);
                 if (betygnr>=1&&betygnr<=5){
                     this.betyg=betygnr.intValue();
                 }
@@ -38,6 +36,29 @@ public class Produkt{
         }
     } 
     }
+        
+    public Long getId(){
+        return id;
+    }
+    
+    public void setId(String idstr) throws Exception {
+        
+        if (idstr!=null){
+            if (!idstr.isEmpty()){
+                try {
+                    Long id = new Long(idstr);
+                    this.id=id;
+                }catch (NumberFormatException e){
+                    e.printStackTrace();
+                }
+            }
+        }else {
+            throw new Exception("Inget id");
+        }
+    }
+  
+    
+    
     
 }
 

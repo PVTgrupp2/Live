@@ -79,7 +79,7 @@
             
     		while(rs.next()){
     		    Produkt p = new Produkt();
-    		    p.id = rs.getString("idProdukt");
+    		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		    

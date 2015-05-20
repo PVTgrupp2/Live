@@ -78,6 +78,7 @@ public class ApplicationTest {
         p.setBetyg("10");
         assertThat(p.getBetyg()).isEqualTo(0);
     }
+  
     
     
     /**@Test
