@@ -193,6 +193,12 @@
 			//$('#toplist').trigger('create');
 		}
 
+		$( "#ToTasteButton" ).click(function() {
+			var theid = $(this).attr('data-id');
+  			console.log('ID: ' +  theid);
+  			storeToTaste(theid);
+		});
+
 		function storeRate(pid, score){
 			if(uid.length > 1){
 			 console.log('post score to db');
@@ -230,6 +236,45 @@
 				console.log('notloggedin');
 			}
 		}
+
+		function storeToTaste(pid){
+			if(uid.length > 1){
+			 console.log('post totaste to db');
+			 var uids = uid + "";
+			 var pids = pid + "";			 
+			 var data = {'uid':uids,'pid':pids,'token':accessToken}; 
+			 $.ajax({
+			   url: 'https://pvt-grupp2.herokuapp.com/totaste',
+			   type: 'POST',
+			   contentType:'application/json',
+			   data: JSON.stringify(data),
+			   dataType:'json',
+			   success: function(data){
+			     //On ajax success do this
+			     //alert(data);
+			     console.log(data);
+			    },
+			   error: function(xhr, ajaxOptions, thrownError) {
+			      //On error do this
+			        $.mobile.loading('hide')
+			        if (xhr.status == 200) {
+			            console.log(ajaxOptions);
+			        }
+			        else {
+			        	console.log(data);
+			        	console.log(accessToken);
+			        	console.log(JSON.stringify(data));
+			            console.log(xhr.status);
+			            console.log(thrownError);
+					}
+			    }
+			 });
+			}else{
+				console.log('notloggedin');
+			}
+		}
+
+
 	});
 
 	//Ladda Facebook API
