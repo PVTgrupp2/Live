@@ -26,7 +26,7 @@ $(document).ready(function(){
 var uid = '';
 var accessToken;
 
-        function onLogin(){
+        function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
             $('#mytoplist').load(totasteurl, function(){                        
                 $('#mytoplist').listview().listview('refresh'); 
@@ -45,7 +45,7 @@ var accessToken;
             uid = response.authResponse.userID;
             accessToken = response.authResponse.accessToken;
             console.log("Inloggad");
-            onLogin();
+            loadToTaste();
             $('#utloggad').hide();
             $('#inloggad').show();
             $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
