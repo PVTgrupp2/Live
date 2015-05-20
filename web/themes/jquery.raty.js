@@ -730,7 +730,7 @@
     click        : undefined,
     half         : false,
     halfShow     : true,
-    hints        : ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+    hints        : ['Vidrig', 'Godkänd', 'Bra', 'Mycket bra', 'Mästerverk'],
     iconRange    : undefined,
     mouseout     : undefined,
     mouseover    : undefined,
