@@ -10,28 +10,30 @@ GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 # GET	    /helloWeb controllers.Application.helloWeb()
 
-# GET	    /hello controllers.Application.hello()
-# POST    /hello controllers.Application.hello()
+# GET	    /hello          controllers.Application.hello()
+# POST    /hello            controllers.Application.hello()
 
-# GET	    /fbauth controllers.Application.fbauth()
-# POST    /fbauth controllers.Application.fbauth()
+# GET	    /fbauth         controllers.Application.fbauth()
+# POST    /fbauth           controllers.Application.fbauth()
 
-GET     /rate controllers.RateController.rate()
-POST    /rate controllers.RateController.rate()
+GET     /rate               controllers.RateController.rate()
+POST    /rate               controllers.RateController.rate()
 
 GET    /beer/all            controllers.ProduktController.getAllBeer()
 GET    /beer/top            controllers.ProduktController.getTopBeer()
 GET    /beer/:id            controllers.ProduktController.get(id: Long)
 
-GET    /wisky/all            controllers.ProduktController.getAllWisky()
-GET    /wisky/top            controllers.ProduktController.getTopWisky()
-GET    /wisky/:id          controllers.ProduktController.get(id: Long)
+GET    /wisky/all           controllers.ProduktController.getAllWisky()
+GET    /wisky/top           controllers.ProduktController.getTopWisky()
+GET    /wisky/:id           controllers.ProduktController.get(id: Long)
 
-GET    /all            controllers.ProduktController.getAll()
-GET    /top            controllers.ProduktController.getTop()
+GET    /all                 controllers.ProduktController.getAll()
+GET    /top                 controllers.ProduktController.getTop()
 
-GET    /utst            controllers.UtstallareController.getAll()
+GET    /utst                controllers.UtstallareController.getAll()
+
 GET     /totaste/:id        controllers.ToTaste.getToTaste(id: Long)
+POST    /totaste            controllers.ToTaste.setToTaste()
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)
