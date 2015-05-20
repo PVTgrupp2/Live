@@ -189,6 +189,16 @@
 	    			storeRate(theid, score);
 	  			}	
 			});
+			$('.produktlist').raty({
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
+	  			}	
+			});
 
 			//$('#toplist').trigger('create');
 		}
