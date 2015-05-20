@@ -181,17 +181,14 @@
 					$('#popupFrame').trigger('create');
 					RatyEnable();
 				});				
-
-
-				$('#popupFrame').popup({ tolerance: 25 });
-				$('#popupFrame').popup('open');
-
-				function explode(){
-  					//alert("Boom!");
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				function delayopen(){
+					$('#popupFrame').popup('open');
   					console.log('explode'); 
-  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+  					//$('#popupFrame').popup("reposition", {"positionTo": "window"});
 				}
-				setTimeout(explode, 1000);
+				setTimeout(delayopen, 1000);
 
 				
 
