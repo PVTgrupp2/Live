@@ -55,11 +55,13 @@
 			ListPopup();
 		});
 
-		var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-		$('#mytoplist').load(totasteurl, function(){	
-			/* FIXA RIKTIGA LISTAN*/		
-			$('#mytoplist').listview().listview('refresh'); 
-		});
+		if(uid.length > 1){
+			var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
+			$('#mytoplist').load(totasteurl, function(){	
+				/* FIXA RIKTIGA LISTAN*/		
+				$('#mytoplist').listview().listview('refresh'); 
+			});
+		}
 
 
 		$(document).ready(function(){
