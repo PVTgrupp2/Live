@@ -78,6 +78,22 @@ public class ApplicationTest {
         p.setBetyg("10");
         assertThat(p.getBetyg()).isEqualTo(0);
     }
+    @Test
+    public void testUID(){
+        boolean test = Validator.validateUid("100000");
+        assertThat(test).isEqualTo(true);
+    }
+    @Test
+    public void testUIDtext(){
+        boolean test = Validator.validateUid("hej");
+        assertThat(test).isEqualTo(false);
+    }    
+    @Test
+    public void testUIDnull(){
+        boolean test = Validator.validateUid(null);
+        assertThat(test).isEqualTo(false);
+    }
+  
   
     
     
