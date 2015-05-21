@@ -33,6 +33,11 @@
     float:right;
 }
 
+#starforrating {
+    margin-top: 3.5%;
+    margin-right: 7%;
+}
+
 #textarea-2 {
     border-style: solid;
     border-width: 2px;

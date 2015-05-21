@@ -4,8 +4,10 @@ $(document).ready(function(){
 		
 		anv.done(function(data){
 			console.log(data);
-		//	$('#utloggad').hide();
-        //  $('#inloggad').show(); 
+	       	$('#utloggad').hide();
+            $('#dropmenuloggautknapp').show();
+          $('#inloggad').show(); 
+          $('#dropmenuloggainknapp').hide();
             checkLogin();
 		});
 	});
@@ -14,8 +16,10 @@ $(document).ready(function(){
         console.log("Klick class");
 		FB.logout(function(response){
 			// window.location.href = "index.html";
-        //    $('#utloggad').show();
-        //    $('#inloggad').hide();
+               $('#utloggad').show();
+               $('#dropmenuloggautknapp').hide();
+              $('#inloggad').hide();
+              $('#dropmenuloggainknapp').show();
             checkLogin();
 		});
 	});

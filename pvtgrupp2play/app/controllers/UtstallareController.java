@@ -35,7 +35,7 @@ public  class UtstallareController extends Controller{
             
     		while(rs.next()){
     		    Utstallare u = new Utstallare();
-    		    u.id = rs.getString("idUtställare");
+    		    u.id = rs.getInt("idUtställare");
     		    u.namn = rs.getString("utsnamn");
     		    u.land = rs.getString("land");
     		    
@@ -67,7 +67,7 @@ public  class UtstallareController extends Controller{
             ResultSet rs = stmt.executeQuery(sql);	
             while(rs.next()){
                 //Produkt p = new Produkt();
-    		    u.id = rs.getString("idUtställare");
+    		    u.id = rs.getInt("idUtställare");
     		    u.namn = rs.getString("Namn");
     		    u.land = rs.getString("Land");
     		  
