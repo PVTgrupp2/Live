@@ -170,6 +170,12 @@
   			storeToTaste(theid);
 		});
 
+		$(document).on("click", "#BedömButton", function(){
+			//var theid = $(this).attr('data-id');
+  			console.log('totaste ID: ' +  theid);
+  			//storeToTaste(theid);
+		});
+
 		function ListPopup(){
 			$('.produktlink').not('.emptyMessage').click(function(){
 				//$('#popupFrame').hide();
