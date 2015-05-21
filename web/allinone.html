@@ -301,6 +301,19 @@
 
 	});
 
+ // Facebook login/logout
+$(document).ready(function(){ 
+    x = $(".message").text().trim(); 
+    if ( !!x) { 
+        $(".fblogin").hide(); 
+        $(".fblogout").show(); 
+    } 
+    else { 
+        $(".fblogout").hide(); 
+        $(".fblogin").show(); 
+    } 
+});
+
 	//Ladda Facebook API
 
 	window.fbAsyncInit = function() {
@@ -334,6 +347,7 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin">Logga in</a></li>
+						<li><a href="#" class="fblogout">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
