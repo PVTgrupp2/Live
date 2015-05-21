@@ -278,7 +278,7 @@
             String sql = "SELECT P.*, (SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Beska') AS Beska," +
             "(SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Fylligt') AS Fylligt," +
             "(SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
-            "FROM nian8516.Produkt_Betyg P"+
+            "FROM nian8516.Produkt_Betyg P "+
             "WHERE idProdukt= '" + id + "'";
             //"ORDER BY Betyg DESC LIMIT 15";
             //String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
