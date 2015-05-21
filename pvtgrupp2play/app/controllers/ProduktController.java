@@ -279,7 +279,7 @@
             "(SELECT grad FROM nian8516.1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Fylligt') AS Fylligt," +
             "(SELECT grad FROM nian8516.1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
             "FROM nian8516.Produkt_Betyg P "+
-            "WHERE idProdukt= '" + id + "'";
+            "WHERE P.idProdukt= '" + id + "'";
             //"ORDER BY Betyg DESC LIMIT 15";
             //String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
             ResultSet rs = stmt.executeQuery(sql);	
