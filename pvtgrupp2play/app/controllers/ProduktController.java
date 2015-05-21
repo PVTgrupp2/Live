@@ -275,7 +275,13 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
+            String sql = "SELECT P.*, (SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Beska') AS Beska," +
+            "(SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Fylligt') AS Fylligt," +
+            "(SELECT grad FROM 1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
+            "FROM nian8516.Produkt_Betyg P"+
+            "WHERE idProdukt= '" + id + "'";
+            //"ORDER BY Betyg DESC LIMIT 15";
+            //String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
             ResultSet rs = stmt.executeQuery(sql);	
             while(rs.next()){
                 //Produkt p = new Produkt();
@@ -284,6 +290,10 @@
     		    p.land = rs.getString("Land");
     		    p.setBetyg(rs.getString("Betyg"));
     		    p.kategori = rs.getString("KategoriNamn");
+    		    
+    		    p.beska = rs.getString("Beska");
+    		    p.fyllighet = rs.getString("Fylligt");
+    		    p.sötma = rs.getString("Sött");
             }
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
