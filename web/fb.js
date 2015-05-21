@@ -17,9 +17,9 @@ $(document).ready(function(){
 		FB.logout(function(response){
 			// window.location.href = "index.html";
                $('#utloggad').show();
-               $('.dropmenuloggautknapp').hide();
+               $('#logoutp1').hide();
               $('#inloggad').hide();
-              $('.dropmenuloggainknapp').show();
+              $('#loginp1').show();
             checkLogin();
 		});
 	});
@@ -54,8 +54,8 @@ var accessToken;
             $('#inloggad').show();
             $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
                 //visa/inte visa login/ut i dropmeny
-                $('.dropmenuloggautknapp').show();
-                $('.dropmenuloggainknapp').hide();
+                $('#logoutp1').show();
+                $('#loginp1').hide();
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
@@ -64,8 +64,8 @@ var accessToken;
             $('#inloggad').hide();
             $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
                 //visa/inte visa login/ut i dropmeny
-                $('.dropmenuloggautknapp').hide();
-                $('.dropmenuloggainknapp').show();
+                $('#logoutp1').hide();
+                $('#loginp1').show();
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
@@ -73,8 +73,8 @@ var accessToken;
             $('#inloggad').hide();
             $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
                 //visa/inte visa login/ut i dropmeny
-                $('.dropmenuloggautknapp').hide();
-                $('.dropmenuloggainknapp').show();
+                $('#logoutp1').hide();
+                $('#loginp1').show();
 
           }
         });
