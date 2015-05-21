@@ -41,6 +41,8 @@
 				String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				
+				p.typ = rs.getString("KategoriNamn");
     		    
     		    thelist.add(p);
     		}
@@ -82,6 +84,7 @@
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.typ = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
     		conn.close();
@@ -122,6 +125,7 @@
     		    String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.typ = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
     		conn.close();
@@ -162,6 +166,7 @@
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.typ = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
     		conn.close();
@@ -201,6 +206,7 @@
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.typ = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
     		conn.close();
@@ -240,6 +246,7 @@
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.typ = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
     		conn.close();
@@ -276,7 +283,7 @@
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     		    p.setBetyg(rs.getString("Betyg"));
-    		  
+    		    p.typ = rs.getString("KategoriNamn");
             }
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
