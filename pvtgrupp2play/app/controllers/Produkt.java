@@ -7,6 +7,7 @@ public class Produkt{
     public String beskr;
     public Double alkhalt;
     public int typ;
+    public String kategori;
     
     public Produkt(){
         
