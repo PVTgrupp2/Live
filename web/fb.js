@@ -53,7 +53,7 @@ var accessToken;
             $('#utloggad').hide();
             $('#inloggad').show();
             $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
-                //nytt
+                //visa/inte visa login/ut i dropmeny
                 $('#dropmenuloggautknapp').show();
                 $('#dropmenuloggainknapp').hide();
           } else if (response.status === 'not_authorized') {
@@ -63,7 +63,7 @@ var accessToken;
             $('#utloggad').show();
             $('#inloggad').hide();
             $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
-                //nytt
+                //visa/inte visa login/ut i dropmeny
                 $('#dropmenuloggautknapp').hide();
                 $('#dropmenuloggainknapp').show();
           } else {
@@ -72,7 +72,7 @@ var accessToken;
             $('#utloggad').show();
             $('#inloggad').hide();
             $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
-                //nytt
+                //visa/inte visa login/ut i dropmeny
                 $('#dropmenuloggautknapp').hide();
                 $('#dropmenuloggainknapp').show();
 
