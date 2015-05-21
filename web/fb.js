@@ -5,9 +5,9 @@ $(document).ready(function(){
 		anv.done(function(data){
 			console.log(data);
 	       	$('#utloggad').hide();
-            $('#dropmenuloggautknapp').hide();
+            $('#dropmenuloggautknapp').show();
           $('#inloggad').show(); 
-          $('#dropmenuloggainknapp').show();
+          $('#dropmenuloggainknapp').hide();
             checkLogin();
 		});
 	});
@@ -17,9 +17,9 @@ $(document).ready(function(){
 		FB.logout(function(response){
 			// window.location.href = "index.html";
                $('#utloggad').show();
-               $('#dropmenuloggautknapp').show();
+               $('#dropmenuloggautknapp').hide();
               $('#inloggad').hide();
-              $('#dropmenuloggainknapp').hide();
+              $('#dropmenuloggainknapp').show();
             checkLogin();
 		});
 	});
