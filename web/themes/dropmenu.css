@@ -60,22 +60,17 @@
 	border-top: 1px solid #e7c0bb;
 	border-bottom: 1px solid #e7c0bb;
 	position: relative;
-
 }
+
+/*
 #dropmenu ul ul li a {
 	padding: 15px 40px;
 	color: #fff;
 	text-align:center;
-}	
+}
+*/	
+
 #dropmenu ul ul li a:hover {
 	background: #e7c0bb;
 	color:#ffffff;
 }
-
-/*
-.dropmenuloggainknapp {
-}
-
-.dropmenuloggautknapp {
-}
-*/
