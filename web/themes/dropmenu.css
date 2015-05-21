@@ -44,11 +44,10 @@
 }
 
 #dropmenu ul li ul li a{
-	color:black;
 	display:block;
 	padding:10px 20px;
 	color:#b03120;
-}
+} 
 
 #dropmenu ul ul {
 	background: #5f6975; border-radius: 0px; padding: 0;
