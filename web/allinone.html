@@ -183,10 +183,11 @@
 				});				
 				//$('#popupFrame').popup({ tolerance: 25 });
 				//$('#popupFrame').popup('open');
-				function delayopen(){
-					$('#popupFrame').popup('open');
+				$('#popupFrame').popup('open');
+
+				function delayopen(){					
   					console.log('explode'); 
-  					//$('#popupFrame').popup("reposition", {"positionTo": "window"});
+  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
 				}
 				setTimeout(delayopen, 1000);
 
