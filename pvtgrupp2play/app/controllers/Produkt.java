@@ -2,7 +2,7 @@ package controllers;
 public class Produkt{
     public Long id;
     public String namn;
-    public int betyg;
+    public double betyg;
     public String land;
     public String beskr;
     public Double alkhalt;
@@ -12,20 +12,19 @@ public class Produkt{
         
     }
     
-    public int getBetyg(){
-        
+    public double getBetyg(){
         return betyg;
         
     }
     public void setBetyg(String betygstr){
         
-    Integer betygnr;
+    
        
     if (betygstr!=null){
        
     if (!betygstr.isEmpty()){
             try{
-                betygnr=Integer.parseInt(betygstr);
+                Double betygnr= new Double(betygstr);
                 if (betygnr>=1&&betygnr<=5){
                     this.betyg=betygnr.intValue();
                 }
