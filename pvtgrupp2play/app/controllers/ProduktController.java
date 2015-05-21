@@ -275,10 +275,10 @@
     		Statement stmt = null;
     		
             stmt = conn.createStatement();
-            String sql = "SELECT P.*, (SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Beska') AS Beska," +
-            "(SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Fylligt') AS Fylligt," +
-            "(SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
-            "FROM nian8516.Produkt_Betyg P WHERE P.idProdukt= '" + id + "'";
+            String sql = "SELECT P.*, (SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt AS EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Beska') AS Beska," +
+            "(SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt AS EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Fylligt') AS Fylligt," +
+            "(SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt AS EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
+            "FROM nian8516.Produkt_Betyg AS P WHERE P.idProdukt= '" + id + "'";
             //"ORDER BY Betyg DESC LIMIT 15";
             //String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
             ResultSet rs = stmt.executeQuery(sql);	
