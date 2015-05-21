@@ -5,9 +5,9 @@ $(document).ready(function(){
 		anv.done(function(data){
 			console.log(data);
 	       	$('#utloggad').hide();
-            $('.dropmenuloggautknapp').show();
+            $('#logoutp1').show();
           $('#inloggad').show(); 
-          $('.dropmenuloggainknapp').hide();
+          $('#loginp1').hide();
             checkLogin();
 		});
 	});
