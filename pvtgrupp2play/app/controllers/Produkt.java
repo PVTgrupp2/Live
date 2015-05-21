@@ -8,6 +8,9 @@ public class Produkt{
     public Double alkhalt;
     public int typ;
     public String kategori;
+    public int beska;
+    public int fyllighet;
+    public int sötma;
     
     public Produkt(){
         

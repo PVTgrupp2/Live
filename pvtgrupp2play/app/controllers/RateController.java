@@ -32,7 +32,7 @@ package controllers;
             String score = json.findPath("score").textValue();
             String token = json.findPath("token").textValue();
             
-            if(uid.length() != 18 && pid.length() != 5 && token == null && score == null){
+            if(Validator.validateUid(uid)&&Validator.validatePid(pid)&& token == null &&Validator.validateScore(score)){
                 result.put("status", "Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
