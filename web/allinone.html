@@ -301,18 +301,18 @@
 
 	});
 
- // Facebook login/logout
-$(document).ready(function(){ 
-    x = $(".message").text().trim(); 
-    if ( !!x) { 
-        $(".fblogin").hide(); 
-        $(".fblogout").show(); 
-    } 
-    else { 
-        $(".fblogout").hide(); 
-        $(".fblogin").show(); 
-    } 
-});
+ 	// Facebook login/logout
+	//$(document).ready(function(){ 
+    //  x = $(".message").text().trim(); 
+    //if ( !!x) { 
+	//  $(".fblogin").hide(); 
+    //$(".fblogout").show(); 
+    // } 
+    //else { 
+	//  $(".fblogout").hide(); 
+    //$(".fblogin").show(); 
+    //} 
+	//});
 
 	//Ladda Facebook API
 
@@ -346,8 +346,8 @@ $(document).ready(function(){
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#">Dela</a></li>
-						<li><a href="#" class="fblogin">Logga in</a></li>
-						<li><a href="#" class="fblogout">Logga ut</a></li>
+						<li><a href="#" class="fblogin" id="dropmenuloggainknapp">Logga in</a></li>
+						<li><a href="#" class="fblogout" id="dropmenuloggautknapp">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -545,8 +545,8 @@ $(document).ready(function(){
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#">Dela</a></li>
-						<li><a href="#" class="fblogin">Logga in</a></li>
-						<li><a href="#" class="fblogout">Logga ut</a></li>
+						<li><a href="#" class="fblogin" id="dropmenuloggainknapp">Logga in</a></li>
+						<li><a href="#" class="fblogout" id="dropmenuloggautknapp">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
