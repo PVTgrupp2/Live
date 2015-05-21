@@ -6,7 +6,9 @@
 <body>
 	<script>
 
-
+$(document).ready(function() {
+	$('#page1').hide();
+});
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -85,10 +87,14 @@
         'Thanks for logging in, ' + response.name + '!';
     });
   }
+  function visaSidan() {
+  	$('#page1').show();
+  	// body...
+  }
 </script>
-<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+<div class="fb-login-button" onlogin"visaSidan()" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 
- <div><h1>Här är freddes coola sida!</h1></div>
+ <div id="page1"><h1>Här är freddes coola sida!</h1></div>
 
 
 <!--
