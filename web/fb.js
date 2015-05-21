@@ -67,7 +67,7 @@ var accessToken;
             loadToTaste();
             $('#utloggad').hide();
             $('#inloggad').show();
-            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').show();
                 $('#logoutp2').show();
@@ -83,7 +83,7 @@ var accessToken;
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
@@ -98,7 +98,7 @@ var accessToken;
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
