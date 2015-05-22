@@ -55,8 +55,8 @@ var accessToken;
 
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            $('#mytoplist').load(totasteurl, function(){                        
-                $('#mytoplist').listview().listview('refresh'); 
+            $('#mytastelist').load(totasteurl, function(){                        
+                $('#mytastelist').listview().listview('refresh'); 
             });
         }
 
