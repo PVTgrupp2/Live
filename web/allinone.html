@@ -173,8 +173,8 @@
 
 		$(document).on("click", "#BedömButton", function(){
 			var theid = $(this).attr('data-id');
-  			console.log('bedöm' +  theid);
-  			//storeToTaste(theid);
+  			console.log('bedöm ' +  theid);
+  			storeBedöm(theid);
 		});
 
 		function ListPopup(){
@@ -307,10 +307,15 @@
 		}
 
 		function storeBedöm(pid){
-			var uids = uid + "";
-			var pids = pid + "";
-			$('#uid').val(uids);
-			$('#pid').val(pids);
+			if(uid.length > 1){
+				var uids = uid + "";
+				var pids = pid + "";
+				$('#uid').val(uids);
+				$('#pid').val(pids);
+				$.mobile.changePage("#rate");
+			}else{
+				console.log('notloggedin');
+			}
 		}
 
 		});
@@ -646,7 +651,7 @@
 
 		<form action="https://pvt-grupp2.herokuapp.com/bedom" method="POST">
 			<input type="hidden" id="uid" name="uid" class="hiddenField"/> 
-			<input type="hidden" id="pid" name="pid" class="hiddenField" value="1"/>
+			<input type="hidden" id="pid" name="pid" class="hiddenField"/>
 			
 			    <label class="sliderubrik" for="Beska">Beska: <a href="#beskainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 					<div data-role="popup" id="beskainfo" class="ui-content" data-theme="a" style="max-width:350px;">
