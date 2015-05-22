@@ -11,6 +11,7 @@ public class Produkt{
     public int beska;
     public int fyllighet;
     public int sötma;
+    public int rökighet;
     
     public Produkt(){
         

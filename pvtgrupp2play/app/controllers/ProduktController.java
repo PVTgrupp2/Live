@@ -295,6 +295,7 @@
     		    p.beska = rs.getInt("Beska");
     		    p.fyllighet = rs.getInt("Fylligt");
     		    p.sötma = rs.getInt("Sött");
+    		    p.rökighet = rs.getInt("Rökighet");
             }
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());

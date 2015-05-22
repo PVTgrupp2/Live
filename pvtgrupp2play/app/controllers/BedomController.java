@@ -34,7 +34,7 @@ package controllers;
             String sötma = json.findPath("sötma").textValue();
             String token = json.findPath("token").textValue();
             
-            if(Validator-validateUid(uid) && Validator.validatePid(pid) && token == null &&fyllighet==null && sötma == null && beska == null ){
+            if(Validator.validateUid(uid) && Validator.validatePid(pid) && token == null &&fyllighet==null && sötma == null && beska == null ){
                 result.put("status", "Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
@@ -43,6 +43,7 @@ package controllers;
                         Connection conn = DatabaseConn.getConn();
             		    Statement stmt = null;
                         stmt = conn.createStatement();
+                        String score = "";
                         String sql = "INSERT INTO nian8516.Användare_Egenskap (idAnvändare_Egenskap, Användare_Egenskapcol) VALUES('"+ pid +"','" + uid +"','" + score + "')" +
                          "ON DUPLICATE KEY UPDATE idAnvändare='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";
                         stmt.executeUpdate(sql);	
