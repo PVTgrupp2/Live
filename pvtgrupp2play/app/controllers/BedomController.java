@@ -33,10 +33,10 @@ package controllers;
 
             String uid = dynamicForm.get("uid");//json.findPath("uid").textValue();
             String pid = dynamicForm.get("pid");//json.findPath("pid").textValue();
-            String beska = "1";//json.findPath("beska").textValue();
-            String fyllighet = "1";//json.findPath("fyllighet").textValue();
-            String sötma = "1";//json.findPath("sötma").textValue();
-            String token = "1";//json.findPath("token").textValue();
+            String beska = dynamicForm.get("Beska");//json.findPath("beska").textValue();
+            String fyllighet = dynamicForm.get("Fyllighet");//json.findPath("fyllighet").textValue();
+            String sötma = dynamicForm.get("Sötma");//json.findPath("sötma").textValue();
+            //String token = dynamicForm.get("pid");//json.findPath("token").textValue();
             
             if(false){//(Validator.validateUid(uid) && Validator.validatePid(pid) && token == null &&fyllighet==null && sötma == null && beska == null ){
                 result.put("status", "Missing parameter");
