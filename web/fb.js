@@ -11,10 +11,14 @@ $(document).ready(function(){
             $('#logoutp2').show();
             $('#logoutp3').show();
             $('#logoutp4').show();
+            $('#logoutp5').show();
+            $('#logoutp6').show();
           $('#loginp1').hide();
           $('#loginp2').hide();
           $('#loginp3').hide();
           $('#loginp4').hide();
+          $('#loginp5').hide();
+          $('#loginp6').hide();
             checkLogin();
 		});
 	});
@@ -30,10 +34,14 @@ $(document).ready(function(){
                $('#logoutp2').hide();
                $('#logoutp3').hide();
                $('#logoutp4').hide();
+               $('#logoutp5').hide();
+               $('#logoutp6').hide();
               $('#loginp1').show();
               $('#loginp2').show();
               $('#loginp3').show();
               $('#loginp4').show();
+              $('#loginp5').show();
+              $('#loginp6').show();
 
             checkLogin();
 		});
@@ -73,10 +81,14 @@ var accessToken;
                 $('#logoutp2').show();
                 $('#logoutp3').show();
                 $('#logoutp4').show();
+                $('#logoutp5').show();
+                $('#logoutp6').show();
                 $('#loginp1').hide();
                 $('#loginp2').hide();
                 $('#loginp3').hide();
                 $('#loginp4').hide();
+                $('#loginp5').hide();
+                $('#loginp6').hide();
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
@@ -89,10 +101,14 @@ var accessToken;
                 $('#logoutp2').hide();
                 $('#logoutp3').hide();
                 $('#logoutp4').hide();
+                $('#logoutp5').hide();
+                $('#logoutp6').hide();
                 $('#loginp1').show();
                 $('#loginp2').show();
                 $('#loginp3').show();
                 $('#loginp4').show();
+                $('#loginp5').show();
+                $('#loginp6').show();
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
@@ -104,10 +120,14 @@ var accessToken;
                 $('#logoutp2').hide();
                 $('#logoutp3').hide();
                 $('#logoutp4').hide();
+                $('#logoutp5').hide();
+                $('#logoutp6').hide();
                 $('#loginp1').show();
                 $('#loginp2').show();
                 $('#loginp3').show();
                 $('#loginp4').show();
+                $('#loginp5').show();
+                $('#loginp6').show();
 
 
           }
