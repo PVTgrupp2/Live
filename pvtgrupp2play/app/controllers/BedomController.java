@@ -39,7 +39,8 @@ package controllers;
             //String token = dynamicForm.get("pid");//json.findPath("token").textValue();
             
             if(false){//(Validator.validateUid(uid) && Validator.validatePid(pid) && token == null &&fyllighet==null && sötma == null && beska == null ){
-                result.put("status", "Missing parameter");
+                //result.put("status", "Missing parameter");
+                return internalServerError("Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
                     
@@ -55,13 +56,14 @@ package controllers;
                          "ON DUPLICATE KEY UPDATE idAnvändare='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";*/
                         stmt.executeUpdate(sql);	
                     }catch(Exception e){
-                        result.put("status", e.toString());
+                        return internalServerError("Oops: Database Error" + e.toString());
                     }
                         
                     //return ok(result);
                     
                 }else{
-                    result.put("status", "Login fail");
+                    //result.put("status", "Login fail");
+                    return internalServerError("Oops: Login Fail");
                 }
             }
         
