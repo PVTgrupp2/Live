@@ -172,8 +172,8 @@
 		});
 
 		$(document).on("click", "#BedömButton", function(){
-			//var theid = $(this).attr('data-id');
-  			console.log('totaste ID: ' +  theid);
+			var theid = $(this).attr('data-id');
+  			console.log('bedöm' +  theid);
   			//storeToTaste(theid);
 		});
 
@@ -306,8 +306,12 @@
 			}
 		}
 
-
-	});
+		function storeBedöm(pid){
+			var uids = uid + "";
+			var pids = pid + "";
+			$('#uid').val(uids);
+			$('#pid').val(pids);
+		});
 
  	// Facebook login/logout
 	//$(document).ready(function(){ 
@@ -638,30 +642,31 @@
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
 
-		<form>
-			    <label class="sliderubrik" for="slider-4">Beska: <a href="#beskainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
+		<form action="https://pvt-grupp2.herokuapp.com/bedom">
+			<input type="hidden" id="uid" name="uid" class="hiddenField"/> 
+			<input type="hidden" id="pid" name="pid" class="hiddenField"/>
+			
+			    <label class="sliderubrik" for="Beska">Beska: <a href="#beskainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 					<div data-role="popup" id="beskainfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Beska smakar bittert och mäts bara i öl. Generellt kan man säga att veteöl och vissa amerikanska öl har den lägsta beskan (1-2) medan tysk pilsner och de mörka stout och porter kan vara väldigt beska (10-12). Vanlig svensk ljus lager brukar ha en beska på 6-8. 
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
-		<form>
-			     <label class="sliderubrik" for="slider-4">Sötma: <a href="#sötmainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
+		    <input name="Beska" id="Beska" data-highlight="true" min="0" max="12" value="6" type="range">
+
+			     <label class="sliderubrik" for="Sötma">Sötma: <a href="#sötmainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 					<div data-role="popup" id="sötmainfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Hur söt är drycken? Allt ifrån 1 (helt torr) till 12 (mycket söt) förekommer. Vitt vin, rosé, mousserande och cider räknas som halvtorra om klockan står på 5-8. Rött vin saknar denna klocka, eftersom det så gott som alltid är torrt.
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
-		<form>
-			    <label class="sliderubrik" for="slider-4">Fyllighet: <a href="#fyllinfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a></p>
+		    <input name="Sötma" id="Sötma" data-highlight="true" min="0" max="12" value="6" type="range">
+
+			    <label class="sliderubrik" for="Fyllighet">Fyllighet: <a href="#fyllinfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a></p>
 					<div data-role="popup" id="fyllinfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Hur fyllig känns drycken? Som vatten eller som oblandad saft? En 1:a (som vatten) är mycket sällsynt, men kan förekomma hos väldigt lätta öltyper. Motsatsen, en 12:a, är också sällsynt men ibland kan ett sött vitt vin, ett kraftigt rött eller ett starkvin vara just så väldigt fylligt.
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
+		    <input name="Fyllighet" id="Fyllighet" data-highlight="true" min="0" max="12" value="6" type="range">
+		
 			<p style="float:left">Ditt betyg för drycken:</p> 
 			<div class="produktlist" id="starforrating">
 		</div> 
@@ -678,9 +683,9 @@
 		</ul>
 	</div>
 
-		<form>
+		
 		    <textarea name="textarea-1" id="textarea-1"></textarea>
-		</form>
+		
 
 		<p> </p>
 
@@ -689,9 +694,10 @@
 	<div >
 		<button class="ui-btn ui-btn-inline">Avbryt</button>
 		<button class="ui-btn ui-btn-inline">Spara/Dela</button>
-		<button class="ui-btn ui-btn-inline">Spara</button>
+		<!--<button class="ui-btn ui-btn-inline">Spara</button>-->
+		<input type="submit" value="Spara">
 	</div>
-	
+	</form>
 	</div><!-- /content -->
 		
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
