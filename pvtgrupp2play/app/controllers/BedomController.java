@@ -50,7 +50,7 @@ package controllers;
                         String score = "";
                         
                         String sql = "INSERT INTO `nian8516`.`Användare_Egenskap` (`idAnvändare_Egenskap`,`Användare_Egenskapcol`,`pid`,`grad`,`Beska`,`Sötma`,`Fyllighet`)"+
-                                                                            "VALUES('" + "1" +"','" + "2" + "','" + "','" + pid +"','" + beska + "','" + sötma + "','" + fyllighet + "')";
+                                                                            "VALUES('" + "1" +"','" + "2" + "','" + pid +"','" + "4"  + "','" + beska + "','" + sötma + "','" + fyllighet + "')";
                         /*String sql = "INSERT INTO nian8516.Användare_Egenskap (idAnvändare_Egenskap, Användare_Egenskapcol) VALUES('"+ pid +"','" + uid +"','" + score + "')" +
                          "ON DUPLICATE KEY UPDATE idAnvändare='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";*/
                         stmt.executeUpdate(sql);	
