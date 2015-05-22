@@ -65,7 +65,7 @@ package controllers;
                 }
             }
         
-        return ok(result);
+        return redirect("https://pvt.dsv.su.se/Group2/web/allinone.html");
     }
      
  }
