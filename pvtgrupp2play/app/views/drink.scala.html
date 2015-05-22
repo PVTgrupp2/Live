@@ -1,4 +1,5 @@
 @(theitem: Produkt)
+
 <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 	<div class="ui-grid-a">
 		 <div class="ui-block-a" ><img src="themes/img/@(theitem.id).png"></div>
@@ -9,10 +10,22 @@
 				        <p>Land: @theitem.land</p>
 				        <p>Alkhalt: @theitem.alkhalt %</p>
 				        <p>Betyg: @theitem.betyg</p>
-				        <p>Fyllighet: @theitem.fyllighet</p>
-				        <p>Sötma: @theitem.sötma</p>
-				        <p>Beska: @theitem.beska</p>
-				        <p>Rökighet: @theitem.rökighet</p>
+				        @if(theitem.kategori == "Öl") {
+    				        <p>Fyllighet: @theitem.fyllighet</p>
+    				        <p>Sötma: @theitem.sötma</p>
+    				        <p>Beska: @theitem.beska</p>
+				        } 
+				        
+				        @if(theitem.kategori == "Vin") {
+    				        <p>Fyllighet: @theitem.fyllighet</p>
+    				        <p>Sötma: @theitem.sötma</p>
+    				        <p>Beska: @theitem.beska</p>
+				        } 
+				        
+				        @if(theitem.kategori == "Wisky") {
+    				        <p>Rökighet: @theitem.rökighet</p>
+				        } 
+				        
 						<p class="produkt" data-score="@theitem.betyg"></p>
             </div>
     </div>
