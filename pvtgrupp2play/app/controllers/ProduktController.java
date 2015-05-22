@@ -292,9 +292,9 @@
     		    p.setBetyg(rs.getString("Betyg"));
     		    p.kategori = rs.getString("KategoriNamn");
     		    
-    		    p.beska = rs.getString("Beska");
-    		    p.fyllighet = rs.getString("Fylligt");
-    		    p.sötma = rs.getString("Sött");
+    		    p.beska = rs.getInt("Beska");
+    		    p.fyllighet = rs.getInt("Fylligt");
+    		    p.sötma = rs.getInt("Sött");
             }
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
