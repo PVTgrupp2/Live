@@ -22,6 +22,7 @@
 	<link href="themes/kartan/interactive_map.css" rel="stylesheet" type="text/css" />
 	<script src="themes/kartan/jquery.panzoom.js"></script>
     <script src="themes/kartan/jquery.mousewheel.js"></script>
+	<script >function logoutalert() {alert("Du har loggats ut!");}</script>
 
 	<script type="text/javascript">	
 
@@ -182,18 +183,13 @@
 		/* MINA SIDOR TESTLIST */
 
 		$('#myTop').click(function(){
-		$('#mytoplist').show();
-			
+			$('#mytoplist').show();		
+			$('#mytastelist').hide();
 		});
 
-
-		$('#minaBedömningar').click(function(){
-			$('#thetoplistwisky').show();
-			/*$('#thetoplistwisky').hide();*/
-		});
-		$('#To-Taste-Lista').click(function(){
-			$('#thetoplistwisky').hide();
-			$('#thetoplistwisky').show();
+		$('#myTaste').click(function(){
+			$('#mytastelist').show();
+			$('#mytoplist').hide();
 		});
 
 
@@ -214,9 +210,9 @@
 		});
 
 		$(document).on("click", "#BedömButton", function(){
-			//var theid = $(this).attr('data-id');
-  			console.log('totaste ID: ' +  theid);
-  			//storeToTaste(theid);
+			var theid = $(this).attr('data-id');
+  			console.log('bedöm ' +  theid);
+  			storeBedöm(theid);
 		});
 
 		function ListPopup(){
@@ -348,8 +344,19 @@
 			}
 		}
 
+		function storeBedöm(pid){
+			if(uid.length > 1){
+				var uids = uid + "";
+				var pids = pid + "";
+				$('#uid').val(uids);
+				$('#pid').val(pids);
+				$.mobile.changePage("#rate");
+			}else{
+				console.log('notloggedin');
+			}
+		}
 
-	});
+		});
 
  	// Facebook login/logout
 	//$(document).ready(function(){ 
@@ -366,7 +373,12 @@
 
 	//Ladda Facebook API
 
-	window.fbAsyncInit = function() {
+	</script>
+</head>
+
+<body>
+<script>
+		window.fbAsyncInit = function() {
         FB.init({
           appId      : '799390323443595',		// 392795464233014
           xfbml      : true,
@@ -375,18 +387,17 @@
         checkLogin();
       };
 
-      (function(d, s, id){
-         var js, fjs = d.getElementsByTagName(s)[0];
-         if (d.getElementById(id)) {return;}
-         js = d.createElement(s); js.id = id;
-         js.src = "//connect.facebook.net/en_US/sdk.js";
-         fjs.parentNode.insertBefore(js, fjs);
-       }(document, 'script', 'facebook-jssdk'));
+     (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+ 
 
-	</script>
-</head>
 
-<body>
+</script>
 <!-- PAGE 1 -->
 <div data-role="page" id="toplist">
 	<div id="banner" data-role="header">
@@ -396,8 +407,13 @@
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#">Dela</a></li>
-						<li><a href="#" class="fblogin" id="loginp1" data-transition="none">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp1" data-transition="none">Logga ut</a></li>
+						<li><a href="#" class="fblogin" id="loginp1" >Logga in</a></li>
+						<li><a href="#" class="fblogout" id="logoutp1" onclick="logoutalert()">Logga ut</a></li>
+						<script >
+								function logoutalert() {
+								alert("Du har loggats ut!");
+								}
+							</script>
 					</ul>
 				</li>	
 			</ul>
@@ -453,7 +469,7 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin" id="loginp2">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp2">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -607,6 +623,11 @@
 
 	<!-- /content -->
 
+		<div
+ 		 class="fb-like"
+ 		 data-send="true"
+ 		 data-width="450">
+		</div>
 		<a href="#rate">RATESIDAN</a> <!-- TILLFÄLLIG GENVÄG TILL RATESIDAN!!! -->
 		<br><br>
 		<a href="#Valkommen">VÄLKOMSTSIDAN</a> <!-- TILLFÄLLIG GENVÄG TILL Välkomstsidan!!! -->
@@ -634,7 +655,7 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin" id="loginp3">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp3">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp3" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -688,24 +709,26 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin" id="loginp4">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp4">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
+		
 	</div><!-- /header -->
-<div class="space"></div>
-	<div id="fb-root"></div>
-
+	<div class="space"></div>
 	<div data-role="content" id="utloggad" data-theme="b">			
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
-
-		<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p>
-	</div><!-- /content -->
+			<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+		
+		<!--<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p> -->
+	</div> 
+	<!-- /content -->
 
 	<div data-role="content" id="inloggad">	
+	<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
@@ -746,8 +769,8 @@
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#">Dela</a></li>
-						<li><a href="#" class="fblogin">Logga in</a></li>
-						<li><a href="#" class="fblogout">Logga ut</a></li>
+						<li><a href="#" class="fblogin" id="loginp5">Logga in</a></li>
+						<li><a href="#" class="fblogout" id="logoutp5" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -756,30 +779,31 @@
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
 
-		<form>
-			    <label class="sliderubrik" for="slider-4">Beska: <a href="#beskainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
+		<form action="https://pvt-grupp2.herokuapp.com/bedom" method="POST">
+			<input type="hidden" id="uid" name="uid" class="hiddenField"/> 
+			<input type="hidden" id="pid" name="pid" class="hiddenField"/>
+			
+			    <label class="sliderubrik" for="Beska">Beska: <a href="#beskainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 					<div data-role="popup" id="beskainfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Beska smakar bittert och mäts bara i öl. Generellt kan man säga att veteöl och vissa amerikanska öl har den lägsta beskan (1-2) medan tysk pilsner och de mörka stout och porter kan vara väldigt beska (10-12). Vanlig svensk ljus lager brukar ha en beska på 6-8. 
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
-		<form>
-			     <label class="sliderubrik" for="slider-4">Sötma: <a href="#sötmainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
+		    <input name="Beska" id="Beska" data-highlight="true" min="0" max="12" value="6" type="range">
+
+			     <label class="sliderubrik" for="Sötma">Sötma: <a href="#sötmainfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 					<div data-role="popup" id="sötmainfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Hur söt är drycken? Allt ifrån 1 (helt torr) till 12 (mycket söt) förekommer. Vitt vin, rosé, mousserande och cider räknas som halvtorra om klockan står på 5-8. Rött vin saknar denna klocka, eftersom det så gott som alltid är torrt.
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
-		<form>
-			    <label class="sliderubrik" for="slider-4">Fyllighet: <a href="#fyllinfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a></p>
+		    <input name="Sötma" id="Sötma" data-highlight="true" min="0" max="12" value="6" type="range">
+
+			    <label class="sliderubrik" for="Fyllighet">Fyllighet: <a href="#fyllinfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a></p>
 					<div data-role="popup" id="fyllinfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Hur fyllig känns drycken? Som vatten eller som oblandad saft? En 1:a (som vatten) är mycket sällsynt, men kan förekomma hos väldigt lätta öltyper. Motsatsen, en 12:a, är också sällsynt men ibland kan ett sött vitt vin, ett kraftigt rött eller ett starkvin vara just så väldigt fylligt.
 					</div>
 				</label>
-		    <input name="slider-4" id="slider-4" data-highlight="true" min="0" max="12" value="6" type="range">
-		</form>
+		    <input name="Fyllighet" id="Fyllighet" data-highlight="true" min="0" max="12" value="6" type="range">
+		
 			<p style="float:left">Ditt betyg för drycken:</p> 
 			<div class="produktlist" id="starforrating">
 		</div> 
@@ -796,9 +820,9 @@
 		</ul>
 	</div>
 
-		<form>
+		
 		    <textarea name="textarea-1" id="textarea-1"></textarea>
-		</form>
+		
 
 		<p> </p>
 
@@ -807,9 +831,10 @@
 	<div >
 		<button class="ui-btn ui-btn-inline">Avbryt</button>
 		<button class="ui-btn ui-btn-inline">Spara/Dela</button>
-		<button class="ui-btn ui-btn-inline">Spara</button>
+		<!--<button class="ui-btn ui-btn-inline">Spara</button>-->
+		<input type="submit" value="Spara">
 	</div>
-	
+	</form>
 	</div><!-- /content -->
 		
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
@@ -834,8 +859,8 @@
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#">Dela</a></li>
-						<li><a href="#" class="fblogin">Logga in</a></li>
-						<li><a href="#" class="fblogout">Logga ut</a></li>
+						<li><a href="#" class="fblogin" id="loginp6">Logga in</a></li>
+						<li><a href="#" class="fblogout" id="logoutp6" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>

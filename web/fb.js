@@ -11,10 +11,14 @@ $(document).ready(function(){
             $('#logoutp2').show();
             $('#logoutp3').show();
             $('#logoutp4').show();
+            $('#logoutp5').show();
+            $('#logoutp6').show();
           $('#loginp1').hide();
           $('#loginp2').hide();
           $('#loginp3').hide();
           $('#loginp4').hide();
+          $('#loginp5').hide();
+          $('#loginp6').hide();
             checkLogin();
 		});
 	});
@@ -30,10 +34,14 @@ $(document).ready(function(){
                $('#logoutp2').hide();
                $('#logoutp3').hide();
                $('#logoutp4').hide();
+               $('#logoutp5').hide();
+               $('#logoutp6').hide();
               $('#loginp1').show();
               $('#loginp2').show();
               $('#loginp3').show();
               $('#loginp4').show();
+              $('#loginp5').show();
+              $('#loginp6').show();
 
             checkLogin();
 		});
@@ -47,8 +55,8 @@ var accessToken;
 
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            $('#mytoplist').load(totasteurl, function(){                        
-                $('#mytoplist').listview().listview('refresh'); 
+            $('#mytastelist').load(totasteurl, function(){                        
+                $('#mytastelist').listview().listview('refresh'); 
             });
         }
 
@@ -67,47 +75,59 @@ var accessToken;
             loadToTaste();
             $('#utloggad').hide();
             $('#inloggad').show();
-            $('.fblogout').html('<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').show();
                 $('#logoutp2').show();
                 $('#logoutp3').show();
                 $('#logoutp4').show();
+                $('#logoutp5').show();
+                $('#logoutp6').show();
                 $('#loginp1').hide();
                 $('#loginp2').hide();
                 $('#loginp3').hide();
                 $('#loginp4').hide();
+                $('#loginp5').hide();
+                $('#loginp6').hide();
           } else if (response.status === 'not_authorized') {
             // the user is logged in to Facebook, 
             // but has not authenticated your app
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
                 $('#logoutp3').hide();
                 $('#logoutp4').hide();
+                $('#logoutp5').hide();
+                $('#logoutp6').hide();
                 $('#loginp1').show();
                 $('#loginp2').show();
                 $('#loginp3').show();
                 $('#loginp4').show();
+                $('#loginp5').show();
+                $('#loginp6').show();
           } else {
             // the user isn't logged in to Facebook.
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html('<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>');
+            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
                 $('#logoutp3').hide();
                 $('#logoutp4').hide();
+                $('#logoutp5').hide();
+                $('#logoutp6').hide();
                 $('#loginp1').show();
                 $('#loginp2').show();
                 $('#loginp3').show();
                 $('#loginp4').show();
+                $('#loginp5').show();
+                $('#loginp6').show();
 
 
           }
