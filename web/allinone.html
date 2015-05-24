@@ -20,9 +20,8 @@
 	<script src="themes/jquery.raty.js"></script>
 
 	<link href="themes/kartan/interactive_map.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="themes/kartan/jquery.touchpanview.js"></script>
-	<script type="text/javascript" src="themes/kartan/jquery.jgestures.js"></script>
-	<script type="text/javascript" src="themes/kartan/interactive_map.js"></script>
+	<script src="themes/kartan/jquery.panzoom.js"></script>
+    <script src="themes/kartan/jquery.mousewheel.js"></script>
 
 	<script type="text/javascript">	
 
@@ -57,8 +56,52 @@
 
 
 
+// KARTANS PINS; PLACERA POPUP HÄR!	
 		
+		$('#pin01').click(function(){
+		
+		});
+		$('#pin02').click(function(){
+		
+		});
+		$('#pin03').click(function(){
+		
+		});
+		$('#pina1').click(function(){
+		
+		});
+		$('#pina2').click(function(){
+		
+		});
+		$('#pina3').click(function(){
+		
+		});
+		$('#pina4').click(function(){
+		
+		});
+		$('#pina5').click(function(){
+		
+		});
+		$('#pinb1').click(function(){
+		
+		});
+		$('#pinb2').click(function(){
+		
+		});
+		$('#pinb3').click(function(){
+		
+		});
+		$('#pinb4').click(function(){
+		
+		});
+		$('#pinb5').click(function(){
+		
+		});
+		$('#pinc1').click(function(){
+		
+		});
 
+		//KARTAN, KARTAN GÖMS/VISAS
 
 		$(document).ready(function(){
 			$('#b').hide();
@@ -418,7 +461,7 @@
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">		
-		<div>
+		<div style="border: #e7c0bb solid 1px;">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#" id="hallall" class="ui-btn-active" data-transition="none">Karta</a></li>
@@ -426,49 +469,141 @@
 						<li><a href="#" id="hallb" class="ui-btn" data-transition="none">Hall B</a></li>
 						<li><a href="#" id="hallc" class="ui-btn" data-transition="none">Hall C</a></li>
 					</ul>
-				</div>				
+				</div>			
 		
 <!--kartan och dens 'dots'-->
 
+<section class="s0">
+      <div class="parent">
+        <div class="panzoom">
+        <div id="all0" class="map_c">
+        	
+<img id="hall1" src="themes/img/hall0.png" width="1200" height="463" />
+  
+  <div id="pin01" class="pins">
+  </div>
+ <div id="pin02" class="pins">
+  </div>
+ <div id="pin03" class="pins">
+  </div>
+   
 
-	<div id="all0" class="map_c">
-<img id="hall0" src="themes/img/hall0.png" width="1200" height="463" />
-<a class="touchpanview-pin-1"  href="#"></a>
-<a class="touchpanview-pin-2" href="#"></a>
-<a class="touchpanview-pin-3" href="#"></a>
-<a class="touchpanview-pin-4" href="#"></a>
-
+   </div>
 </div>
+</div>
+      <script>
+        (function() {
+          var $section = $('.s0').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
 
+          });
+        })();
+       
+      </script>
+    </section>
 
+<section class="s1">
+      <div class="parent">
+        <div class="panzoom">
 	<div id="a" class="map_c">
 <img id="hall1" src="themes/img/hall1.png" width="1200" height="463" />
-<a class="touchpanview-pin-1"  href="#"></a>
-<a class="touchpanview-pin-2" href="#"></a>
-<a class="touchpanview-pin-3" href="#"></a>
-<a class="touchpanview-pin-4" href="#"></a>
+	
+	<div id="pina1" class="pins">
+  </div>
+  <div id="pina2" class="pins">
+  </div>
+ <div id="pina3" class="pins">
+  </div>
+   <div id="pina4" class="pins">
+  </div>
+   <div id="pina5" class="pins">
+  </div>
 
+   </div>
 </div>
+</div>
+      <script>
+        (function() {
+          var $section = $('.s1').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
 
-<div id="b" class="map_c">
+          });
+        })();
+       
+      </script>
+    </section>
+
+<section class="s2">
+      <div class="parent">
+        <div class="panzoom">
+	<div id="b" class="map_c">
 <img id="hall2" src="themes/img/hall2.png" width="1200" height="463"/>
-<a class="touchpanview-pin-1"  href="#"></a>
-<a class="touchpanview-pin-2" href="#"></a>
-<a class="touchpanview-pin-3" href="#"></a>
-<a class="touchpanview-pin-4" href="#"></a>
+	
+	<div id="pinb1" class="pins">
+  </div>
+  <div id="pinb2" class="pins">
+  </div>
+ <div id="pinb3" class="pins">
+  </div>
+   <div id="pinb4" class="pins">
+  </div>
+   <div id="pinb5" class="pins">
+  </div>
 
+   </div>
 </div>
+</div>
+      <script>
+        (function() {
+          var $section = $('.s2').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
 
+          });
+        })();
+       
+      </script>
+    </section>
+
+<section class="s3">
+      <div class="parent">
+        <div class="panzoom">
 	<div id="c" class="map_c">
-<img id="hall3" src="themes/img/hall3.jpg" width="1200" height="463" />
-<a class="touchpanview-pin-1"  href="#"></a>
-<a class="touchpanview-pin-2" href="#"></a>
-<a class="touchpanview-pin-3" href="#"></a>
-<a class="touchpanview-pin-4" href="#"></a>
+<img id="hall3" src="themes/img/hall3.jpg" width="463" height="463" />
+
+	<div id="pinc1" class="pins">
+  </div>
+   </div>
+</div>
+</div>
+      <script>
+        (function() {
+          var $section = $('.s3').first();
+          $section.find('.panzoom').panzoom({
+            $zoomIn: $section.find(".zoom-in"),
+            $zoomOut: $section.find(".zoom-out"),
+            $zoomRange: $section.find(".zoom-range"),
+            $reset: $section.find(".reset")
+
+          });
+        })();
+       
+      </script>
+    </section>
 
 </div>
 </div>
-	</div>
 
 	<!-- /content -->
 

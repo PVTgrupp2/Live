@@ -3,8 +3,84 @@
 	/*width:230px;*/
 	width: 100%;
 	height: 100%;
+
 	position: relative;
 	background: white;
+	
+}
+
+.pins{
+	border-radius: 50%; 
+	background-color:orange; 
+	width:30px; 
+	height:30px;
+	position: absolute;
+}
+.pins:hover{
+	background-color: yellow;
+}
+
+
+/* FÖR HALL0/ ALLA 3 Hallar*/
+#pin01{
+	top:75px; 
+	left: 545px;
+}
+#pin02{
+	top:180px; 
+	left: 709px;
+}
+#pin03{
+	top:339px; 
+	left: 600px;
+}
+/* FÖR HALL 1/A*/
+#pina1{
+	top:225px; 
+	left: 425px;
+}
+#pina2{
+	top:210px; 
+	left: 539px;
+}
+#pina3{
+	top:222px; 
+	left: 650px;
+}
+#pina4{
+	top:313px; 
+	left: 370px;
+}
+#pina5{
+	top:309px; 
+	left: 550px;
+}
+/* FÖR HALL 2/B*/
+#pinb1{
+	top:255px; 
+	left: 397px;
+}
+#pinb2{
+	top:267px; 
+	left: 620px;
+}
+#pinb3{
+	top:267px; 
+	left: 708px;
+}
+#pinb4{
+	top:255px; 
+	left: 255px;
+}
+#pinb5{
+	top:305px; 
+	left: 775px;
+}
+/* FÖR HALL 3/C */
+
+#pinc1{
+	top:238px; 
+	left: 355px;
 }
 
 .all0{
@@ -21,41 +97,4 @@
 	display: none;
 }
 
-
-.touchpanview-wrap {
-	position:relative;
-	
-	overflow:hidden;
-	border:1px solid #e7c0bb;
-}
-
-.touchpanview-pan {
-	position:absolute;
-	top:0;
-	left:0;
-	
-	overflow:hidden;
-}
-
-.touchpanview-pan img {
-	position:absolute;
-	top:0;
-	left:0;
-	
-}
-
-
-.touchpanview-pin {
-	position: absolute;
-	display: block;
-	width: 30px;
-	height: 30px;
-	background: orange;
-	border-radius: 50%;
-	
-}
-
-.touchpanview-pin:active {
-	background-position: -30px 0px; 
-}
 
