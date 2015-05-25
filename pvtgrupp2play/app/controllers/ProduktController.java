@@ -31,7 +31,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -74,7 +74,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=1";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg WHERE Kategori=1";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -117,7 +117,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=2";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg WHERE Kategori=2";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -158,7 +158,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=1 ORDER BY Betyg DESC LIMIT 15";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg WHERE Kategori=1 ORDER BY Betyg DESC LIMIT 15";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -198,7 +198,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE Kategori=2 ORDER BY Betyg DESC LIMIT 15";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg WHERE Kategori=2 ORDER BY Betyg DESC LIMIT 15";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
