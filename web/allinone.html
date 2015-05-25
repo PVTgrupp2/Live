@@ -63,49 +63,123 @@
 
 	
 // KARTANS PINS; PLACERA POPUP HÄR!	
+
+	$('.close').click(function(){
+		$('#Alla').hide();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+
+
+	$(document).ready(function(){
+		$('#Alla').hide();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
 		
-		$('#pin01').click(function(){
-		
-		});
-		$('#pin02').click(function(){
-		
-		});
-		$('#pin03').click(function(){
-		
-		});
-		$('#pina1').click(function(){
-		
-		});
-		$('#pina2').click(function(){
-		
-		});
-		$('#pina3').click(function(){
-		
-		});
-		$('#pina4').click(function(){
-		
-		});
-		$('#pina5').click(function(){
-		
-		});
-		$('#pinb1').click(function(){
-		
-		});
-		$('#pinb2').click(function(){
-		
-		});
-		$('#pinb3').click(function(){
-		
-		});
-		$('#pinb4').click(function(){
-		
-		});
-		$('#pinb5').click(function(){
-		
-		});
-		$('#pinc1').click(function(){
-		
-		});
+	$('#pin01').click(function(){
+		$('#Alla').hide();
+		$('#Carls').hide();
+		$('#hall2P').show();
+		$('#hall1P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pin02').click(function(){
+		$('#Alla').hide();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').show();
+	});
+	$('#pin03').click(function(){
+		$('#Alla').hide();
+		$('#Carls').hide();
+		$('#hall1P').show();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pina1').click(function(){
+		$('#Alla').hide();
+		$('#Carls').show();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pina2').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pina3').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pina4').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pina5').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinb1').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinb2').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinb3').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinb4').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinb5').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+	$('#pinc1').click(function(){
+		$('#Alla').show();
+		$('#Carls').hide();
+		$('#hall1P').hide();
+		$('#hall2P').hide();
+		$('#hall3P').hide();
+	});
+
 
 		//KARTAN, KARTAN GÖMS/VISAS
 
@@ -502,6 +576,8 @@
 		
 <!--kartan och dens 'dots'-->
 
+
+
 <section class="s0">
       <div class="parent">
         <div class="panzoom">
@@ -630,6 +706,51 @@
        
       </script>
     </section>
+<div id="Carls"class="uPopUp">
+	<div class="close"> X</div>
+<h1>Carlsberg</h1>
+<p>Vi har rest land och rike för att leverera dessa drycker till dig! </br>
+info........................................</p>
+
+<div class="utBilder">BILDER </div>
+</div>
+
+<div id="Alla"class="uPopUp">
+	<div class="close"> X</div>
+<h1>Namn</h1>
+<p>Vi har rest land och rike för att leverera dessa drycker till dig! </br>
+info........................................</p>
+
+<div class="utBilder"> BILDER</div>
+</div>
+
+<div id="hall1P" class="uPopUp">
+	<div class="close"> X</div>
+<h1>Hall A</h1>
+<p>Denna hall har öl och blbalbalbalbalab</br>
+info........................................</p>
+
+<div class="utBilder"> BILDER</div>
+</div>
+
+<div id="hall2P" class="uPopUp">
+	<div class="close"> X</div>
+<h1>Hall B</h1>
+<p>Denna hall har vin och blbalbalbalbalab</br>
+info........................................</p>
+
+<div class="utBilder"> BILDER</div>
+</div>
+
+<div id="hall3P" class="uPopUp">
+	<div class="close"> X</div>
+<h1>Hall C</h1>
+<p>Denna hall har minibrygerier och blbalbalbalbalab</br>
+info........................................</p>
+
+<div class="utBilder"> BILDER</div>
+</div>
+
 
 </div>
 </div>
