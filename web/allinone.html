@@ -22,11 +22,19 @@
 	<link href="themes/kartan/interactive_map.css" rel="stylesheet" type="text/css" />
 	<script src="themes/kartan/jquery.panzoom.js"></script>
     <script src="themes/kartan/jquery.mousewheel.js"></script>
+
+    <!--<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	<script language="JavaScript" src="/scriptcam/scriptcam.js"></script>
+
+
 	<script >function logoutalert() {alert("Du har loggats ut!");}</script>
 
 	<script type="text/javascript">	
 
-	
+	$(document).ready(function() {
+    		$("#webcam").scriptcam();
+		});
 
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
@@ -287,6 +295,9 @@
   			console.log('totaste ID: ' +  theid);
   			storeToTaste(theid);
 		});*/
+
+
+
 		$(document).on("click", "#ToTasteButton", function(){
 			var theid = $(this).attr('data-id');
   			console.log('totaste ID: ' +  theid);
@@ -386,8 +397,8 @@
 			    }
 			 });
 			}else{
-				console.log('notloggedin');{
-					alert("Du måste logga in!");}
+				console.log('notloggedin');
+				alert("Du måste logga in!");
 			}
 		}
 
@@ -944,7 +955,9 @@ info........................................</p>
 		<a href="#betyginfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 		<div data-role="popup" id="betyginfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Vad är ditt helhetsbetyg för den här drycken, är det din nya favorit eller smakar det som farfars rakvatten? 
-					</div>
+		</div>
+		<div id="webcam"></div>
+
 		
 
 	<div data-role="navbar">
