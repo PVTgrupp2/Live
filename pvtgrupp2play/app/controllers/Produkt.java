@@ -17,6 +17,11 @@ public class Produkt{
         
     }
     
+    public int hashCode() {
+
+        return id.hashCode();
+    }
+    
     public boolean equals(Object object){
         Produkt temp = (Produkt) object;
         return id.equals(temp.id);
