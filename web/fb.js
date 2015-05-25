@@ -62,12 +62,12 @@ var accessToken;
             });
         }
         function loadTested(){
-            var testedurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            /*$('#mytestedlist').load(testedurl, function(){                        
+            var testedurl = 'https://pvt-grupp2.herokuapp.com/bedom/' + uid;
+            $('#mytestedlist').load(testedurl, function(){                        
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
-            });*/
+            });
         }
 
     function checkLogin(){
