@@ -180,21 +180,21 @@
 			$('#textarea-2').show();
 		});
 
-		/* MINA SIDOR TESTLIST */
+		/* MINA SIDOR TESTLIST 
 		$(document).ready(function(){
-			$('#mytested').hide();
+			$('#mytestedlist').hide();
 			$('#mytastelist').show();
 
-		});
+		});*/
 
-		$('#provade').click(function(){
-			$('#mytested').show();		
+		$('#mytested').click(function(){
+			$('#mytestedlist').show();		
 			$('#mytastelist').hide();
 		});
 
-		$('#myTaste').click(function(){
+		$('#mytaste').click(function(){
 			$('#mytastelist').show();
-			$('#mytested').hide();
+			$('#mytestedlist').hide();
 		});
 
 
@@ -726,26 +726,26 @@
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
-			<div class="fblogin" class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+			<div class="fb-login-button fblogin" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 		
 		<!--<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p> -->
 	</div> 
 	<!-- /content -->
 
 	<div data-role="content" id="inloggad">	
-	<div class="fb-logout"class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+	<div class="fb-login-button fblogout" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#" id="myTop" class="ui-btn-active" data-transition="none">Prövade</a></li>
-				<li><a href="#" id="myTaste" class="ui-btn" data-transition="none">ToTaste</a></li>
+				<li><a href="#" id="mytested" class="ui-btn-active" data-transition="none">Prövade</a></li>
+				<li><a href="#" id="mytaste" class="ui-btn" data-transition="none">ToTaste</a></li>
 			</ul>
 		</div>
 		<div data-role="content">
 			<ul id="mytastelist" class="ul-listview" data-role="listview">			
 			</ul>
 
-			<ul id="mytested" class="ul-listview" data-role="listview">		
+			<ul id="mytestedlist" class="ul-listview" data-role="listview">		
 			</ul>
 		</div>
 
