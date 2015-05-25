@@ -79,7 +79,7 @@ package controllers;
     
     public static Result bild() {
             MultipartFormData body = request().body().asMultipartFormData();
-            FilePart picture = body.getFile("takePictureField");
+            FilePart picture = body.getFile("picture");
               if (picture != null) {
                 String fileName = picture.getFilename();
                 String contentType = picture.getContentType(); 
