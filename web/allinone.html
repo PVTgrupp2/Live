@@ -56,16 +56,12 @@
 		});
 
 
-		$(document).on("click", "#clogin", function(){
+		$(document).on("click", ".fb-login-button", function(){
 			checkLogin();
 			console.log("DU ÄR SÄMST");
 		});
 
-		$(document).on("click", "#clogin2", function(){
-			checkLogin();
-			console.log("DU ÄR SÄMST2");
-		});
-
+	
 // KARTANS PINS; PLACERA POPUP HÄR!	
 		
 		$('#pin01').click(function(){
@@ -735,14 +731,14 @@
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
-			<div class="fb-login-button" id="clogin" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+			<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 		
 		<!--<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p> -->
 	</div> 
 	<!-- /content -->
 
 	<div data-role="content" id="inloggad">	
-	<div class="fb-login-button" id="clogin2" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+	<div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
