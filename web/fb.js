@@ -83,6 +83,7 @@ var accessToken;
             accessToken = response.authResponse.accessToken;
             console.log("Inloggad");
             loadToTaste();
+            loadTested();
             $('#utloggad').hide();
             $('#inloggad').show();
             $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
