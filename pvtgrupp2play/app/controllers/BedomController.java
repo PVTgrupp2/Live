@@ -51,7 +51,7 @@ package controllers;
                         String score = "";
                         
                         String sql = "INSERT INTO `nian8516`.`Användare_Egenskap` (`idAnvändare`,`pid`,`Beska`,`Sötma`,`Fyllighet`)"+
-                                                                            "VALUES('" + uid +"','" + pid +"','" + "','" + beska + "','" + sötma + "','" + fyllighet + "')";
+                                                                            "VALUES('" + uid +"','" + pid +"','" + beska + "','" + sötma + "','" + fyllighet + "')";
                         /*String sql = "INSERT INTO nian8516.Användare_Egenskap (idAnvändare_Egenskap, Användare_Egenskapcol) VALUES('"+ pid +"','" + uid +"','" + score + "')" +
                          "ON DUPLICATE KEY UPDATE idAnvändare='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";*/
                         stmt.executeUpdate(sql);	
