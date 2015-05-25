@@ -54,7 +54,7 @@
 #dropmenu ul ul {
 	background: #5f6975; border-radius: 0px; padding: 0;
 	position: absolute; top: 100%;
-	width:120px;
+	/*width:120px;*/
 }
 #dropmenu ul ul li {
 	float: none; 
