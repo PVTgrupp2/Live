@@ -60,10 +60,10 @@ var accessToken;
             });
         }
         function loadTested(){
-            var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            $('#mytested').load(totasteurl, function(){                        
+            var testedurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
+            /*$('#mytested').load(testedurl, function(){                        
                 $('#mytested').listview().listview('refresh'); 
-            });
+            });*/
         }
 
     function checkLogin(){
