@@ -238,7 +238,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.Produkt_Betyg ORDER BY Betyg DESC LIMIT 15";
+            String sql = "SELECT DISTINCT * FROM nian8516.Produkt_Betyg ORDER BY Betyg DESC LIMIT 15";
             
             ResultSet rs = stmt.executeQuery(sql);	
             
