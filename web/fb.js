@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	$('.fblogin').click(function(){
-		var anv = $.fblogin({fbId: '799390323443595'});
+        console.log("Login?!!=!");
+        checkLogin();
+
+	/*	var anv = $.fblogin({fbId: '799390323443595'});
 		
 		anv.done(function(data){
 			console.log(data);
@@ -20,12 +23,13 @@ $(document).ready(function(){
           $('#loginp5').hide();
           $('#loginp6').hide();
             checkLogin();
-		});
+		});*/
 	});
 
 	$('.fblogout').click(function(){
         console.log("Klick class");
-		FB.logout(function(response){
+        checkLogin();
+		/*FB.logout(function(response){
 			// window.location.href = "index.html";
                $('#utloggad').show();
               $('#inloggad').hide();
@@ -44,7 +48,7 @@ $(document).ready(function(){
               $('#loginp6').show();
 
             checkLogin();
-		});
+		}); */
 	});
 
     
@@ -106,7 +110,6 @@ var accessToken;
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
@@ -125,7 +128,6 @@ var accessToken;
             console.log("Offline");
             $('#utloggad').show();
             $('#inloggad').hide();
-            $('.fblogout').html(/*'<li><a href="#" class="fblogin"><button class="ui-btn ui-btn-inline">Logga in</button></a></li>'*/);
                 //KNAPPID FÖR ALLA SIDOR
                 $('#logoutp1').hide();
                 $('#logoutp2').hide();
