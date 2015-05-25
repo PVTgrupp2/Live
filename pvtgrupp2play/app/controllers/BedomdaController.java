@@ -30,7 +30,7 @@ public  class BedomdaController extends Controller{
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.ProdBet LEFT JOIN Användare_Egenskap ON IdProdukt=pid WHERE idAnvändare= " + id;
+            String sql = "SELECT DISTINCT * FROM nian8516.ProdBet LEFT JOIN Användare_Egenskap ON IdProdukt=pid WHERE idAnvändare= " + id;
             
             ResultSet rs = stmt.executeQuery(sql);	
             
