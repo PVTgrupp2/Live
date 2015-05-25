@@ -16,10 +16,6 @@
 	height:30px;
 	position: absolute;
 }
-.pins:hover{
-	background-color: yellow;
-}
-
 
 /* FÖR HALL0/ ALLA 3 Hallar*/
 #pin01{
@@ -83,18 +79,5 @@
 	left: 355px;
 }
 
-.all0{
-	display: block;
-}
-.a{
-	display: none;
-}
-
-.b{
-	display: none;
-}
-.c{
-	display: none;
-}
 
 
