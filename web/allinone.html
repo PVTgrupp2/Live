@@ -187,14 +187,14 @@
 
 		});
 
-		$('#provade').click(function(){
-			$('#mytested').show();		
+		$('#mytested').click(function(){
+			$('#mytestedlist').show();		
 			$('#mytastelist').hide();
 		});
 
-		$('#myTaste').click(function(){
+		$('#mytaste').click(function(){
 			$('#mytastelist').show();
-			$('#mytested').hide();
+			$('#mytestedlist').hide();
 		});
 
 
@@ -737,15 +737,15 @@
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
-				<li><a href="#" id="myTop" class="ui-btn-active" data-transition="none">Prövade</a></li>
-				<li><a href="#" id="myTaste" class="ui-btn" data-transition="none">ToTaste</a></li>
+				<li><a href="#" id="mytested" class="ui-btn-active" data-transition="none">Prövade</a></li>
+				<li><a href="#" id="mytaste" class="ui-btn" data-transition="none">ToTaste</a></li>
 			</ul>
 		</div>
 		<div data-role="content">
 			<ul id="mytastelist" class="ul-listview" data-role="listview">			
 			</ul>
 
-			<ul id="mytested" class="ul-listview" data-role="listview">		
+			<ul id="mytestedlist" class="ul-listview" data-role="listview">		
 			</ul>
 		</div>
 

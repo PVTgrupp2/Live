@@ -61,8 +61,8 @@ var accessToken;
         }
         function loadTested(){
             var testedurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            /*$('#mytested').load(testedurl, function(){                        
-                $('#mytested').listview().listview('refresh'); 
+            /*$('#mytestedlist').load(testedurl, function(){                        
+                $('#mytestedlist').listview().listview('refresh'); 
             });*/
         }
 
