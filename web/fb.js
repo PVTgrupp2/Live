@@ -59,10 +59,10 @@ var accessToken;
                 $('#mytastelist').listview().listview('refresh'); 
             });
         }
-        function loadToTaste(){
+        function loadTested(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
-            $('#mytoplist').load(totasteurl, function(){                        
-                $('#mytoplist').listview().listview('refresh'); 
+            $('#mytested').load(totasteurl, function(){                        
+                $('#mytested').listview().listview('refresh'); 
             });
         }
 
