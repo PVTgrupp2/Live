@@ -73,6 +73,7 @@ var accessToken;
                 $('#mytestedlist').show();
             });
         }
+    
 
     function checkLogin(){
         console.log("checkLogin");
