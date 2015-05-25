@@ -11,6 +11,8 @@
  import play.mvc.Result;
  import play.mvc.Results;
  import play.libs.Json;
+ import java.util.LinkedHashSet;
+  import java.util.Set;
  
  import com.fasterxml.jackson.databind.node.*;
 
@@ -87,6 +89,8 @@
 				p.kategori = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
+    		Set<Produkt> s = new LinkedHashSet<Produkt>(thelist);
+    		thelist = new ArrayList<>(s);
     		conn.close();
         }catch(Exception e){
 		    return internalServerError("Oops: Database Error" + e.toString());
