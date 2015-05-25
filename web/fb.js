@@ -1,13 +1,4 @@
 $(document).ready(function(){
-        FB.getLoginStatus(function(response) {
-  if (response.status === 'connected') {
-    console.log(response.authResponse.accessToken);
-        $('#utloggad').hide();
-        $('#inloggad').show(); 
-  }
-});
-
-
 	$('.fblogin').click(function(){
 		var anv = $.fblogin({fbId: '799390323443595'});
 		
