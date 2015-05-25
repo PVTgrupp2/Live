@@ -56,13 +56,17 @@ var accessToken;
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
             $('#mytastelist').load(totasteurl, function(){                        
-                $('#mytastelist').listview().listview('refresh'); 
+                $('#mytastelist').listview().listview('refresh');                    
+                $('#mytastelist').hide();                
+                $('#mytestedlist').show();
             });
         }
         function loadTested(){
             var testedurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
             /*$('#mytestedlist').load(testedurl, function(){                        
-                $('#mytestedlist').listview().listview('refresh'); 
+                $('#mytestedlist').listview().listview('refresh');
+                $('#mytastelist').hide();
+                $('#mytestedlist').show();
             });*/
         }
 
