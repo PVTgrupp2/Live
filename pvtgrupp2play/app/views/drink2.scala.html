@@ -1,0 +1,57 @@
+@(theitem: Produkt2)
+
+<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+	<div class="ui-grid-a">
+		 <div class="ui-block-a" ><img src="themes/img/@(theitem.id).png"></div>
+			 <div class="ui-block-b">
+				  <h2>@theitem.kategori</h2>
+			            <p>Namn: @theitem.namn</p>
+				        <p>artnr: @(theitem.id)</p>
+				        <p>Land: @theitem.land</p>
+				        <p>Alkhalt: @theitem.alkhalt %</p>
+				        <p>Betyg: @theitem.betyg</p>
+				        @if(theitem.kategori == "Öl") {
+    				        <p>Fyllighet: @theitem.fyllighet</p>
+    				        <p>Sötma: @theitem.sötma</p>
+    				        <p>Beska: @theitem.beska</p>
+    				        <p>Fyllighet: @theitem.anvfyllighet</p>
+    				        <p>Sötma: @theitem.anvsötma</p>
+    				        <p>Beska: @theitem.anvbeska</p>
+				        } 
+				        
+				        @if(theitem.kategori == "Vin") {
+    				        <p>Fyllighet: @theitem.fyllighet</p>
+    				        <p>Sötma: @theitem.sötma</p>
+				        } 
+				        
+				        @if(theitem.kategori == "Whisky") {
+    				        <p>Rökighet: @theitem.rökighet</p>
+				        } 
+				        
+						<p class="produkt" data-score="@theitem.betyg"></p>
+            </div>
+    </div>
+
+	<div class="ui-grid-solo">
+		<div class="ui-block-a">
+			
+		</div>
+	</div>
+
+	<div class="ui-grid-solo">
+		<div class="ui-block-a" data-role="navbar">
+			<ul>
+				<li><a href="#" id="produktInfoRate" class="ui-btn-active" data-transition="none">Produktinformation</a></li>
+			</ul>
+	    </div>
+		<p> </p>
+
+	    <div name="textarea-1">@theitem.beskr</div>
+		</div>
+
+		<div class="ui-grid-solo">
+			<div class="ui-block-a">
+				<button class="ui-btn ui-btn-inline" id="ToTasteButton" data-id="@(theitem.id)">ToTaste</button>
+			    <button class="ui-btn ui-btn-inline" id="BedömButton" data-id="@(theitem.id)">Bedöm</button>
+		    </div>
+	    </div>

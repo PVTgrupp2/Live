@@ -320,7 +320,7 @@
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
         response().setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Referer, User-Agent");
-        Produkt p = new Produkt();
+        Produkt2 p = new Produkt2();
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -360,7 +360,7 @@
         }else if(false){ //FIX later
             return notFound("Out looking for a nonexistant drink I see");
         }else{
-            return ok(drink.render(p));
+            return ok(drink2.render(p));
         }
         
     }
