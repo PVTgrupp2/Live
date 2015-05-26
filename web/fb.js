@@ -28,8 +28,10 @@ $(document).ready(function(){
 
 	$('.fblogout').click(function(){
         console.log("Klick class");
-        checkLogin();
+        checkLogin(); 
 		FB.logout(function(response){
+            checkLogin(); 
+        }); /*
 			// window.location.href = "index.html";
                $('#utloggad').show();
               $('#inloggad').hide();
@@ -48,8 +50,8 @@ $(document).ready(function(){
               $('#loginp6').show();
 
             checkLogin();
-		}); 
-	});
+		
+	});*/
 
     
 

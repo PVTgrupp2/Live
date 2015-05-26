@@ -563,7 +563,7 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin" id="loginp2">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()" >Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -862,7 +862,7 @@ info........................................</p>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<!--<li><a href="#">Dela</a></li>-->
-						<li><div class="fb-login-button" onlogin="checkLogin();" data-max-rows="1" data-size="xlarge" data-show-faces="false"> </div>
+						<li></div>
 						</li>
 						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a>--></li>
 					</ul>
@@ -872,11 +872,12 @@ info........................................</p>
 		
 	</div><!-- /header -->
 	<div class="space"></div>
-	<div class="fb-login-button" onlogin="checkLogin();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+
 	<div data-role="content" id="utloggad" data-theme="b">			
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
+			<div class="fb-login-button" onlogin="checkLogin();" data-max-rows="1" data-size="xlarge" data-show-faces="false"></div>
 			
 		
 		<!--<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p>-->
