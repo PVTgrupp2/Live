@@ -30,7 +30,7 @@ GET    /wisky/:id           controllers.ProduktController.get(id: Long)
 GET    /all                 controllers.ProduktController.getAll()
 GET    /top                 controllers.ProduktController.getTop()
 
-
+GET    /image/:id           controllers.Image.get(id: Long)
 
 GET    /utst                controllers.UtstallareController.getAll()
 
