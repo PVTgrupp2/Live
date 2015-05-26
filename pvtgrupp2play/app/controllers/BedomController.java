@@ -87,7 +87,7 @@ package controllers;
                 //return ok("File uploaded");
               } else {
                 flash("error", "Missing file");
-                return redirect(routes.Application.index());    
+                return internalServerError("Oops: Fail");   
               }
               try{
                         Connection conn = DatabaseConn.getConn();
