@@ -57,7 +57,11 @@ $(document).ready(function(){
     
 
 });
-
+function loggaUt(){   
+    FB.logout(function(response) {
+        checkLogin();
+    });
+    }
 
 var uid = '';
 var accessToken;
@@ -107,11 +111,7 @@ var accessToken;
                 //$('#ToTasteButton').trigger('create');
             });
         }
-    function loggaUt(){   
-    FB.logout(function(response) {
-        checkLogin();
-    });
-    }
+    
     function checkLogin(){
         console.log("checkLogin");
         FB.getLoginStatus(function(response) {
