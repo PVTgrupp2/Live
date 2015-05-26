@@ -29,7 +29,7 @@ $(document).ready(function(){
 	$('.fblogout').click(function(){
         console.log("Klick class");
         checkLogin();
-		*FB.logout(function(response){
+		FB.logout(function(response){
 			// window.location.href = "index.html";
                $('#utloggad').show();
               $('#inloggad').hide();
