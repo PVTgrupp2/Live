@@ -26,7 +26,7 @@ $(document).ready(function(){
 		});*/
 	});
 
-	$('.fblogout').click(function(){
+/*	$('.fblogout').click(function(){
         console.log("Klick class");
         checkLogin(); 
 		FB.logout(function(response){
