@@ -484,7 +484,6 @@
 					var theid = $(this).parent().attr('id');
 	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
 	    			storeRate(theid, score);
-	    			alert("Din röst har sparats!");
 	  			}	
 			});
 			$('.produktlist').raty({
@@ -495,8 +494,7 @@
 					var theid = $(this).parent().attr('id');
 	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
 	    			storeRate(theid, score);
-	    			alert("Din röst har sparats!");
-	  			}	
+	 	  			}	
 			});
 
 			//$('#toplist').trigger('create');
@@ -520,7 +518,8 @@
 			   success: function(data){
 			     //On ajax success do this
 			     //alert(data);
-			     console.log(data);
+			    // console.log(data);
+			    alert("Din röst har sparats!");	
 			    },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
