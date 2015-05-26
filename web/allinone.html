@@ -66,8 +66,16 @@
 		});
 		$('.fblogout').click(function(){
 			FB.logout();
-			checkLogin();
 			console.log("DET FUNGEAR ATT LOGGA UT");
+			checkLogin();
+			console.log("Reload på checkLogin");
+		});
+
+		$('.fbloogin').click(function(){
+			FB.login();
+			console.log("DET FUNGEAR ATT LOGGA IN");
+			checkLogin();
+			console.log("Reload på checkLogin");
 		});
 	
 
