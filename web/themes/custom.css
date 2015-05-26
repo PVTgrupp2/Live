@@ -111,7 +111,11 @@ gul=fde68b
     z-index:3000;
 }
 
-#toplistpopuptext{
-    float:center;
+#ToTasteButton {
+    margin-left: 20%;
+}
+
+#BedömButton {
+    margin-right: 20%;
 }
 
