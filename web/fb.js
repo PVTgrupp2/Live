@@ -24,7 +24,6 @@ var accessToken;
 
         function loggaUt(){   
         FB.logout();
-        checkLogin();
          }
 
         function PListPopup(){
