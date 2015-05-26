@@ -67,7 +67,7 @@
 		$('.fblogout').click(function(){
 			FB.logout();
 			console.log("DET FUNGEAR ATT LOGGA UT");
-			statusChangeCallback(response);
+			statusChangeCallback();
 			checkLogin();
 			console.log("Reload på checkLogin");
 		});
