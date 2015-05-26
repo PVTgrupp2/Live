@@ -24,7 +24,8 @@ $(document).ready(function(){
           $('#loginp6').hide();
             checkLogin();
 		});*/
-	});
+	
+
 
 /*	$('.fblogout').click(function(){
         console.log("Klick class");
@@ -56,6 +57,8 @@ $(document).ready(function(){
     
 
 });
+
+
 var uid = '';
 var accessToken;
 
@@ -104,8 +107,11 @@ var accessToken;
                 //$('#ToTasteButton').trigger('create');
             });
         }
-    
-
+    function loggaUt(){   
+    FB.logout(function(response) {
+        checkLogin();
+    });
+    }
     function checkLogin(){
         console.log("checkLogin");
         FB.getLoginStatus(function(response) {
