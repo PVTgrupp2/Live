@@ -1,9 +1,25 @@
  package controllers;
  
+ import java.sql.*;
+ import java.util.ArrayList;
+ 
+ import views.html.*;
+ 
+ import play.*;
+ import play.mvc.*;
+ import play.mvc.Controller;
+ import play.mvc.Result;
+ import play.mvc.Results;
+ import play.libs.Json;
+ import java.util.LinkedHashSet;
+  import java.util.Set;
+ 
+ import com.fasterxml.jackson.databind.node.*;
+ 
  public class Image extends Controller{
      public static Result get(Long pid) {
         Long p;
-        byte[] image;
+        byte[] image = null;
         
         try{
 		    Connection conn = DatabaseConn.getConn();
@@ -17,7 +33,7 @@
     		while(rs.next()){
     		    p = rs.getLong("pid");
     		    image = rs.getBytes("bildercol");
-    		    thelist.add(p);
+    		    //thelist.add(p);
     		}
     		conn.close();
         }catch(Exception e){
