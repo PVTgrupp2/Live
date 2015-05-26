@@ -30,16 +30,22 @@ GET    /wisky/:id           controllers.ProduktController.get(id: Long)
 GET    /all                 controllers.ProduktController.getAll()
 GET    /top                 controllers.ProduktController.getTop()
 
+
+
 GET    /utst                controllers.UtstallareController.getAll()
 
 GET     /totaste/:id        controllers.ToTaste.getToTaste(id: Long)
 POST    /totaste            controllers.ToTaste.setToTaste()
 
-POST    /bedom              controllers.BedomController.bedom()
 GET     /bedom/:id          controllers.BedomdaController.getBedomda(id: Long)
 
+<<<<<<< HEAD
 
 
+=======
+POST    /bedom              controllers.BedomController.bedom()
+POST    /bild               controllers.BedomController.bild()
+>>>>>>> origin/master
 
 # Allow cross orgin
 OPTIONS /*all controllers.Application.preflight(all)

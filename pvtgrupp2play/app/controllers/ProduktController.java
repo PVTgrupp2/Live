@@ -315,7 +315,7 @@
         }
         
     }
-        public static Result get(Long id, Long anvid){
+        public static Result getBedomd(Long id, Long anvid){
         response().setHeader("Access-Control-Allow-Origin", "*");
         response().setHeader("Allow", "*");
         response().setHeader("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
@@ -333,7 +333,7 @@
             "(SELECT EP.grad FROM nian8516.1Egenskap_has_Produkt AS EP WHERE EP.Produkt_IdProdukt = P.IdProdukt AND EP.Egenskap_namn = 'Sött') AS Sött" +
             "FROM nian8516.Produkt_Betyg AS P WHERE P.idProdukt= '" + id + "'";*/
             
-            String sql = "SELECT PB.*, AE.idAnvändare, AE.Beska, AE.Sötma, AE.Fyllighet, PA.betyg FROM ProdBet AS PB, Användare_Egenskap AS AE, 1Produkt_has_Användare AS PA WHERE PB.IdProdukt=AE.pid AND AE.pid=PA.Produkt_IdProdukt AND AE.idAnvändare= '" +anvid+"' AND PB.IdProdukt='" +id +"' ;
+            String sql = "SELECT PB.*, AE.idAnvändare, AE.Beska, AE.Sötma, AE.Fyllighet, PA.betyg FROM ProdBet AS PB, Användare_Egenskap AS AE, 1Produkt_has_Användare AS PA WHERE PB.IdProdukt=AE.pid AND AE.pid=PA.Produkt_IdProdukt AND AE.idAnvändare= '" +anvid+"' AND PB.IdProdukt='" +id +"'" ;
             //"ORDER BY Betyg DESC LIMIT 15";
             //String sql = "SELECT * FROM nian8516.Produkt_Betyg WHERE idProdukt= '" + id + "'";
             ResultSet rs = stmt.executeQuery(sql);	
