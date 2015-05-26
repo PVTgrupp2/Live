@@ -35,7 +35,7 @@ GET    /utst                controllers.UtstallareController.getAll()
 GET     /totaste/:id        controllers.ToTaste.getToTaste(id: Long)
 POST    /totaste            controllers.ToTaste.setToTaste()
 
-GET     /bedom/:id            controllers.BedomdaController.getBedomda(id: Long)
+GET     /bedom/:id          controllers.BedomdaController.getBedomda(id: Long)
 
 POST    /bedom              controllers.BedomController.bedom()
 POST    /bild               controllers.BedomController.bild()
