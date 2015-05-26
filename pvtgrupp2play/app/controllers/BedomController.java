@@ -93,7 +93,7 @@ package controllers;
                         Connection conn = DatabaseConn.getConn();
             		    Statement stmt = null;
                         stmt = conn.createStatement();
-                        String sql2 = "INSERT INTO `nian8516`.`bilder` (`pid`,`bildercol`) VALUES('" + "1" +"','" + picture + "')";
+                        String sql2 = "INSERT INTO `nian8516`.`bilder` (`pid`,`bildercol`) VALUES('" + "1" +"','" + file + "')";
                         stmt.executeUpdate(sql2);
                 }catch(Exception e){
                     return internalServerError("Oops: Database Error" + e.toString());
