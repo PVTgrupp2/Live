@@ -934,7 +934,7 @@ info........................................</p>
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
 
-		<form action="https://pvt-grupp2.herokuapp.com/bedom" method="POST" enctype="multipart/form-data">
+		<form action="https://pvt-grupp2.herokuapp.com/bedom" method="POST">
 			<input type="hidden" id="uid" name="uid" class="hiddenField"/> 
 			<input type="hidden" id="pid" name="pid" class="hiddenField"/>
 			
@@ -992,6 +992,11 @@ info........................................</p>
 		<input type="submit" value="Spara">
 	</div>
 	</form>
+	<form action="https://pvt-grupp2.herokuapp.com/bild" method="POST" enctype="multipart/form-data">
+		<input type="file" capture="camera" accept="image/*" id="picture">
+		<input type="submit" value="Spara Bild">
+	</form>
+
 	</div><!-- /content -->
 		
  	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
