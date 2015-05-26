@@ -23,8 +23,8 @@ var accessToken;
         }
 
         function loggaUt(){   
-        FB.logout();
-         }
+            FB.logout();
+        }
 
         function PListPopup(){
             $('.produktlink').not('.emptyMessage').click(function(){
