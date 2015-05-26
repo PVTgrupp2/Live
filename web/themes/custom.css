@@ -111,6 +111,7 @@ gul=fde68b
     z-index:3000;
 }
 
+/*
 #ToTasteButton {
     margin-left: 20%;
 }
@@ -118,4 +119,7 @@ gul=fde68b
 #BedömButton {
     margin-right: 20%;
 }
-
+*/
+#compaligner {
+    margin-left : 20%;
+}
