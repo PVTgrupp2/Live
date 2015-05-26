@@ -1,67 +1,4 @@
-$(document).ready(function(){
-	$('.fblogin').click(function(){
-        console.log("Login?!!=!");
-        checkLogin();
 
-	/*	var anv = $.fblogin({fbId: '799390323443595'});
-		
-		anv.done(function(data){
-			console.log(data);
-	       	$('#utloggad').hide();
-          $('#inloggad').show(); 
-          //KNAPPID FÖR ALLA SIDOR
-            $('#logoutp1').show();
-            $('#logoutp2').show();
-            $('#logoutp3').show();
-            $('#logoutp4').show();
-            $('#logoutp5').show();
-            $('#logoutp6').show();
-          $('#loginp1').hide();
-          $('#loginp2').hide();
-          $('#loginp3').hide();
-          $('#loginp4').hide();
-          $('#loginp5').hide();
-          $('#loginp6').hide();
-            checkLogin();
-		});*/
-	
-
-
-/*	$('.fblogout').click(function(){
-        console.log("Klick class");
-        checkLogin(); 
-		FB.logout(function(response){
-            checkLogin(); 
-        }); /*
-			// window.location.href = "index.html";
-               $('#utloggad').show();
-              $('#inloggad').hide();
-              //KNAPPID FÖR ALLA SIDOR
-               $('#logoutp1').hide();
-               $('#logoutp2').hide();
-               $('#logoutp3').hide();
-               $('#logoutp4').hide();
-               $('#logoutp5').hide();
-               $('#logoutp6').hide();
-              $('#loginp1').show();
-              $('#loginp2').show();
-              $('#loginp3').show();
-              $('#loginp4').show();
-              $('#loginp5').show();
-              $('#loginp6').show();
-
-            checkLogin();
-		
-	});*/
-
-    
-
-});
-function loggaUt(){   
-    FB.logout(function(response) {
-        checkLogin();
-    });
-    }
 
 var uid = '';
 var accessToken;
@@ -84,6 +21,11 @@ var accessToken;
 
             });
         }
+
+        function loggaUt(){   
+        FB.logout();
+        checkLogin();
+         }
 
         function PListPopup(){
             $('.produktlink').not('.emptyMessage').click(function(){
