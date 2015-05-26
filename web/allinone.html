@@ -65,11 +65,12 @@
 			console.log("DU ÄR SÄMST");
 		});
 		$('.fblogout').click(function(){
-			FB.logout();
+			FB.logout(function(response){
+				checkLogin();
+				console.log("Innerloop!");
+			});
 			console.log("DET FUNGEAR ATT LOGGA UT");
-			location.reload(true);
 			checkLogin();
-			console.log("Reload på checkLogin");
 		});
 
 		$('.fblogin').click(function(){
