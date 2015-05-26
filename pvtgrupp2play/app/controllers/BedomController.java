@@ -79,8 +79,8 @@ package controllers;
     
     public static Result bild() {
             MultipartFormData body = request().body().asMultipartFormData();
-            //FilePart picture = body.getFile("picture");
-            FilePart picture = body.getAllFiles();
+            FilePart picture = body.getFile("picture");
+            //FilePart picture = body.getFiles();
               if (picture != null) {
                 String fileName = picture.getFilename();
                 String contentType = picture.getContentType(); 
