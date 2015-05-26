@@ -23,7 +23,7 @@ var accessToken;
         }
 
         function loggaUt(){   
-        FB.logout();
+        
          }
 
         function PListPopup(){
