@@ -15,6 +15,10 @@ package controllers;
  import static play.data.Form.form;
  import play.data.DynamicForm;
  
+ import play.mvc.Http.MultipartFormData;
+ import play.mvc.Http.MultipartFormData.FilePart;
+ import java.io.File;
+ 
  import com.fasterxml.jackson.databind.node.*;
 
  
@@ -37,13 +41,14 @@ package controllers;
             String fyllighet = dynamicForm.get("Fyllighet");//json.findPath("fyllighet").textValue();
             String sötma = dynamicForm.get("Sötma");//json.findPath("sötma").textValue();
             //String token = dynamicForm.get("pid");//json.findPath("token").textValue();
+
+            
             
             if(false){//(Validator.validateUid(uid) && Validator.validatePid(pid) && token == null &&fyllighet==null && sötma == null && beska == null ){
                 //result.put("status", "Missing parameter");
                 return internalServerError("Missing parameter");
             }else{
                 if(true){ //if(FBvalidator.validateFb(token)){
-                    
                     try{
                         Connection conn = DatabaseConn.getConn();
             		    Statement stmt = null;
@@ -52,9 +57,11 @@ package controllers;
                         
                         String sql = "INSERT INTO `nian8516`.`Användare_Egenskap` (`idAnvändare`,`pid`,`Beska`,`Sötma`,`Fyllighet`)"+
                                                                             "VALUES('" + uid +"','" + pid +"','" + beska + "','" + sötma + "','" + fyllighet + "')";
+                        
                         /*String sql = "INSERT INTO nian8516.Användare_Egenskap (idAnvändare_Egenskap, Användare_Egenskapcol) VALUES('"+ pid +"','" + uid +"','" + score + "')" +
                          "ON DUPLICATE KEY UPDATE idAnvändare='" + uid + "', Produkt_IdProdukt='" + pid + "', betyg='" + score + "' ";*/
-                        stmt.executeUpdate(sql);	
+                        stmt.executeUpdate(sql);
+                        
                     }catch(Exception e){
                         return internalServerError("Oops: Database Error" + e.toString());
                     }
@@ -69,5 +76,29 @@ package controllers;
         
         return redirect("https://pvt.dsv.su.se/Group2/web/allinone.html");
     }
+    
+    public static Result bild() {
+            MultipartFormData body = request().body().asMultipartFormData();
+            FilePart picture = body.getFile("picture");
+              if (picture != null) {
+                String fileName = picture.getFilename();
+                String contentType = picture.getContentType(); 
+                File file = picture.getFile();
+                //return ok("File uploaded");
+              } else {
+                flash("error", "Missing file");
+                return redirect(routes.Application.index());    
+              }
+              try{
+                        Connection conn = DatabaseConn.getConn();
+            		    Statement stmt = null;
+                        stmt = conn.createStatement();
+                        String sql2 = "INSERT INTO `nian8516`.`bilder` (`pid`,`bildercol`) VALUES('" + "1" +"','" + picture + "')";
+                        stmt.executeUpdate(sql2);
+                }catch(Exception e){
+                    return internalServerError("Oops: Database Error" + e.toString());
+                }
+        return ok("File uploaded");
+}
      
  }

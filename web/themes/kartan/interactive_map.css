@@ -104,7 +104,8 @@
 	background-color: white;
 	height: 100px;
 	width: 90%;
-	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size: 50px;
 	border: 1px solid #E6E6E6;
 }
@@ -120,4 +121,33 @@
 	font-size: 25px;
 	border: 2px solid #ff0000;
 	color: white;
+}
+
+.sortiment{
+	height: 20px;
+	width: 110px;
+	background-color: #b03120;
+	border: 1px solid #E6E6E6;
+	color: #fff;
+	position: absolute;
+	top: 88%;
+	padding: 5px;
+}
+
+.logga{
+	height: 50px;
+	width: 90%;
+	position: relative;
+	background-color: #E6E6E6;
+	text-align: center;
+	font-size: 30px;
+}
+
+.logga img{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	background-color: #E6E6E6;
+	text-align: center;
+	font-size: 30px;
 }

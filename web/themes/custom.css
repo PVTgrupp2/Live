@@ -97,9 +97,6 @@ gul=fde68b
     border-top: solid #fde68b;
     z-index: 1000;
 }
-/*<<<<<<< HEAD
-=======
-*/
 
 
 #hoger{
@@ -114,6 +111,7 @@ gul=fde68b
     z-index:3000;
 }
 
-/*
->>>>>>> origin/master
-*/
+#toplistpopuptext{
+    float:center;
+}
+

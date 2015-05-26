@@ -563,7 +563,7 @@
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#" class="fblogin" id="loginp2">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()" >Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
@@ -713,49 +713,62 @@
        
       </script>
     </section>
+
+
 <div id="Carls"class="uPopUp">
 	<div class="close"> X</div>
-<h1>Carlsberg</h1>
-<p>Vi har rest land och rike för att leverera dessa drycker till dig! </br>
+	<div class="logga"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9vYG8xu3iR5Gc5mED--4wBYx-lfb-y6hmrvnRzB0EpJajz8PAiw" /> </div>
+<p style="font-size:18px; margin:0px; padding:5px;">Carlsberg</p>
+<p style="margin:0px; padding:5px;">Vi har rest land och rike för att leverera dessa drycker till dig! </br>
 info........................................</p>
 
 <div class="utBilder">BILDER </div>
+<div class="sortiment"> Vårat sortiment</div>
 </div>
 
 <div id="Alla"class="uPopUp">
 	<div class="close"> X</div>
-<h1>Namn</h1>
-<p>Vi har rest land och rike för att leverera dessa drycker till dig! </br>
+	<div class="logga">LOGGA</div>
+<p style="font-size:18px; margin:0px; padding:5px;">Namn</p>
+<p style="margin:0px; padding:5px;">Vi har rest land och rike för att leverera dessa drycker till dig! </br>
 info........................................</p>
 
 <div class="utBilder"> BILDER</div>
+<div class="sortiment"> Vårat sortiment</div>
 </div>
 
 <div id="hall1P" class="uPopUp">
 	<div class="close"> X</div>
-<h1>Hall A</h1>
-<p>Denna hall har öl och blbalbalbalbalab</br>
+	<div class="logga">LOGGA</div>
+<p style="font-size:18px; margin:0px; padding:5px;">Hall A</p>
+<p style="margin:0px; padding:5px;">Denna hall har öl och blbalbalbalbalab</br>
 info........................................</p>
 
 <div class="utBilder"> BILDER</div>
+<div class="sortiment"> Vårat sortiment</div>
 </div>
 
 <div id="hall2P" class="uPopUp">
 	<div class="close"> X</div>
-<h1>Hall B</h1>
-<p>Denna hall har vin och blbalbalbalbalab</br>
+	<div class="logga">LOGGA</div>
+<p style="font-size:18px; margin:0px; padding:5px;">Hall B</p>
+<p style="margin:0px; padding:5px;">Denna hall har vin och blbalbalbalbalab</br>
 info........................................</p>
 
 <div class="utBilder"> BILDER</div>
+<div class="sortiment"> Vårat sortiment</div>
 </div>
 
 <div id="hall3P" class="uPopUp">
 	<div class="close"> X</div>
-<h1>Hall C</h1>
-<p>Denna hall har minibrygerier och blbalbalbalbalab</br>
+	<div class="logga">LOGGA</div>
+<p style="font-size:18px; margin:0px; padding:5px;">Hall C</p>
+<p style="margin:0px; padding:5px;">Denna hall har minibrygerier och blbalbalbalbalab</br>
 info........................................</p>
 
 <div class="utBilder"> BILDER</div>
+
+<div class="sortiment"> Vårat sortiment</div>
 </div>
 
 
@@ -849,8 +862,9 @@ info........................................</p>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<!--<li><a href="#">Dela</a></li>-->
-						<!--<li><a href="#" class="fblogin" id="loginp4">Logga in</a></li>-->
-						<li><div class="fb-login-button" data-max-rows="1" data-size="large" onlogin="checkLogin();" data-show-faces="false" data-auto-logout-link="true"></div><!--<a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a>--></li>
+						<li></div>
+						</li>
+						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a>--></li>
 					</ul>
 				</li>	
 			</ul>
@@ -858,15 +872,17 @@ info........................................</p>
 		
 	</div><!-- /header -->
 	<div class="space"></div>
+
 	<div data-role="content" id="utloggad" data-theme="b">			
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
+			<div class="fb-login-button" onlogin="checkLogin();" data-max-rows="1" data-size="xlarge" data-show-faces="false"></div>
 			
 		
 		<!--<a href="#" class="fblogin"><img src="themes/img/fblogin.png"></a></p>-->
 	</div> 
-	<div class="fb-login-button" onlogin="checkLogin();" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="true"></div>
+	
 	<!-- /content -->
 
 	<div data-role="content" id="inloggad">	
@@ -953,7 +969,7 @@ info........................................</p>
 						Vad är ditt helhetsbetyg för den här drycken, är det din nya favorit eller smakar det som farfars rakvatten? 
 		</div>
 		
-		<input type="file" capture="camera" accept="image/*" id="takePictureField">
+		<input type="file" capture="camera" accept="image/*" id="picture">
 		
 
 	<div data-role="navbar">
