@@ -65,6 +65,7 @@ var accessToken;
                 $('#mytastelist').listview().listview('refresh');                    
                 $('#mytastelist').hide();                
                 $('#mytestedlist').show();
+                PListPopup();
             });
         }
         function loadTested(){
@@ -73,6 +74,34 @@ var accessToken;
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
+
+            });
+        }
+
+        function PListPopup(){
+            $('.produktlink').not('.emptyMessage').click(function(){
+                //$('#popupFrame').hide();
+                var linkid = $(this).attr('id');
+                console.log(linkid); 
+                var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+                var popupid;
+                $('#popupFrame').load(poplink, function(){  
+                    $('#popupFrame').trigger('create');
+                    RatyEnable();
+                });             
+                //$('#popupFrame').popup({ tolerance: 25 });
+                //$('#popupFrame').popup('open');
+                $('#popupFrame').popup('open');
+
+                function delayopen(){                   
+                    console.log('explode'); 
+                    $('#popupFrame').popup("reposition", {"positionTo": "window"});
+                }
+                setTimeout(delayopen, 1000);
+
+                
+
+                //$('#ToTasteButton').trigger('create');
             });
         }
     
