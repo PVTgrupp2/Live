@@ -40,11 +40,18 @@ POST    /totaste            controllers.ToTaste.setToTaste()
 GET     /bedom/:id          controllers.BedomdaController.getBedomda(id: Long)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 POST    /bedom              controllers.BedomController.bedom()
 POST    /bild               controllers.BedomController.bild()
+>>>>>>> origin/master
+=======
+POST    /bedom              controllers.BedomController.bedom()
+
+POST    /bild               controllers.BedomController.bild()
+GET     /bild               controllers.BedomController.bild()
 >>>>>>> origin/master
 
 # Allow cross orgin
