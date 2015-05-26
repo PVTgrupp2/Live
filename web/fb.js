@@ -35,7 +35,7 @@ var accessToken;
                 var popupid;
                 $('#popupFrame').load(poplink, function(){  
                     $('#popupFrame').trigger('create');
-                    RatyEnable();
+                    //RatyEnable();
                 });             
                 //$('#popupFrame').popup({ tolerance: 25 });
                 //$('#popupFrame').popup('open');
