@@ -2,6 +2,7 @@
 	margin-left:85%;
 }
 Är till för att flytta stjärnor*/
+
 .sliderubrik {
 	/*text-align:center;*/
 	margin-left: auto;
@@ -50,11 +51,6 @@
     font-size: 16px;
 }
 
-/*
-röd=b03120
-grön=2f451e
-gul=fde68b
-*/
 .space{
     position: relative;
     height: 80px;
@@ -111,13 +107,10 @@ gul=fde68b
     z-index:3000;
 }
 
-/*
-#ToTasteButton {
-    margin-left: 20%;
-}
 
-#BedömButton {
-    margin-right: 20%;
-}
+/*
+röd=b03120
+grön=2f451e
+gul=fde68b
 */
 
