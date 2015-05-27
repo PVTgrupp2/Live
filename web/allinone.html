@@ -31,7 +31,7 @@
 	<!--KODEN FÖR FB.JS-->
 	<script> 
 
-
+var objectToLike = 'https://pvt.dsv.su.se/Group2/web/old/face.html';
 var uid = '';
 var accessToken;
 
@@ -154,6 +154,26 @@ var accessToken;
 	          }
 	        });
 	    }
+  function postLike() {
+    FB.api(
+       'https://graph.facebook.com/me/og.likes',
+       'post',
+       { object: objectToLike,},
+       function(response) {
+         if (!response) {
+           alert('Error occurred.');
+         } else if (response.error) {
+           consol.log('Error: ' + response.error.message);
+         } else {
+           document.getElementById('result').innerHTML =
+             '<a href=\"https://www.facebook.com/me/activity/' +
+             response.id + '\">' +
+             'Story created.  ID is ' +
+             response.id + '</a>';
+         }
+       }
+    );
+  }
 
 
 //------------------------------//
@@ -361,6 +381,31 @@ var accessToken;
 		$('.fblogin').click(function(){
 			$.mobile.navigate('#mypage');
 		});
+
+		$('.dela').click(function(){
+			  postLike();
+			 }); 
+    FB.api(
+       'https://graph.facebook.com/me/og.likes',
+       'post',
+       { object: objectToLike,},
+       function(response) {
+         if (!response) {
+           alert('Error occurred.');
+         } else if (response.error) {
+           consol.log('Error: ' + response.error.message);
+         } else {
+           document.getElementById('result').innerHTML =
+             '<a href=\"https://www.facebook.com/me/activity/' +
+             response.id + '\">' +
+             'Story created.  ID is ' +
+             response.id + '</a>';
+         }
+       }
+    );
+  }
+
+		}
 	
 
 // KARTANS PINS; PLACERA POPUP HÄR!	
@@ -951,7 +996,7 @@ var accessToken;
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#">Dela</a></li>
+						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp1" onclick="logoutalert()">Logga ut</a></li>
 						<script >
@@ -1012,7 +1057,7 @@ var accessToken;
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#">Dela</a></li>
+						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp2">Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()" >Logga ut</a></li>
 					</ul>
@@ -1343,7 +1388,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#">Dela</a></li>
+						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp3">Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp3" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
@@ -1397,7 +1442,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<!--<li><a href="#">Dela</a></li>-->
+						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
@@ -1467,7 +1512,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#">Dela</a></li>
+						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#mypage" data-transition='none' class="fblogin" id="loginp5">Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp5" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
