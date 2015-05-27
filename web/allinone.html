@@ -163,7 +163,7 @@ var accessToken;
          if (!response) {
            alert('Error occurred.');
          } else if (response.error) {
-           consol.log('Error: ' + response.error.message);
+           console.log('Error: ' + response.error.message);
          } else {
            document.getElementById('result').innerHTML =
              '<a href=\"https://www.facebook.com/me/activity/' +
