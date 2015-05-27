@@ -981,8 +981,9 @@ var accessToken;
 						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp1" onclick="logoutalert()">Logga ut</a></li>
-						<!--<li><a href="#"> <button type="button" id="fade_in">Click Me!</button></a></li>-->
                         <div id="fading_div">Du har loggats ut!</div>
+						<!--<li><a href="#"> <button type="button" id="fade_in">Click Me!</button></a></li>-->
+                        
                         <!--<script >
 								function logoutalert() {
 								alert("Du har loggats ut!");
@@ -1013,8 +1014,8 @@ var accessToken;
                                 if (done && fading_div.style.opacity !== '1') {
                                     done = false;
                                     for (var i = 1; i <= 50; i++) {
-                                        setTimeout("function_opacity(" + i + ",'in')", i * 30);
-                                        setTimeout("function_opacity(" + i + ",'out')", (i - 100) * -1 * 30);
+                                        setTimeout("function_opacity(" + i + ",'in')", i * 10);
+                                        setTimeout("function_opacity(" + i + ",'out')", (i - 3000) * -1 * 1);
                                     }
                                 }
                             };
@@ -1049,6 +1050,7 @@ var accessToken;
 			</ul>
 		</div>
 	</div><!-- /content -->
+
 	<div id="popupcontent"></div>
 	<div data-role="footer" data-position="fixed" data-id="nav1" class="nav-iconmanager" data-theme="a">
 		<div data-role="navbar" class="nav-iconmanager">
