@@ -298,7 +298,7 @@
     		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.setBetyg(rs.getString("Betyg");
+    		    p.setBetyg(rs.getString("Betyg"));
     		    p.kategori = rs.getString("KategoriNamn");
     		    p.alkhalt=rs.getDouble("Alkoholhalt");
     		    p.beska = rs.getInt("Beska");
