@@ -43,7 +43,7 @@
 				String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
-				
+				p.alkhalt=rs.getDouble("Alkoholhalt");
 				p.kategori = rs.getString("KategoriNamn");
     		    
     		    thelist.add(p);
@@ -86,6 +86,7 @@
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.alkhalt=rs.getDouble("Alkoholhalt");
 				p.kategori = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
@@ -129,6 +130,7 @@
     		    String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
+				p.alkhalt=rs.getDouble("Alkoholhalt");
 				p.kategori = rs.getString("KategoriNamn");
     		    thelist.add(p);
     		}
@@ -167,6 +169,7 @@
     		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
+    		    p.alkhalt=rs.getDouble("Alkoholhalt");
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
@@ -208,6 +211,7 @@
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
     			String temp = rs.getString("Betyg"); 
+    			p.alkhalt=rs.getDouble("Alkoholhalt");
 				//Kontroller?
 				p.setBetyg(temp);
 				p.kategori = rs.getString("KategoriNamn");
@@ -247,6 +251,7 @@
     		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
+    		    p.alkhalt=rs.getDouble("Alkoholhalt");
     			String temp = rs.getString("Betyg"); 
 				//Kontroller?
 				p.setBetyg(temp);
@@ -293,9 +298,9 @@
     		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
-    		    p.setBetyg(rs.getString("Betyg"));
+    		    p.setBetyg(rs.getString("Betyg");
     		    p.kategori = rs.getString("KategoriNamn");
-    		    
+    		    p.alkhalt=rs.getDouble("Alkoholhalt");
     		    p.beska = rs.getInt("Beska");
     		    p.fyllighet = rs.getInt("Fylligt");
     		    p.sötma = rs.getInt("Sött");
@@ -344,7 +349,7 @@
     		    p.land = rs.getString("Land");
     		    p.setBetyg(rs.getString("Betyg"));
     		    p.kategori = rs.getString("KategoriNamn");
-    		    
+    		    p.alkhalt=rs.getDouble("Alkoholhalt");
     		    p.beska = rs.getInt("Beska");
     		    p.fyllighet = rs.getInt("Fylligt");
     		    p.sötma = rs.getInt("Sött");
