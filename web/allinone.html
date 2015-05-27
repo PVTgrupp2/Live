@@ -646,7 +646,6 @@ var accessToken;
 			$('#c').hide();
 		});
 
-
 		$('#hallall').click(function(){
 			$('#b').hide();
 			$('#a').hide();
@@ -675,19 +674,20 @@ var accessToken;
 			$('#c').show();
 		});
 
-
 		$('#topAlla').click(function(){
 			$('#thetoplistwisky').hide();
 			$('#thetoplistall').show();
 			$('#thetoplistbeer').hide();
 			$('.produkt').trigger('refresh');
 		});
+
 		$('#topÖl').click(function(){
 			$('#thetoplistwisky').hide();
 			$('#thetoplistall').hide();
 			$('#thetoplistbeer').show();
 			$('.produkt').trigger('refresh');		
 		});
+
 		$('#topWhisky').click(function(){
 			$('#thetoplistwisky').show();
 			$('#thetoplistall').hide();
@@ -699,6 +699,7 @@ var accessToken;
 			$('#searchlistuts').hide();
 			$('#searchlistdrink').show();
 		});
+
 		$('#searchuts').click(function(){
 			$('#searchlistuts').show();
 			$('#searchlistdrink').hide();
@@ -732,7 +733,6 @@ var accessToken;
 			$('#mytestedlist').hide();
 		});
 
-
 		$('#mypage').click(function(){
 			console.log('test');
 			checkLogin();
@@ -743,7 +743,6 @@ var accessToken;
   			console.log('totaste ID: ' +  theid);
   			storeToTaste(theid);
 		});*/
-
 
 
 		$(document).on("click", "#ToTasteButton", function(){
@@ -779,11 +778,10 @@ var accessToken;
 				}
 				setTimeout(delayopen, 1000);
 
-				
-
 				//$('#ToTasteButton').trigger('create');
 			});
 		}
+		
 		function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
