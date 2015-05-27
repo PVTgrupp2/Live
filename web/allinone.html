@@ -44,19 +44,19 @@ var accessToken;
                 PListPopup();
             });
         }
+
         function loadTested(){
             var testedurl = 'https://pvt-grupp2.herokuapp.com/bedom/' + uid;
             $('#mytestedlist').load(testedurl, function(){                        
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
-
             });
         }
 
         function loggaUt(){   
         
-         }
+        }
 
         function PListPopup(){
             $('.produktlink').not('.emptyMessage').click(function(){
@@ -79,84 +79,81 @@ var accessToken;
                 }
                 setTimeout(delayopen, 1000);
 
-                
-
                 //$('#ToTasteButton').trigger('create');
             });
         }
     
-    function checkLogin(){
-        console.log("checkLogin");
-        FB.getLoginStatus(function(response) {
-          if (response.status === 'connected') {
-            // the user is logged in and has authenticated your
-            // app, and response.authResponse supplies
-            // the user's ID, a valid access token, a signed
-            // request, and the time the access token 
-            // and signed request each expire
-            uid = response.authResponse.userID;
-            accessToken = response.authResponse.accessToken;
-            console.log("Inloggad");
-            loadToTaste();
-            loadTested();
-            $('#utloggad').hide();
-            $('#inloggad').show();
-            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
-                //KNAPPID FÖR ALLA SIDOR
-                $('#logoutp1').show();
-                $('#logoutp2').show();
-                $('#logoutp3').show();
-                $('#logoutp4').show();
-                $('#logoutp5').show();
-                $('#logoutp6').show();
-                $('#loginp1').hide();
-                $('#loginp2').hide();
-                $('#loginp3').hide();
-                $('#loginp4').hide();
-                $('#loginp5').hide();
-                $('#loginp6').hide();
-          } else if (response.status === 'not_authorized') {
-            // the user is logged in to Facebook, 
-            // but has not authenticated your app
-            console.log("Offline");
-            $('#utloggad').show();
-            $('#inloggad').hide();
-                //KNAPPID FÖR ALLA SIDOR
-                $('#logoutp1').hide();
-                $('#logoutp2').hide();
-                $('#logoutp3').hide();
-                $('#logoutp4').hide();
-                $('#logoutp5').hide();
-                $('#logoutp6').hide();
-                $('#loginp1').show();
-                $('#loginp2').show();
-                $('#loginp3').show();
-                $('#loginp4').show();
-                $('#loginp5').show();
-                $('#loginp6').show();
-          } else {
-            // the user isn't logged in to Facebook.
-            console.log("Offline");
-            $('#utloggad').show();
-            $('#inloggad').hide();
-                //KNAPPID FÖR ALLA SIDOR
-                $('#logoutp1').hide();
-                $('#logoutp2').hide();
-                $('#logoutp3').hide();
-                $('#logoutp4').hide();
-                $('#logoutp5').hide();
-                $('#logoutp6').hide();
-                $('#loginp1').show();
-                $('#loginp2').show();
-                $('#loginp3').show();
-                $('#loginp4').show();
-                $('#loginp5').show();
-                $('#loginp6').show();
+	    function checkLogin(){
+	        console.log("checkLogin");
+	        FB.getLoginStatus(function(response) {
+	          if (response.status === 'connected') {
+	            // the user is logged in and has authenticated your
+	            // app, and response.authResponse supplies
+	            // the user's ID, a valid access token, a signed
+	            // request, and the time the access token 
+	            // and signed request each expire
+	            uid = response.authResponse.userID;
+	            accessToken = response.authResponse.accessToken;
+	            console.log("Inloggad");
+	            loadToTaste();
+	            loadTested();
+	            $('#utloggad').hide();
+	            $('#inloggad').show();
+	            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
+	                //KNAPPID FÖR ALLA SIDOR
+	                $('#logoutp1').show();
+	                $('#logoutp2').show();
+	                $('#logoutp3').show();
+	                $('#logoutp4').show();
+	                $('#logoutp5').show();
+	                $('#logoutp6').show();
+	                $('#loginp1').hide();
+	                $('#loginp2').hide();
+	                $('#loginp3').hide();
+	                $('#loginp4').hide();
+	                $('#loginp5').hide();
+	                $('#loginp6').hide();
+	          } else if (response.status === 'not_authorized') {
+	            // the user is logged in to Facebook, 
+	            // but has not authenticated your app
+	            console.log("Offline");
+	            $('#utloggad').show();
+	            $('#inloggad').hide();
+	                //KNAPPID FÖR ALLA SIDOR
+	                $('#logoutp1').hide();
+	                $('#logoutp2').hide();
+	                $('#logoutp3').hide();
+	                $('#logoutp4').hide();
+	                $('#logoutp5').hide();
+	                $('#logoutp6').hide();
+	                $('#loginp1').show();
+	                $('#loginp2').show();
+	                $('#loginp3').show();
+	                $('#loginp4').show();
+	                $('#loginp5').show();
+	                $('#loginp6').show();
+	          } else {
+	            // the user isn't logged in to Facebook.
+	            console.log("Offline");
+	            $('#utloggad').show();
+	            $('#inloggad').hide();
+	                //KNAPPID FÖR ALLA SIDOR
+	                $('#logoutp1').hide();
+	                $('#logoutp2').hide();
+	                $('#logoutp3').hide();
+	                $('#logoutp4').hide();
+	                $('#logoutp5').hide();
+	                $('#logoutp6').hide();
+	                $('#loginp1').show();
+	                $('#loginp2').show();
+	                $('#loginp3').show();
+	                $('#loginp4').show();
+	                $('#loginp5').show();
+	                $('#loginp6').show();
 
-
-          }
-        });
-    }
+	          }
+	        });
+	    }
 
 
 //------------------------------//
@@ -562,7 +559,7 @@ var accessToken;
 		$('#sk').hide();
 	});
 	$('#pinb3').on('touchstart click', function(){
-		$('#Alla').hide();
+		$('#Alla').hid1e();
 		$('#Carls').hide();
 		$('#hall1P').hide();
 		$('#hall2P').hide();
