@@ -329,6 +329,26 @@ var accessToken;
         }
     });
 }));
+function postLike() {
+FB.api(
+       'https://graph.facebook.com/me/og.likes',
+       'post',
+       { object: objectToLike,},
+       function(response) {
+         if (!response) {
+           alert('Error occurred.');
+         } else if (response.error) {
+           consol.log('Error: ' + response.error.message);
+         } else {
+           document.getElementById('result').innerHTML =
+             '<a href=\"https://www.facebook.com/me/activity/' +
+             response.id + '\">' +
+             'Story created.  ID is ' +
+             response.id + '</a>';
+         }
+       }
+    );
+  }
 	</script>
 	<!--SLUT KODEN FÖR FB.JS-->
 
@@ -384,26 +404,7 @@ var accessToken;
 
 		$('.dela').click(function(){
 			  postLike();
-			 }); 
-    FB.api(
-       'https://graph.facebook.com/me/og.likes',
-       'post',
-       { object: objectToLike,},
-       function(response) {
-         if (!response) {
-           alert('Error occurred.');
-         } else if (response.error) {
-           consol.log('Error: ' + response.error.message);
-         } else {
-           document.getElementById('result').innerHTML =
-             '<a href=\"https://www.facebook.com/me/activity/' +
-             response.id + '\">' +
-             'Story created.  ID is ' +
-             response.id + '</a>';
-         }
-       }
-    );
-  }
+			 });
 
 		}
 	
