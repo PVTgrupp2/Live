@@ -118,7 +118,8 @@
     top:85%;
     padding-left:10px;
     padding-right:10px;
-    width:100%;
+    left:50%;
+    transform: translate(-50%, -50%);
 }
 
 /*
