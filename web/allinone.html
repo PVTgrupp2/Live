@@ -331,22 +331,24 @@ var accessToken;
 			RatyEnable();			
 			$('#thetoplistbeer').hide();
 		});
+
 		$('#thetoplistwisky').load('https://pvt-grupp2.herokuapp.com/wisky/top', function(){
 			$('#thetoplistwisky').listview().listview('refresh');
 			RatyEnable();
 			$('#thetoplistwisky').hide();			
 		});
+
 		$('#thetoplistall').load('https://pvt-grupp2.herokuapp.com/top', function(){					
 			$('#thetoplistall').listview().listview('refresh');
 			RatyEnable();
 			ListPopup();
 		});
 
-
 		$(document).on("click", ".fb-login-button", function(){
 			checkLogin();
 			console.log("DU ÄR SÄMST");
 		});
+
 		$('.fblogout').click(function(){
 			FB.logout(function(response){
 				checkLogin();
@@ -378,7 +380,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 
 	$(document).ready(function(){
 		$('#Alla').hide();
@@ -413,6 +414,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pin02').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -429,6 +431,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pin03').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -445,6 +448,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pina1').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').show();
@@ -461,6 +465,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pina2').on('touchstart click', function(){
 		$('#Abro').show();
 		$('#Carls').hide();
@@ -476,8 +481,8 @@ var accessToken;
 		$('#Michael').hide();
 		$('#sp').hide();
 		$('#sk').hide();
-	
 	});
+
 	$('#pina3').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -494,6 +499,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pina4').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -510,6 +516,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pina5').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -526,6 +533,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pinb1').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -542,6 +550,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pinb2').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -558,6 +567,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pinb3').on('touchstart click', function(){
 		$('#Alla').hid1e();
 		$('#Carls').hide();
@@ -574,6 +584,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
+
 	$('#pinb4').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -590,6 +601,7 @@ var accessToken;
 		$('#sp').show();
 		$('#sk').hide();
 	});
+
 	$('#pinb5').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -606,6 +618,7 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').show();
 	});
+
 	$('#pinc1').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -621,7 +634,6 @@ var accessToken;
 		$('#Michael').hide();
 		$('#sp').hide();
 		$('#sk').hide();
-
 	});
 
 
