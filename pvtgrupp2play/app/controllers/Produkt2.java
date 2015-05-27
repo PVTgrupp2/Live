@@ -12,7 +12,7 @@ public class Produkt2{
     public int fyllighet;
     public int sötma;
     public int rökighet;
-     public int anvbeska;
+    public int anvbeska;
     public int anvfyllighet;
     public int anvsötma;
     public int anvrökighet;
