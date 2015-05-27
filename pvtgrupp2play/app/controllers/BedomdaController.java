@@ -41,7 +41,7 @@ public  class BedomdaController extends Controller{
     		    p.land = rs.getString("Land");
     		    p.setBetyg(rs.getString("Betyg"));
     		    p.kategori = rs.getString("KategoriNamn");
-    		    p.alkhalt=rs.getDouble("Alkoholhalt");
+    		    p.alkhalt=rs.getDouble("Alk");
     		    p.beska = rs.getInt("Beska");
     		    p.fyllighet = rs.getInt("Fylligt");
     		    p.sötma = rs.getInt("Sött");
