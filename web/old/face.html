@@ -11,7 +11,7 @@ div { padding: 10px; }
 <script type="text/javascript">
   // You probably don't want to use globals, but this is just example code
   var fbAppId = '799390323443595';
-  var objectToLike = 'http://samples.ogp.me/813368275379133';
+  var objectToLike = 'https://pvt.dsv.su.se/Group2/web/old/face.html';
 
   // This check is just here to make sure you set your app ID. You don't
   // need to use it in production. 
@@ -74,19 +74,15 @@ div { padding: 10px; }
    */
 
   function postLike() {
-    console.log("FACE");
     FB.api(
-  'me/ol_whisky_app:betygsatt',
-  'post',
-  {
-    dryck: "https://pvt.dsv.su.se/Group2/web/allinone"
-  },
-  function(response) {
+       'https://graph.facebook.com/me/og.likes',
+       'post',
+       { object: objectToLike,},
+       function(response) {
          if (!response) {
            alert('Error occurred.');
          } else if (response.error) {
-           document.getElementById('result').innerHTML =
-             'Error: ' + response.error.message;
+           consol.log('Error: ' + response.error.message);
          } else {
            document.getElementById('result').innerHTML =
              '<a href=\"https://www.facebook.com/me/activity/' +
