@@ -67,7 +67,7 @@ var accessToken;
                 var popupid;
                 $('#popupFrame').load(poplink, function(){  
                     $('#popupFrame').trigger('create');
-                    //RatyEnable();
+                    RatyEnable();
                 });             
                 //$('#popupFrame').popup({ tolerance: 25 });
                 //$('#popupFrame').popup('open');
@@ -1406,8 +1406,9 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		
 	</div><!-- /header -->
 	<div class="space"></div>
-
-	<div data-role="content" id="utloggad" data-theme="b">			
+	<iframe src="//wwn.se/pvt/index.html" width="70%"></iframe>
+	<div data-role="content" id="utloggad" data-theme="b">
+				
 		<p align="center" id="minSidaText">För att få tillgång till alla<br>
 			funktioner måste du logga in.<br>
 			<br><br>
@@ -1419,7 +1420,8 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 	
 	<!-- /content -->
 
-	<div data-role="content" id="inloggad">	
+	<div data-role="content" id="inloggad">
+
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
