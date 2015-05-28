@@ -947,7 +947,7 @@ var accessToken;
 					<ul>
 						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp1" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp1" >Logga ut</a></li>
                         <div id="fading_div">Du har loggats ut!</div>
 						<!--<li><a href="#"> <button type="button" id="fade_in">Click Me!</button></a></li>-->
                         
@@ -956,7 +956,9 @@ var accessToken;
 								alert("Du har loggats ut!");
 								}
 							</script>-->
+                            
                             <!--SCRIPT FÖR FADE IN POPUP-->
+                            <!--
                             <script type="text/javascript">
                             var done = true,
                                 fading_div = document.getElementById('fading_div'),
@@ -988,7 +990,17 @@ var accessToken;
                             };
                             
                             </script>
-                            
+                            -->
+                           <script>
+                            $(document).ready(function(){
+                                    $("#fading_div").fadeIn();
+                                    $("#fading_div").delay(2000);
+                                    $("#fading_div").fadeOut("slow");
+                                });
+                            });
+                            </script>
+                           <button>Click to fade in boxes</button><br><br>
+
 
 					</ul>
 				</li>	
