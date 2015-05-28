@@ -42,7 +42,7 @@ var accessToken;
                 $('#mytastelist').hide();                
                 $('#mytestedlist').show();
                 //PListPopup();
-                RatyEnable();	
+                	
             });
         }
 
@@ -52,7 +52,7 @@ var accessToken;
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
-                RatyEnable();	
+                	
             });
         }
 
@@ -311,7 +311,12 @@ var accessToken;
     });
 }));
 
-/*hÄR*/
+	</script>
+	<!--SLUT KODEN FÖR FB.JS-->
+
+
+	<script type="text/javascript">	
+
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
 			$('#searchlistdrink').listview().listview('refresh');			
@@ -354,7 +359,6 @@ var accessToken;
 			});
 			console.log("DET FUNGEAR ATT LOGGA UT");
 			checkLogin();
-            fader();
 		});
 
 		$('.fblogin').click(function(){
@@ -734,6 +738,7 @@ var accessToken;
 		});
 
 		$('#mypage').click(function(){
+			RatyEnable();
 			console.log('test');
 			checkLogin();
 		});
@@ -957,14 +962,15 @@ var accessToken;
                         <div id="fading_div">Du har loggats ut!</div>
 						
                            <script>
-                            function fader(){
+                            $(document).ready(function(){
+                                $("button").click(function(){
                                     $("#fading_div").fadeIn();
                                     $("#fading_div").delay(2000);
                                     $("#fading_div").fadeOut("slow");
                                 });
-                            
+                            });
                             </script>
-                           <button>Click to fade in boxes</button>
+                           <button>Click to fade in boxes</button><br><br>
 
 
 					</ul>
