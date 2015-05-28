@@ -949,48 +949,7 @@ var accessToken;
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
 						<li><a href="#" class="fblogout" id="logoutp1" >Logga ut</a></li>
                         <div id="fading_div">Du har loggats ut!</div>
-						<!--<li><a href="#"> <button type="button" id="fade_in">Click Me!</button></a></li>-->
-                        
-                        <!--<script >
-								function logoutalert() {
-								alert("Du har loggats ut!");
-								}
-							</script>-->
-                            
-                            <!--SCRIPT FÖR FADE IN POPUP-->
-                            <!--
-                            <script type="text/javascript">
-                            var done = true,
-                                fading_div = document.getElementById('fading_div'),
-                                fade_in_button = document.getElementById('logoutp1'),
-                                fade_out_button = document.getElementById('fade_out');
-
-                            function function_opacity(opacity_value, fade_in_or_fade_out) { // fade_in_or_out - 0 = fade in, 1 = fade out
-                                fading_div.style.opacity = opacity_value / 100;
-                                fading_div.style.filter = 'alpha(opacity=' + opacity_value + ')';
-                                if (fade_in_or_fade_out == 'in' && opacity_value == 1) {
-                                    fading_div.style.display = 'block';
-                                }
-                                if (fade_in_or_fade_out == 'in' && opacity_value == 100) {
-                                    done = true;
-                                }
-                                if (fade_in_or_fade_out == 'out' && opacity_value == 1) {
-                                    fading_div.style.display = 'none';
-                                    done = true;
-                                }
-                            }
-                            fade_in_button.onclick = function () {
-                                if (done && fading_div.style.opacity !== '1') {
-                                    done = false;
-                                    for (var i = 1; i <= 50; i++) {
-                                        setTimeout("function_opacity(" + i + ",'in')", i * 10);
-                                        setTimeout("function_opacity(" + i + ",'out')", (i - 3000) * -1 * 1);
-                                    }
-                                }
-                            };
-                            
-                            </script>
-                            -->
+						
                            <script>
                             $(document).ready(function(){
                                     $("#fading_div").fadeIn();
