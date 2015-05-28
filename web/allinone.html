@@ -30,6 +30,31 @@
 	<script >function logoutalert() {alert("Du har loggats ut!");}</script>
 	<!--KODEN FÖR FB.JS-->
 	<script> 
+			function ListPopup(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
+				var linkid = $(this).attr('id');
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame').load(poplink, function(){	
+					$('#popupFrame').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				$('#popupFrame').popup('open');
+
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+				}
+				setTimeout(delayopen, 1000);
+
+				//$('#ToTasteButton').trigger('create');
+			});
+		}
+
 		function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
@@ -122,7 +147,7 @@ var accessToken;
 	            loadToTaste();
 	            loadTested();
 	            
-	            
+
 	            $('#utloggad').hide();
 	            $('#inloggad').show();
 	            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
@@ -788,31 +813,8 @@ var accessToken;
   			storeBedöm(theid);
 		});
 
-		function ListPopup(){
-			$('.produktlink').not('.emptyMessage').click(function(){
-				//$('#popupFrame').hide();
-				var linkid = $(this).attr('id');
-				console.log(linkid); 
-				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
-				var popupid;
-				$('#popupFrame').load(poplink, function(){	
-					$('#popupFrame').trigger('create');
-					RatyEnable();
-				});				
-				//$('#popupFrame').popup({ tolerance: 25 });
-				//$('#popupFrame').popup('open');
-				$('#popupFrame').popup('open');
 
-				function delayopen(){					
-  					console.log('explode'); 
-  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
-				}
-				setTimeout(delayopen, 1000);
-
-				//$('#ToTasteButton').trigger('create');
-			});
-		}
-		
+		/*
 		function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
@@ -836,7 +838,7 @@ var accessToken;
 			});
 
 			//$('#toplist').trigger('create');
-		}
+		}*/
 
 
 
