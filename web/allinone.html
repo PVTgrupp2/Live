@@ -358,6 +358,7 @@ var accessToken;
 			});
 			console.log("DET FUNGEAR ATT LOGGA UT");
 			checkLogin();
+            fader();
 		});
 
 		$('.fblogin').click(function(){
@@ -960,15 +961,14 @@ var accessToken;
                         <div id="fading_div">Du har loggats ut!</div>
 						
                            <script>
-                            $(document).ready(function(){
-                                $("button").click(function(){
+                            function fader(){
                                     $("#fading_div").fadeIn();
                                     $("#fading_div").delay(2000);
                                     $("#fading_div").fadeOut("slow");
                                 });
-                            });
+                            
                             </script>
-                           <button>Click to fade in boxes</button><br><br>
+                           <button>Click to fade in boxes</button>
 
 
 					</ul>
