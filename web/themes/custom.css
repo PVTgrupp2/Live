@@ -107,7 +107,7 @@
     z-index:3000;
 }
 
-#fading_div{
+.fading_div{
     display:none;
     background:#FFFFFF;
     color:black;
