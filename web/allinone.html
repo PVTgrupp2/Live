@@ -382,6 +382,7 @@ var accessToken;
 		$('#sk').hide();
 	});
 
+
 	$(document).ready(function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -415,7 +416,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pin02').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -432,7 +432,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pin03').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -449,7 +448,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pina1').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').show();
@@ -466,7 +464,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pina2').on('touchstart click', function(){
 		$('#Abro').show();
 		$('#Carls').hide();
@@ -482,8 +479,8 @@ var accessToken;
 		$('#Michael').hide();
 		$('#sp').hide();
 		$('#sk').hide();
+	
 	});
-
 	$('#pina3').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -500,7 +497,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pina4').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -517,7 +513,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pina5').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -534,7 +529,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pinb1').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -551,7 +545,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pinb2').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -568,9 +561,8 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pinb3').on('touchstart click', function(){
-		$('#Alla').hid1e();
+		$('#Alla').hide();
 		$('#Carls').hide();
 		$('#hall1P').hide();
 		$('#hall2P').hide();
@@ -585,7 +577,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').hide();
 	});
-
 	$('#pinb4').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -602,7 +593,6 @@ var accessToken;
 		$('#sp').show();
 		$('#sk').hide();
 	});
-
 	$('#pinb5').on('touchstart click', function(){
 		$('#Alla').hide();
 		$('#Carls').hide();
@@ -619,7 +609,6 @@ var accessToken;
 		$('#sp').hide();
 		$('#sk').show();
 	});
-
 	$('#pinc1').on('touchstart click', function(){
 		$('#Alla').show();
 		$('#Carls').hide();
@@ -635,10 +624,11 @@ var accessToken;
 		$('#Michael').hide();
 		$('#sp').hide();
 		$('#sk').hide();
+
 	});
 
 
-		//KARTAN, KARTAN GÖMS/VISAS
+
 
 		$(document).ready(function(){
 			$('#b').hide();
@@ -647,12 +637,14 @@ var accessToken;
 			$('#c').hide();
 		});
 
+
 		$('#hallall').click(function(){
 			$('#b').hide();
 			$('#a').hide();
 			$('#all0').show();
 			$('#c').hide();
 		});
+
 
 		$('#halla').click(function(){
 			$('#b').hide();
@@ -674,6 +666,7 @@ var accessToken;
 			$('#all0').hide();
 			$('#c').show();
 		});
+
 
 		$('#topAlla').click(function(){
 			$('#thetoplistwisky').hide();
@@ -1070,30 +1063,31 @@ var accessToken;
 						<li><a href="#" id="hallb" class="ui-btn" data-transition="none">Hall B</a></li>
 						<li><a href="#" id="hallc" class="ui-btn" data-transition="none">Hall C</a></li>
 					</ul>
-				</div>			
+				</div>				
 		
 <!--kartan och dens 'dots'-->
+ <section class="s0">
+      <div class="parent">
+        <div class="panzoom">
+        <div id="all0" class="map_c">
+        	
+<img id="hall1" src="themes/img/hall0.png" width="1200" height="463" />
+  
+  <div id="pin01" class="pins">
+  	
+  </div>
+ <div id="pin02" class="pins">
+ 
+  </div>
+ <div id="pin03" class="pins">
+  
+  </div>
+   
 
-
-
-<section class="s0">
-    	<div class="parent">
-	        <div class="panzoom">
-		        <div id="all0" class="map_c">
-		        	
-					<img id="hall1" src="themes/img/hall0.png" width="1200" height="463" />
-			  
-			  		<div id="pin01" class="pins">
-			  		</div>
-			 		<div id="pin02" class="pins">
-					</div>
-					<div id="pin03" class="pins">
-			  		</div>
-   				</div>
-			</div>
-		</div>
-
-    <script>
+   </div>
+</div>
+</div>
+      <script>
         (function() {
           var $section = $('.s0').first();
           $section.find('.panzoom').panzoom({
@@ -1101,33 +1095,42 @@ var accessToken;
             $zoomOut: $section.find(".zoom-out"),
             $zoomRange: $section.find(".zoom-range"),
             $reset: $section.find(".reset")
+
           });
         })();
        
-    </script>
-</section>
+      </script>
+    </section>
+
+    
+
 
 <section class="s1">
-      	<div class="parent">
-	        <div class="panzoom">
-				<div id="a" class="map_c">
-					<img id="hall1" src="themes/img/hall1.png" width="1200" height="463" />
-				
-					<div id="pina1" class="pins">
-			  		</div>
-			  		<div id="pina2" class="pins">
-			  		</div>
-			 		<div id="pina3" class="pins">
-			  		</div>
-			   		<div id="pina4" class="pins">
-			  		</div>
-			   		<div id="pina5" class="pins">
-			  		</div>
-   				</div>
-			</div>
-		</div>
+      <div class="parent">
+        <div class="panzoom">
+	<div id="a" class="map_c">
+<img id="hall1" src="themes/img/hall1.png" width="1200" height="463" />
+	
+	<div id="pina1" class="pins">
 
-     <script>
+  </div>
+  <div id="pina2" class="pins">
+
+  </div>
+ <div id="pina3" class="pins">
+
+  </div>
+   <div id="pina4" class="pins">
+
+  </div>
+   <div id="pina5" class="pins">
+
+  </div>
+
+   </div>
+</div>
+</div>
+      <script>
         (function() {
           var $section = $('.s1').first();
           $section.find('.panzoom').panzoom({
@@ -1139,30 +1142,35 @@ var accessToken;
           });
         })();
        
-     </script>
-</section>
+      </script>
+    </section>
 
 <section class="s2">
-      	<div class="parent">
-	        <div class="panzoom">
-				<div id="b" class="map_c">
-					<img id="hall2" src="themes/img/hall2.png" width="1200" height="463"/>
-				
-					<div id="pinb1" class="pins">
-				  	</div>
-				  	<div id="pinb2" class="pins">
-				  	</div>
-				 	<div id="pinb3" class="pins">
-				  	</div>
-				   	<div id="pinb4" class="pins">
-				  	</div>
-				   	<div id="pinb5" class="pins">
-				  	</div>
-   				</div>
-			</div>
-		</div>
+      <div class="parent">
+        <div class="panzoom">
+	<div id="b" class="map_c">
+<img id="hall2" src="themes/img/hall2.png" width="1200" height="463"/>
+	
+	<div id="pinb1" class="pins">
+  
+  </div>
+  <div id="pinb2" class="pins">
+  
+  </div>
+ <div id="pinb3" class="pins">
 
-     <script>
+  </div>
+   <div id="pinb4" class="pins">
+  	
+  </div>
+   <div id="pinb5" class="pins">
+
+  </div>
+
+   </div>
+</div>
+</div>
+      <script>
         (function() {
           var $section = $('.s2').first();
           $section.find('.panzoom').panzoom({
@@ -1174,21 +1182,21 @@ var accessToken;
           });
         })();
        
-     </script>
-</section>
+      </script>
+    </section>
 
 <section class="s3">
-      	<div class="parent">
-	        <div class="panzoom">
-				<div id="c" class="map_c">
-					<img id="hall3" src="themes/img/hall3.jpg" width="463" height="463" />
-
-					<div id="pinc1" class="pins">
-			  		</div>
-   				</div>
-			</div>
-		</div>
-
+      <div class="parent">
+        <div class="panzoom">
+	<div id="c" class="map_c">
+<img id="hall3" src="themes/img/hall3.jpg" width="463" height="463" />
+	
+	<div id="pinc1" class="pins">
+  	<a href="#">   </a>
+  </div>
+   </div>
+</div>
+</div>
       <script>
         (function() {
           var $section = $('.s3').first();
@@ -1202,7 +1210,7 @@ var accessToken;
         })();
        
       </script>
-</section>
+    </section>
 
 
 <div id="Carls"class="uPopUp">
