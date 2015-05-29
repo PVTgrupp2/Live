@@ -33,6 +33,31 @@ var objectToLike = 'https://pvt.dsv.su.se/Group2/web/old/face.html';
 var uid = '';
 var accessToken;
 
+		function RatyEnable(){
+			$('.produkt').raty({
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
+	  			}	
+			});
+			$('.produktlist').raty({
+  				score: function() {
+    				return $(this).attr('data-score');
+				},
+				click: function(score, evt) {
+					var theid = $(this).parent().attr('id');
+	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
+	    			storeRate(theid, score);
+	 	  			}	
+			});
+
+			//$('#toplist').trigger('create');
+		}
+
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
             $('#mytastelist').load(totasteurl, function(){                        
@@ -785,7 +810,7 @@ var accessToken;
 			});
 		}
 		
-		function RatyEnable(){
+		/*function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
     				return $(this).attr('data-score');
@@ -808,7 +833,7 @@ var accessToken;
 			});
 
 			//$('#toplist').trigger('create');
-		}
+		}*/
 
 
 
