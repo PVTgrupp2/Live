@@ -58,6 +58,31 @@ var accessToken;
 			//$('#toplist').trigger('create');
 		}
 
+		function ListPopup(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
+				var linkid = $(this).attr('id');
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame').load(poplink, function(){	
+					$('#popupFrame').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				$('#popupFrame').popup('open');
+
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+				}
+				setTimeout(delayopen, 1000);
+
+				//$('#ToTasteButton').trigger('create');
+			});
+		}
+
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
             $('#mytastelist').load(totasteurl, function(){                        
@@ -65,6 +90,8 @@ var accessToken;
                 $('#mytastelist').hide();                
                 $('#mytestedlist').show();
                 //PListPopup();
+                RatyEnable();
+                ListPopup();
                 	
             });
         }
@@ -76,6 +103,7 @@ var accessToken;
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
                 RatyEnable();
+                ListPopup();
             });
         }
 
@@ -785,7 +813,7 @@ var accessToken;
   			storeBedöm(theid);
 		});
 
-		function ListPopup(){
+		/*function ListPopup(){
 			$('.produktlink').not('.emptyMessage').click(function(){
 				//$('#popupFrame').hide();
 				var linkid = $(this).attr('id');
@@ -808,7 +836,7 @@ var accessToken;
 
 				//$('#ToTasteButton').trigger('create');
 			});
-		}
+		}*/
 		
 		/*function RatyEnable(){
 			$('.produkt').raty({
