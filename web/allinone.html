@@ -43,11 +43,14 @@
 				});				
 				//$('#popupFrame').popup({ tolerance: 25 });
 				//$('#popupFrame').popup('open');
+				$('#popupFrame2').html($('#popupFrame').html());
 				$('#popupFrame').popup('open');
+				$('#popupFrame2').popup('open');
 
 				function delayopen(){					
   					console.log('explode'); 
   					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+  					$('#popupFrame2').popup("reposition", {"positionTo": "window"});
 				}
 				setTimeout(delayopen, 1000);
 
