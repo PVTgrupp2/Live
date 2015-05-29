@@ -76,12 +76,11 @@ var accessToken;
 				
 				
 				$('#popupFrame').popup('open');
-				$('#popupFrame2').html($('#popupFrame').html());
-				$('#popupFrame2').popup('open');
+
 				function delayopen(){					
   					console.log('explode'); 
   					$('#popupFrame').popup("reposition", {"positionTo": "window"});
-  					$('#popupFrame2').popup("reposition", {"positionTo": "window"});
+  					
 				}
 				setTimeout(delayopen, 1000);
 
@@ -1452,7 +1451,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		    </ul>
       	</div>
     </div><!-- /footer -->
-    <div class="popupruta" data-role="popup" data-theme="b" id="popupFrame2">
+    <div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
 	<!-- Ska vara tom-->
 	</div>
 </div>
