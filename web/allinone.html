@@ -26,6 +26,8 @@
 	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 	<script language="JavaScript" src="scriptcam/scriptcam.js"></script>
 
+
+	<script >function logoutalert() {alert("Du har loggats ut!");}</script>
 	<!--KODEN FÖR FB.JS-->
 	<script> 
 
@@ -885,9 +887,8 @@ var accessToken;
 			     //On ajax success do this
 			     //alert(data);
 			    // console.log(data);
-			    //alert("Din röst har sparats!");	
-			    faderaty(); 
-                },
+			    alert("Din röst har sparats!");	
+			    },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
 			        $.mobile.loading('hide')
@@ -923,9 +924,8 @@ var accessToken;
 			   dataType:'json',
 			   success: function(data){
 			     //On ajax success do this
-			     //alert("Sparat i din To Taste lista");
-			     faderaty();
-                 console.log(data);
+			     alert("Sparat i din To Taste lista");
+			     console.log(data);
 			     loadToTaste();
 			    },
 			   error: function(xhr, ajaxOptions, thrownError) {
@@ -980,25 +980,6 @@ var accessToken;
 	//Ladda Facebook API
 
 	</script>
-
-    <!-- Fade för logga ut -->
-    <script>
-        function fadelogout(){
-                $(".fading_div").fadeIn();
-                $(".fading_div").delay(2000);
-                $(".fading_div").fadeOut("slow");
-            }
-    </script>
-
-    <!-- Fade för bedöm -->
-    <script>
-        function faderaty(){
-                $(".rating_div").fadeIn();
-                $(".rating_div").delay(2000);
-                $(".rating_div").fadeOut("slow");
-            }
-    </script>
-
 </head>
 
 <body>
@@ -1033,14 +1014,27 @@ var accessToken;
 					<ul>
 						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp1" onclick="fadelogout()" >Logga ut</a></li>
-                    </ul>
+						<li><a href="#" class="fblogout" id="logoutp1" >Logga ut</a></li>
+                        <div id="fading_div">Du har loggats ut!</div>
+						
+                           <script>
+                            $(document).ready(function(){
+                                $("button").click(function(){
+                                    $("#fading_div").fadeIn();
+                                    $("#fading_div").delay(2000);
+                                    $("#fading_div").fadeOut("slow");
+                                });
+                            });
+                            </script>
+                           <button>Click to fade in boxes</button><br><br>
+
+
+					</ul>
 				</li>	
 			</ul>
 
 		</div>
-        <div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
+
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1090,15 +1084,13 @@ var accessToken;
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#" class="dela"> Dela</a></li>
+						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp2">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp2" onclick="fadelogout()" >Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()" >Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-        <div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">		
@@ -1423,15 +1415,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#" class="dela"> Dela</a></li>
+						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp3">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp3" onclick="fadelogout()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp3" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-        <div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1479,14 +1469,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#" class="dela"> Dela</a></li>
-						<li><a href="#" class="fblogout" id="logoutp4" onclick="fadelogout()">Logga ut</a></li>
+						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
+						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-		<div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
+		
 	</div><!-- /header -->
 	<div class="space"></div>
 
@@ -1553,15 +1542,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><a href="#" class="dela"> Dela</a></li>
+						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href="#mypage" data-transition='none' class="fblogin" id="loginp5">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp5" onclick="fadelogout()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp5" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-        <div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
@@ -1593,7 +1580,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		
 			<p style="float:left">Ditt betyg för drycken:</p> 
 			<div class="produktlist" id="starforrating">
-		</div> 
+			</div> 
 		<a href="#betyginfo" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-info ui-btn-icon-notext" title="Mer information">Mer information</a>
 		<div data-role="popup" id="betyginfo" class="ui-content" data-theme="a" style="max-width:350px;">
 						Vad är ditt helhetsbetyg för den här drycken, är det din nya favorit eller smakar det som farfars rakvatten? 
@@ -1614,14 +1601,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 
 		<p> </p>
 
-	    <div name="textarea-1" id="textarea-2">Den här ölen smakar si och den smakar så, capish?</div>
+	    <div name="textarea-1" id="textarea-2">Den här ölen smakar si och den smakar så, capish?</div>-->
+	<div> <br> </div>	
+	
+	<div class="ui-grid-a">
+		<div class="ui-block-a"><a href="#mypage" data-tranistion="none" class="ui-shadow ui-btn">Avbryt</a></div>
+		<div class="ui-block-b"><input type="submit" value="Spara"></div>
 		
-	<div > -->
-		<button class="ui-btn ui-btn-inline">Avbryt</button>
-		<button class="ui-btn ui-btn-inline">Spara/Dela</button>
-		<!--<button class="ui-btn ui-btn-inline">Spara</button>-->
-		<input type="submit" value="Spara">
-	</div>
 	</form>
 
 	</div><!-- /content -->
@@ -1649,13 +1635,11 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#mypage" data-transition='none' class="fblogin" id="loginp6">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp6" onclick="fadelogout()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp6" onclick="logoutalert()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-        <div class="fading_div">Du har loggats ut!</div>
-        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
