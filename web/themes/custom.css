@@ -139,6 +139,22 @@
     z-index:4000;
 }
 
+.store_div{
+    display:none;
+    background:#FFFFFF;
+    color:black;
+    text-align:center;
+    border:1px solid black;
+    border-radius:25px;
+    position:fixed;
+    top:85%;
+    padding-left:10px;
+    padding-right:10px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index:4000;
+}
+
 /*
 röd=b03120
 grön=2f451e

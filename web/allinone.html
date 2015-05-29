@@ -900,7 +900,7 @@ var accessToken;
 			   success: function(data){
 			     //On ajax success do this
 			     //alert("Sparat i din To Taste lista");
-			     faderaty();
+			     fadestore();
                  console.log(data);
 			     loadToTaste();
 			    },
@@ -975,6 +975,14 @@ var accessToken;
             }
     </script>
 
+    <script>
+        function fadestore(){
+                $(".store_div").fadeIn();
+                $(".store_div").delay(2000);
+                $(".store_div").fadeOut("slow");
+            }
+    </script>
+
 </head>
 
 <body>
@@ -1017,6 +1025,7 @@ var accessToken;
 		</div>
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1075,6 +1084,7 @@ var accessToken;
 		</div>
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">		
@@ -1419,6 +1429,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		</div>
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1478,6 +1489,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		</div>
 		<div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 	<div class="space"></div>
 
@@ -1556,6 +1568,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		</div>
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
@@ -1649,6 +1662,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		</div>
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
+        <div class="store_div">Produkten har sparats i ToTaste!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
