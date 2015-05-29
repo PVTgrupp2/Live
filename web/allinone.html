@@ -50,7 +50,7 @@ var accessToken;
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
-                	
+                RatyEnable();
             });
         }
 
@@ -93,8 +93,8 @@ var accessToken;
 	            uid = response.authResponse.userID;
 	            accessToken = response.authResponse.accessToken;
 	            console.log("Inloggad");
-	            //loadToTaste();
-	            //loadTested();
+	            loadToTaste();
+	            loadTested();
 	            $('#utloggad').hide();
 	            $('#inloggad').show();
 	            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
@@ -1436,6 +1436,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 
 <div>
 	<h1 style="color:#b03120;">Mingelbilder </h1>
+
 	<iframe src="//nicklas-andersson.se/pvt/" width="99%" height="160px"></iframe>
 
 	<div data-role="content" data-theme="b" align="center">
