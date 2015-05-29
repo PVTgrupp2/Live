@@ -82,6 +82,23 @@ var accessToken;
 				}
 				setTimeout(delayopen, 1000);
 
+				$('#popupFrame2').load(poplink, function(){	
+					$('#popupFrame2').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				
+				
+				$('#popupFrame2').popup('open');
+
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame2').popup("reposition", {"positionTo": "window"});
+  					
+				}
+				setTimeout(delayopen, 1000);
+
 				//$('#ToTasteButton').trigger('create');
 			});
 		}
@@ -1545,7 +1562,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 		    </ul>
       	</div>
     </div><!-- /footer -->
-    <div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
+    <div class="popupruta" data-role="popup" data-theme="b" id="popupFrame2">
 	<!-- Ska vara tom-->
 	</div>
 </div>
