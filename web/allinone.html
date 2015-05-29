@@ -863,8 +863,9 @@ var accessToken;
 			     //On ajax success do this
 			     //alert(data);
 			    // console.log(data);
-			    alert("Din röst har sparats!");	
-			    },
+			    //alert("Din röst har sparats!");	
+			    faderaty();
+                },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
 			        $.mobile.loading('hide')
@@ -900,8 +901,9 @@ var accessToken;
 			   dataType:'json',
 			   success: function(data){
 			     //On ajax success do this
-			     alert("Sparat i din To Taste lista");
-			     console.log(data);
+			     //alert("Sparat i din To Taste lista");
+			     faderaty();
+                 console.log(data);
 			     loadToTaste();
 			    },
 			   error: function(xhr, ajaxOptions, thrownError) {
@@ -956,6 +958,25 @@ var accessToken;
 	//Ladda Facebook API
 
 	</script>
+
+    <!-- FADE FÖR LOGGA UT -->
+    <script>
+        function fadelogout(){
+                $(".fading_div").fadeIn();
+                $(".fading_div").delay(2000);
+                $(".fading_div").fadeOut("slow");
+            }
+    </script>
+
+    <!-- FADE FÖR BEDÖM -->
+    <script>
+        function faderaty(){
+                $(".rating_div").fadeIn();
+                $(".rating_div").delay(2000);
+                $(".rating_div").fadeOut("slow");
+            }
+    </script>
+
 </head>
 
 <body>
@@ -990,27 +1011,14 @@ var accessToken;
 					<ul>
 						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp1" >Logga ut</a></li>
-                        <div id="fading_div">Du har loggats ut!</div>
-						
-                           <script>
-                            $(document).ready(function(){
-                                $("button").click(function(){
-                                    $("#fading_div").fadeIn();
-                                    $("#fading_div").delay(2000);
-                                    $("#fading_div").fadeOut("slow");
-                                });
-                            });
-                            </script>
-                           <button>Click to fade in boxes</button><br><br>
-
-
-					</ul>
+						<li><a href="#" class="fblogout" id="logoutp1" onclick="fadelogout()">Logga ut</a></li>
+                    </ul>
 				</li>	
 			</ul>
 
 		</div>
-
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
