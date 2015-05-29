@@ -107,7 +107,22 @@
     z-index:3000;
 }
 
-#fading_div{
+.fading_div{
+    display:none;
+    background:#FFFFFF;
+    color:black;
+    text-align:center;
+    border:1px solid black;
+    border-radius:25px;
+    position:fixed;
+    top:85%;
+    padding-left:10px;
+    padding-right:10px;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.rating_div{
     display:none;
     background:#FFFFFF;
     color:black;

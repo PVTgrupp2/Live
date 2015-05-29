@@ -26,62 +26,9 @@
 	<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 	<script language="JavaScript" src="scriptcam/scriptcam.js"></script>
 
-
-	<script >function logoutalert() {alert("Du har loggats ut!");}</script>
 	<!--KODEN FÖR FB.JS-->
 	<script> 
-			function ListPopup(){
-			$('.produktlink').not('.emptyMessage').click(function(){
-				//$('#popupFrame').hide();
-				var linkid = $(this).attr('id');
-				console.log(linkid); 
-				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
-				var popupid;
-				$('#popupFrame').load(poplink, function(){	
-					$('#popupFrame').trigger('create');
-					RatyEnable();
-				});				
-				//$('#popupFrame').popup({ tolerance: 25 });
-				//$('#popupFrame').popup('open');
-				$('#popupFrame2').html($('#popupFrame').html());
-				$('#popupFrame').popup('open');
-				$('#popupFrame2').popup('open');
 
-				function delayopen(){					
-  					console.log('explode'); 
-  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
-  					$('#popupFrame2').popup("reposition", {"positionTo": "window"});
-				}
-				setTimeout(delayopen, 1000);
-
-				//$('#ToTasteButton').trigger('create');
-			});
-		}
-
-		function RatyEnable(){
-			$('.produkt').raty({
-  				score: function() {
-    				return $(this).attr('data-score');
-				},
-				click: function(score, evt) {
-					var theid = $(this).parent().attr('id');
-	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
-	    			storeRate(theid, score);
-	  			}	
-			});
-			$('.produktlist').raty({
-  				score: function() {
-    				return $(this).attr('data-score');
-				},
-				click: function(score, evt) {
-					var theid = $(this).parent().attr('id');
-	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
-	    			storeRate(theid, score);
-	 	  			}	
-			});
-
-			//$('#toplist').trigger('create');
-		}
 var objectToLike = 'https://pvt.dsv.su.se/Group2/web/old/face.html';
 var uid = '';
 var accessToken;
@@ -93,8 +40,7 @@ var accessToken;
                 $('#mytastelist').hide();                
                 $('#mytestedlist').show();
                 //PListPopup();
-                	RatyEnable();
-                	ListPopup();
+                	
             });
         }
 
@@ -104,8 +50,7 @@ var accessToken;
                 $('#mytestedlist').listview().listview('refresh');
                 $('#mytastelist').hide();
                 $('#mytestedlist').show();
-                	RatyEnable();
-                	ListPopup();
+                	
             });
         }
 
@@ -148,11 +93,8 @@ var accessToken;
 	            uid = response.authResponse.userID;
 	            accessToken = response.authResponse.accessToken;
 	            console.log("Inloggad");
-
-	            loadToTaste();
-	            loadTested();
-	            
-
+	            //loadToTaste();
+	            //loadTested();
 	            $('#utloggad').hide();
 	            $('#inloggad').show();
 	            $('.fblogout').html(/*'<li><a href="#" class="fblogout"><button class="ui-btn ui-btn-inline">Logga ut</button></a></li>'*/);
@@ -818,8 +760,31 @@ var accessToken;
   			storeBedöm(theid);
 		});
 
+		function ListPopup(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
+				var linkid = $(this).attr('id');
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame').load(poplink, function(){	
+					$('#popupFrame').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				$('#popupFrame').popup('open');
 
-		/*
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame').popup("reposition", {"positionTo": "window"});
+				}
+				setTimeout(delayopen, 1000);
+
+				//$('#ToTasteButton').trigger('create');
+			});
+		}
+		
 		function RatyEnable(){
 			$('.produkt').raty({
   				score: function() {
@@ -843,7 +808,7 @@ var accessToken;
 			});
 
 			//$('#toplist').trigger('create');
-		}*/
+		}
 
 
 
@@ -864,8 +829,9 @@ var accessToken;
 			     //On ajax success do this
 			     //alert(data);
 			    // console.log(data);
-			    alert("Din röst har sparats!");	
-			    },
+			    //alert("Din röst har sparats!");	
+			    faderaty(); 
+                },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
 			        $.mobile.loading('hide')
@@ -901,8 +867,9 @@ var accessToken;
 			   dataType:'json',
 			   success: function(data){
 			     //On ajax success do this
-			     alert("Sparat i din To Taste lista");
-			     console.log(data);
+			     //alert("Sparat i din To Taste lista");
+			     faderaty();
+                 console.log(data);
 			     loadToTaste();
 			    },
 			   error: function(xhr, ajaxOptions, thrownError) {
@@ -958,17 +925,24 @@ var accessToken;
 
 	</script>
 
-		<style type="text/css">
+    <!-- Fade för logga ut -->
+    <script>
+        function fadelogout(){
+                $(".fading_div").fadeIn();
+                $(".fading_div").delay(2000);
+                $(".fading_div").fadeOut("slow");
+            }
+    </script>
 
-.fb-style{
-	border-radius: 40%;
-	width: 100px;
-	height: 50px;
-	background-color: blue;
-}
+    <!-- Fade för bedöm -->
+    <script>
+        function faderaty(){
+                $(".rating_div").fadeIn();
+                $(".rating_div").delay(2000);
+                $(".rating_div").fadeOut("slow");
+            }
+    </script>
 
-	</style>
-</head>
 </head>
 
 <body>
@@ -1001,29 +975,16 @@ var accessToken;
 			<ul>
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
-						<li><div class="fb-style" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
+						<li><div class="fb-share-button" data-href="https://pvt.dsv.su.se/Group2/web/allinone" data-layout="link"></div></li>
 						<li><a href="#" data-transition='none' class="fblogin" id="loginp1" >Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp1" >Logga ut</a></li>
-                        <div id="fading_div">Du har loggats ut!</div>
-						
-                           <script>
-                            $(document).ready(function(){
-                                $("button").click(function(){
-                                    $("#fading_div").fadeIn();
-                                    $("#fading_div").delay(2000);
-                                    $("#fading_div").fadeOut("slow");
-                                });
-                            });
-                            </script>
-                           <button>Click to fade in boxes</button><br><br>
-
-
-					</ul>
+						<li><a href="#" class="fblogout" id="logoutp1" onclick="fadelogout()" >Logga ut</a></li>
+                    </ul>
 				</li>	
 			</ul>
 
 		</div>
-
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1075,11 +1036,13 @@ var accessToken;
 					<ul>
 						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp2">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp2" onclick="logoutalert()" >Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp2" onclick="fadelogout()" >Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">		
@@ -1406,11 +1369,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 					<ul>
 						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href='#mypage' data-transition='none' class="fblogin" id="loginp3">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp3" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp3" onclick="fadelogout()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b">
@@ -1459,18 +1424,22 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 				<li><a href="#" ><img src="themes/img/menuvit.png" width="30px" height="30px"/></a>
 					<ul>
 						<li><a href="#" class="dela"> Dela</a></li>
-						<li><a href="#" class="fblogout" id="logoutp4" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp4" onclick="fadelogout()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
-		
+		<div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 	<div class="space"></div>
+<<<<<<< HEAD
 <div>
 	<h1 style="color:#b03120;">Mingelbilder </h1>
+=======
+
+>>>>>>> origin/master
 	<iframe src="//nicklas-andersson.se/pvt/" width="99%" height="160px"></iframe>
-	<div>
 
 	<div data-role="content" data-theme="b" align="center">
 		<a href="//nicklas-andersson.se/pvt/my_file.php" target="_blank"><button class="ui-btn ui-btn-inline">Ladda upp en bild</button></a>
@@ -1490,9 +1459,7 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 	<!-- /content -->
 
 	<div data-role="content" id="inloggad">
-		<div class="popupruta" data-role="popup" data-theme="b" id="popupFrame">
-	<!-- Ska vara tom-->
-		</div>
+
 		<p id="minSidaText">Inloggad på Min sida</p>
 		<div data-role="navbar">
 			<ul>
@@ -1534,11 +1501,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 					<ul>
 						<li><a href="#" class="dela"> Dela</a></li>
 						<li><a href="#mypage" data-transition='none' class="fblogin" id="loginp5">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp5" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp5" onclick="fadelogout()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
@@ -1634,11 +1603,13 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 					<ul>
 						<li><a href="#">Dela</a></li>
 						<li><a href="#mypage" data-transition='none' class="fblogin" id="loginp6">Logga in</a></li>
-						<li><a href="#" class="fblogout" id="logoutp6" onclick="logoutalert()">Logga ut</a></li>
+						<li><a href="#" class="fblogout" id="logoutp6" onclick="fadelogout()">Logga ut</a></li>
 					</ul>
 				</li>	
 			</ul>
 		</div>
+        <div class="fading_div">Du har loggats ut!</div>
+        <div class="rating_div">Din röst har sparats!</div>
 	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
