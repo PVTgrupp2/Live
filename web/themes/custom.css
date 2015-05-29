@@ -120,6 +120,7 @@
     padding-right:10px;
     left:50%;
     transform: translate(-50%, -50%);
+    font-size:110%;
 }
 
 .rating_div{
@@ -135,6 +136,7 @@
     padding-right:10px;
     left:50%;
     transform: translate(-50%, -50%);
+    font-size:110%;
 }
 
 /*
