@@ -73,7 +73,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.1Produkt AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = " + id;
+            String sql = "SELECT * FROM nian8516.ProdBet AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = " + id;
             
             ResultSet rs = stmt.executeQuery(sql);	
             
@@ -82,6 +82,7 @@
     		    p.id = rs.getLong("idProdukt");
     		    p.namn = rs.getString("Namn");
     		    p.land = rs.getString("Land");
+    		    p.setBetyg(rs.getString("Betyg"));
     		    
     		    totastelist.add(p);
     		}

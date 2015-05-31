@@ -51,7 +51,7 @@
 			    // console.log(data);
 			    //alert("Din röst har sparats!");	
 			    faderaty();
-
+			    $(.li).clearQueue()
                 },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
@@ -134,8 +134,7 @@
 				click: function(score, evt) {
 					var theid = $(this).parent().attr('id');
 	    			console.log('ID: ' +  theid + "\nscore: " + score + "\nevent: " + evt);
-	    			storeRate(theid, score);
-	    			evt.stopPropagation();
+	    			storeRate(theid, score);	    			
 	  			}	
 			});
 			$('.produktlist').raty({
