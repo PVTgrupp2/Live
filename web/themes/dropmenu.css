@@ -3,7 +3,7 @@
 	padding:0px;
 	position:relative;
 	float:right;
-	bottom:50%;
+	top: -60px;
 	right:2%;
 	z-index:2000;
 }
