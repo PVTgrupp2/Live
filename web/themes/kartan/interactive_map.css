@@ -145,15 +145,12 @@
 	top: 88%;
 	padding: 5px;
 }
-/*
 .beerlogga{
-	position: fixed;
+	position: relative;
 	top: 10px;
 	z-index: 1001;
-	width: 100%;
 	text-align: center;
-
-}*/
+}
 
 .toptext{
 	color:#b03120;
