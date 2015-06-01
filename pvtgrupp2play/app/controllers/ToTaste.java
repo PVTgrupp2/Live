@@ -73,7 +73,7 @@
     		Statement stmt = null;
             stmt = conn.createStatement();
             
-            String sql = "SELECT * FROM nian8516.ProdBet AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = " + id;
+            String sql = "SELECT DISTINCT * FROM nian8516.ProdBet AS PR RIGHT JOIN 1ToTaste TT ON TT.idprodukt = PR.IdProdukt WHERE 1idanv = " + id;
             
             ResultSet rs = stmt.executeQuery(sql);	
             
