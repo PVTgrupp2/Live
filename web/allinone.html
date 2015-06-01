@@ -51,7 +51,7 @@
 			    // console.log(data);
 			    //alert("Din röst har sparats!");	
 			    faderaty();
-			    $('.li').clearQueue()
+			    
                 },
 			   error: function(xhr, ajaxOptions, thrownError) {
 			      //On error do this
@@ -198,6 +198,33 @@
 				function delayopen(){					
   					console.log('explode'); 
   					$('#popupFrame2').popup("reposition", {"positionTo": "window"});
+  					
+				}
+				setTimeout(delayopen, 1000);
+				//$('#ToTasteButton').trigger('create');
+			});
+		}
+
+		function ListPopup3(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
+				var linkid = $(this).attr('id');
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame3').load(poplink, function(){	
+					$('#popupFrame3').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				
+				
+				$('#popupFrame3').popup('open');
+
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame3').popup("reposition", {"positionTo": "window"});
   					
 				}
 				setTimeout(delayopen, 1000);
@@ -469,7 +496,8 @@
 
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#searchlistdrink').listview().listview('refresh');			
+			$('#searchlistdrink').listview().listview('refresh');
+			ListPopup3();			
 		});
 	
 		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
@@ -1050,12 +1078,19 @@
 			</ul>
 
 		</div>
+        
+	</div><!-- /header -->
+        <!-- DIV FÖR ALERTS -->
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
+<<<<<<< HEAD
 	</div><!-- /header -->
 <div class="space">
 <h1 class="toptext">Topplista</h1></div>
+=======
+<div class="space"></div>
+>>>>>>> origin/master
 	<div data-role="content" data-theme="b">
 		<div data-role="navbar">
 			<ul>
@@ -1109,12 +1144,18 @@
 				</li>	
 			</ul>
 		</div>
+    </div><!-- /header -->
+    <!-- DIV FÖR ALERTS -->
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
+<<<<<<< HEAD
 	</div><!-- /header -->
 <div class="space">
 <h1 class="toptext">Karta</h1></div>
+=======
+<div class="space"></div>
+>>>>>>> origin/master
 	<div data-role="content" data-theme="b">		
 		<div style="border: #e7c0bb solid 1px;  height:300px; overflow:hidden;">
 				<div data-role="navbar">
@@ -1453,12 +1494,18 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 				</li>	
 			</ul>
 		</div>
+	</div><!-- /header -->
+    <!-- DIV FÖR ALERTS -->
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
+<<<<<<< HEAD
 	</div><!-- /header -->
 <div class="space">
 <h1 class="toptext">Sök</h1></div>
+=======
+<div class="space"></div>
+>>>>>>> origin/master
 	<div data-role="content" data-theme="b">
 		<div data-role="navbar">
 			<ul>
@@ -1513,13 +1560,19 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 				</li>	
 			</ul>
 		</div>
-		<div class="fading_div">Du har loggats ut!</div>
+	</div><!-- /header -->
+    <!-- DIV FÖR ALERTS -->
+        <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
+<<<<<<< HEAD
 	</div><!-- /header -->
 	<div class="space">
 	<h1 class="toptext">Min sida</h1>
 </div>
+=======
+	<div class="space"></div>
+>>>>>>> origin/master
 
 <div>
 	<h1 style="color:#b03120;">Mingelbilder </h1>
@@ -1594,10 +1647,11 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 				</li>	
 			</ul>
 		</div>
+	</div><!-- /header -->
+    <!-- DIV FÖR ALERTS -->
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
-	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
 
@@ -1688,10 +1742,11 @@ Känner du dig modig? kom och tanka din mage med alla typer av drycker och smake
 				</li>	
 			</ul>
 		</div>
+	</div><!-- /header -->
+    <!-- DIV FÖR ALERTS -->
         <div class="fading_div">Du har loggats ut!</div>
         <div class="rating_div">Din röst har sparats!</div>
         <div class="store_div">Produkten har sparats i ToTaste!</div>
-	</div><!-- /header -->
 <div class="space"></div>
 	<div data-role="content" data-theme="b"> 
 
