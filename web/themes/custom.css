@@ -120,7 +120,7 @@
     padding-right:10px;
     left:50%;
     transform: translate(-50%, -50%);
-    z-index:4000;
+    z-index:5000;
 }
 
 .rating_div{
@@ -136,7 +136,7 @@
     padding-right:10px;
     left:50%;
     transform: translate(-50%, -50%);
-    z-index:4000;
+    z-index:5000;
 }
 
 .store_div{
@@ -152,7 +152,7 @@
     padding-right:10px;
     left:50%;
     transform: translate(-50%, -50%);
-    z-index:4000;
+    z-index:5000;
 }
 
 /*
