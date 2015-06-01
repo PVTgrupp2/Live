@@ -157,10 +157,12 @@
 
 .toptext{
 	color:#b03120;
-	/*top: 85%;*/
 	position: relative;
 	text-align: center;
-	background-color: white;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	top: -15px;
+	height: 1px;	
 }
 
 .logga{
