@@ -205,6 +205,33 @@
 			});
 		}
 
+		function ListPopup3(){
+			$('.produktlink').not('.emptyMessage').click(function(){
+				//$('#popupFrame').hide();
+				var linkid = $(this).attr('id');
+				console.log(linkid); 
+				var poplink = 'https://pvt-grupp2.herokuapp.com/beer/' + linkid;
+				var popupid;
+				$('#popupFrame3').load(poplink, function(){	
+					$('#popupFrame3').trigger('create');
+					RatyEnable();
+				});				
+				//$('#popupFrame').popup({ tolerance: 25 });
+				//$('#popupFrame').popup('open');
+				
+				
+				$('#popupFrame3').popup('open');
+
+				function delayopen(){					
+  					console.log('explode'); 
+  					$('#popupFrame3').popup("reposition", {"positionTo": "window"});
+  					
+				}
+				setTimeout(delayopen, 1000);
+				//$('#ToTasteButton').trigger('create');
+			});
+		}
+
 
         function loadToTaste(){
             var totasteurl = 'https://pvt-grupp2.herokuapp.com/totaste/' + uid;
@@ -469,7 +496,8 @@
 
 	$(document).ready(function(){
 		$('#searchlistdrink').load('https://pvt-grupp2.herokuapp.com/beer/all', function(){			
-			$('#searchlistdrink').listview().listview('refresh');			
+			$('#searchlistdrink').listview().listview('refresh');
+			ListPopup3();			
 		});
 	
 		$('#searchlistuts').load('https://pvt-grupp2.herokuapp.com/utst', function(){			
