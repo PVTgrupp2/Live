@@ -1,0 +1,5 @@
+@(thelist: List[Produkt])
+
+@for(item <- thelist) {
+  <li><a href="#p@item.id" id="@item.id" class="produktlinksok" data-rel="popup"><h2>@item.namn</h2><div class="produktlist" data-score="@item.betyg"></div><p>@item.land</p></a></li>
+}

@@ -58,7 +58,7 @@
            return internalServerError("Oops: the drinks is on the table");
         
         }else{
-            return ok(list.render(thelist));
+            return ok(listsok.render(thelist));
         }
     }
     
@@ -101,7 +101,7 @@
         if(thelist.isEmpty()){
             return internalServerError("Oops: the beers is on the table");
         }else{
-            return ok(list.render(thelist));
+            return ok(listsok.render(thelist));
         }
     }
     
@@ -144,7 +144,7 @@
             return internalServerError("Oops: the wisky is on the table");
         
         }else{
-            return ok(list.render(thelist));
+            return ok(listsok.render(thelist));
         }
     }
     

@@ -95,7 +95,7 @@
            return internalServerError("List is empty");
         
         }else{
-            return ok(list.render(totastelist));
+            return ok(listmy.render(totastelist));
         }
         
      }
