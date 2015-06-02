@@ -59,7 +59,7 @@ public  class BedomdaController extends Controller{
            return internalServerError("List is empty");
         
         }else{
-            return ok(list.render(bedomdalist));
+            return ok(listmy.render(bedomdalist));
         }
         
      }
